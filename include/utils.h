@@ -15,3 +15,10 @@ class VectorCaluculation
             double multiplication(double *inp);
             double init(double *inp);
     };
+
+class random
+    {
+        private:
+            double random_uniform();
+            double random_gaussian();
+    };
