@@ -5,4 +5,5 @@ class Activation
         public:
             double ReLU(double *inp);
             double Sigmoid(double *inp);
+            double tanh(double *inp);
     };
