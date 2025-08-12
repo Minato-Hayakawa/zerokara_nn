@@ -37,7 +37,7 @@ class VectorCaluculation
             double init(double *inp,const int n){
                 for(int i=0;i<n;i++){
                     inp[i]=0;
-                }
+                }return *inp;
             }
     };
 
