@@ -14,7 +14,7 @@ class VectorCaluculation
         public:
             double addition(double *inp1,double *inp2);
             double multiplication(double *inp1,double *inp2,const int n,const int m,double *outp);
-            double init(double *inp);
+            double init(double *inp,const int n);
     };
 
 class Random
