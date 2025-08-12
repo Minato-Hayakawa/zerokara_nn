@@ -11,8 +11,12 @@ class Activation
                     return *inp;
                 }
             }
-            double Sigmoid(double *inp);
-            double tanh(double *inp);
+            double Sigmoid(double *inp){
+                return 1/(1-pow(e,*inp));
+            }
+            double tanh(double *inp){
+                return ((pow(e,*inp)-pow(e,*inp))/(pow(e,*inp)+pow(e,*inp)));
+            }
     };
 
 class VectorCaluculation
