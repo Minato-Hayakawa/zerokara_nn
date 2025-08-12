@@ -34,7 +34,11 @@ class VectorCaluculation
                     }
                 }return *outp;
             }
-            double init(double *inp);
+            double init(double *inp,const int n){
+                for(int i=0;i<n;i++){
+                    inp[i]=0;
+                }
+            }
     };
 
 class Random
