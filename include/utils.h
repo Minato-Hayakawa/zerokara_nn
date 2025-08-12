@@ -12,7 +12,7 @@ class Activation
 class VectorCaluculation
     {
         public:
-            double addition(double *inp);
+            double addition(double *inp1,double *inp2);
             double multiplication(double *inp);
             double init(double *inp);
     };
