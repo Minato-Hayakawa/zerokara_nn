@@ -13,7 +13,7 @@ class VectorCaluculation
     {
         public:
             double addition(double *inp1,double *inp2);
-            double multiplication(double *inp);
+            double multiplication(double *inp1,double *inp2);
             double init(double *inp);
     };
 
