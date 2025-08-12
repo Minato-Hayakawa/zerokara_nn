@@ -25,7 +25,15 @@ class VectorCaluculation
             double addition(double *inp1,double *inp2){
                 return *inp1+*inp2;
             }
-            double multiplication(double *inp);
+            double multiplication(double *inp1,double *inp2,const int n,const int m,double *outp){
+                for(int i=0;i<n;i++){
+                    for(int j=0;j<m;j++){
+                        for(int k=0;k<m;k++){
+                            outp[i*m +j] += inp1[i*m+k]*inp2[k*m+j];
+                        }
+                    }
+                }return *outp;
+            }
             double init(double *inp);
     };
 
