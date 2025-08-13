@@ -15,4 +15,7 @@ class layer
                 std::vector<double> bias,
                 std::vector<double(double)> activation,
                 std::vector<double(double)> activation_derivative);
+            void weights_init(
+                const int input_size,
+                std::vector<std::vector<double>> weights);
     };
