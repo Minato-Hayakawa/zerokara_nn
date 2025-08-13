@@ -18,4 +18,7 @@ class layer
             void weights_init(
                 const int input_size,
                 std::vector<std::vector<double>> weights);
+            void bias_init(
+                const int input_size,
+                std::vector<double> bias);;
     };
