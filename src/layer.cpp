@@ -41,7 +41,11 @@ class layer{
                 }
                 
             void bias_init(
-                const int input_size,
-                std::vector<double> bias);
+                int length,
+                std::vector<double> bias){
+                    for (int i=0;i<length;i++){
+                        bias.push_back(dis(gen));
+                    }
+                }
 
 };
