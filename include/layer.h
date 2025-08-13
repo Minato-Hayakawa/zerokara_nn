@@ -1,5 +1,6 @@
 #include<vector>
 #include<string>
+#include <random>
 class layer
     {
         private:
@@ -20,7 +21,8 @@ class layer
                 std::string activation_derivative);
 
             void weights_init(
-                const int input_size,
+                int width,
+                int length,
                 std::vector<std::vector<double>> weights);
 
             void bias_init(
