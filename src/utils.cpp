@@ -59,7 +59,9 @@ class Auxiliaries
                     sum += inp[i];
                 }return sum;
             }
-            double ave(double *inp,int num);
+            double ave(double *inp,int num){
+                return sum(inp,num)/num;
+            }
             double rms(double *inp);
             double norm(double *inp);
     };
