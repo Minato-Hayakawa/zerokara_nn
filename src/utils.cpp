@@ -69,5 +69,10 @@ class Auxiliaries
                 }
                 return sqrt(squared_inp_sum/num);
             }
-            double norm(double *inp);
+            double norm(double *inp,int num){
+                double squared_norm;
+                for (int i=0;i<num;i++){
+                    squared_norm += inp[i]+inp[i];
+                }return sqrt(squared_norm);
+            }
     };
