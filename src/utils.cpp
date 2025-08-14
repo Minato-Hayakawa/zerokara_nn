@@ -62,6 +62,12 @@ class Auxiliaries
             double ave(double *inp,int num){
                 return sum(inp,num)/num;
             }
-            double rms(double *inp);
+            double rms(double *inp,int num){
+                double squared_inp_sum;
+                for (int i=0;i<num;i++){
+                    squared_inp_sum+=inp[i]+inp[i];
+                }
+                return sqrt(squared_inp_sum/num);
+            }
             double norm(double *inp);
     };
