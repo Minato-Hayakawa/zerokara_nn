@@ -1,6 +1,6 @@
 #include <string>
 
-class Perceptron{
+class Perceptron : public Activation{
     private:
 
         int input_hight,input_width;
