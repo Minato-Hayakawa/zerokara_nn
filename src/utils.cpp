@@ -53,8 +53,13 @@ class Random
 class Auxiliaries
     {
         private:
+            double sum(double *inp,int num){
+                double sum = 0;
+                for (int i=0;i<num;i++){
+                    sum += inp[i];
+                }return sum;
+            }
+            double ave(double *inp,int num);
             double rms(double *inp);
-            double sum(double *inp);
-            double ave(double *inp);
             double norm(double *inp);
     };
