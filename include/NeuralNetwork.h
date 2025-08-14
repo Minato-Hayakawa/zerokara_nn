@@ -10,7 +10,7 @@ class Perceptron{
 
     public:
 
-        void dense(std::string activation,bool use_bias,int units);
+        void dense(double *inp,std::string activation,bool use_bias,int units);
         void Flatten(double *inp,int num);
         double convolution(double *inp,int num);
 
