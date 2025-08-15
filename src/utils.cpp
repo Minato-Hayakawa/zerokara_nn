@@ -1,10 +1,9 @@
 #include "utils.h"
 
-class Activation
+class Utils
     {
-        private:
-            const double e = 2.71828182;
         public:
+    
             double ReLU(double *inp){
                 if (inp<0){
                     return 0;
@@ -14,16 +13,12 @@ class Activation
                 }
             }
             double Sigmoid(double *inp){
-                return 1/(1-pow(e,*inp));
+                return 1/(1-pow(std::numbers::e,*inp));
             }
             double tanh(double *inp){
-                return ((pow(e,*inp)-pow(e,*inp))/(pow(e,*inp)+pow(e,*inp)));
+                return ((pow(std::numbers::e,*inp)-pow(std::numbers::e,*inp))/(pow(std::numbers::e,*inp)+pow(std::numbers::e,*inp)));
             }
-    };
 
-class VectorCaluculation
-    {
-        public:
             double addition(double *inp1,double *inp2){
                 return *inp1+*inp2;
             }
@@ -41,18 +36,6 @@ class VectorCaluculation
                     inp[i]=0;
                 }return *inp;
             }
-    };
-
-class Random
-    {
-        private:
-            double random_uniform();
-            double random_gaussian();
-    };
-
-class Auxiliaries
-    {
-        private:
             double sum(double *inp,int num){
                 double sum = 0;
                 for (int i=0;i<num;i++){
@@ -75,4 +58,8 @@ class Auxiliaries
                     squared_norm += inp[i]+inp[i];
                 }return sqrt(squared_norm);
             }
+
+        private:
+            double random_uniform();
+            double random_gaussian();
     };
