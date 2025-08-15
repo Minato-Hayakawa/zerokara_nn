@@ -1,6 +1,7 @@
 #include <string>
+#include <vector>
 
-class Perceptron : public Activation{
+class NewralNetwork : public Utils{
     private:
 
         int input_hight,input_width;
