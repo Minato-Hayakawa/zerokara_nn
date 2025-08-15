@@ -1,7 +1,7 @@
 #include "NeuralNetwork.h"
 #include "utils.h"
 
-class Perceptron : public Utils{
+class NeuralNetwork : public Utils{
 
         double dense(double *inp,std::string activation,double *biasp,int units,double *outp){
             if (activation == "ReLU"){
@@ -10,7 +10,6 @@ class Perceptron : public Utils{
                 return Sigmoid(multiplication(inp,biasp,units,units,outp));
             }
         }
-        void Flatten(double *inp,int num);
         double convolution(double *inp,int num);
 
 };
