@@ -1,33 +1,21 @@
 #include <math.h>
 #include <numbers>
-class Activation
+class Utils
     {
         public:
             double ReLU(double *inp);
             double Sigmoid(double *inp);
             double tanh(double *inp);
-    };
-
-class VectorCaluculation
-    {
-        public:
+            
             double addition(double *inp1,double *inp2);
             double multiplication(double *inp1,double *inp2,const int n,const int m,double *outp);
             double init(double *inp,const int n);
-    };
+                        double rms(double *inp);
 
-class Random
-    {
-        private:
-            double random_uniform();
-            double random_gaussian();
-    };
-
-class Auxiliaries
-    {
-        private:
-            double rms(double *inp);
             double sum(double *inp);
             double ave(double *inp);
             double norm(double *inp);
+        private:
+            double random_uniform();
+            double random_gaussian();
     };
