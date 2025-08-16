@@ -9,7 +9,6 @@ class Utils
         public:
             Eigen::VectorXd ReLU(Eigen::VectorXd inVector);
             Eigen::VectorXd Sigmoid(Eigen::VectorXd inVector);
-            double tanh(double *inp);
 
             double addition(double *inp1,double *inp2);
             double *multiplication(double *inp1,double *inp2,const int n,const int m,double *outp);
