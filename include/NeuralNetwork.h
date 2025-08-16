@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <Eigen/Dense>
 
 class NewralNetwork : public Utils{
     private:
@@ -11,7 +12,7 @@ class NewralNetwork : public Utils{
 
     public:
 
-        double dense(double *inp,std::string activation,bool use_bias,int units);
+        Eigen::VectorXd dense(Eigen::VectorXd inVector,Eigen::MatrixXd bias,std::string activation);
         void Flatten(double *inp,int num);
         double convolution(double *inp,int num);
 
