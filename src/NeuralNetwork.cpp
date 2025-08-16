@@ -3,13 +3,15 @@
 
 class NeuralNetwork : public Utils{
 
-        double dense(double *inp,std::string activation,double *biasp,int units,double *outp){
+        Eigen::VectorXd dense(Eigen::VectorXd inVector,Eigen::MatrixXd bias,std::string activation){
             if (activation == "ReLU"){
-                return ReLU(multiplication(inp,biasp,units,units,outp));
+                return ReLU(multiplication(inVector,bias));
             }else if (activation == "Sigmoid"){
-                return Sigmoid(multiplication(inp,biasp,units,units,outp));
+                return Sigmoid(multiplication(inVector,bias));
             }
         }
-        double convolution(double *inp,int num);
+        double convolution(double *inp,int num){
+            
+        }
 
 };
