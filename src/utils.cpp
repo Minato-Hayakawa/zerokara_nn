@@ -33,12 +33,9 @@ class Utils
             double ave(Eigen::VectorXd inVector){
                 return sum(inVector)/inVector.size();
             }
-            double rms(double *inp,int num){
-                double squared_inp_sum;
-                for (int i=0;i<num;i++){
-                    squared_inp_sum+=inp[i]+inp[i];
-                }
-                return sqrt(squared_inp_sum/num);
+            double rms(Eigen::VectorXd inVector){
+                Eigen::VectorXd squared_Vector=inVector*inVector;
+                return sqrt(ave(squared_Vector));
             }
             double norm(double *inp,int num){
                 double squared_norm;
