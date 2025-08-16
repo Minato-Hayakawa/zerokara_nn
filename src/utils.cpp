@@ -4,8 +4,8 @@ class Utils
     {
         public:
     
-            std::vector<double> ReLU(std::vector<double> inVector){
-                std::vector<double> outVector;
+            Eigen::VectorXd ReLU(Eigen::VectorXd inVector){
+                Eigen::VectorXd outVector;
                 for (int i=0;i<inVector.size();i++){
                     outVector[i]=std::max(0.0,inVector[i]);
                 }return outVector;
@@ -24,14 +24,8 @@ class Utils
                     outVector[i]=inVector1[i]+inVector2[i];
                 }return outVector;
             }
-            double *multiplication(double *inp1,double *inp2,const int n,const int m,double *outp){
-                for(int i=0;i<n;i++){
-                    for(int j=0;j<m;j++){
-                        for(int k=0;k<m;k++){
-                            outp[i*m +j] += inp1[i*m+k]*inp2[k*m+j];
-                        }
-                    }
-                }return outp;
+            std::vector<double> multiplication(std::vector<double> inVector1,std::vector<std::vector<double>> inMatrix){
+
             }
             double init(double *inp,const int n){
                 for(int i=0;i<n;i++){
