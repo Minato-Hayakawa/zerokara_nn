@@ -14,6 +14,6 @@ class Utils
             Eigen::VectorXd multiplication(Eigen::VectorXd inVector1,Eigen::Matrix2Xd inMatrix);
 
             double sum(Eigen::VectorXd inVector);
-            double ave(double *inp);
+            double ave(Eigen::VectorXd inVector);
             double rms(double *inp);
     };
