@@ -13,7 +13,7 @@ class Utils
             Eigen::VectorXd addition(Eigen::VectorXd inVector1,Eigen::VectorXd inVector2);
             Eigen::VectorXd multiplication(Eigen::VectorXd inVector1,Eigen::Matrix2Xd inMatrix);
 
-            double sum(double *inp);
+            double sum(Eigen::VectorXd inVector);
             double ave(double *inp);
             double rms(double *inp);
     };
