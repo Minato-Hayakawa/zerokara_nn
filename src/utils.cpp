@@ -5,13 +5,13 @@ class Utils
         public:
     
             Eigen::VectorXd ReLU(Eigen::VectorXd inVector){
-                Eigen::VectorXd outVector;
+                Eigen::VectorXd outVector(inVector.size());
                 for (int i=0;i<inVector.size();i++){
                     outVector[i]=std::max(0.0,inVector[i]);
                 }return outVector;
             }
             Eigen::VectorXd Sigmoid(Eigen::VectorXd inVector){
-                Eigen::VectorXd outVector;
+                Eigen::VectorXd outVector(inVector.size());
                 for (int i=0;i<inVector.size();i++){
                     outVector[i]=0.5 + 0.25 * inVector[i] - 0.010416666666666666 * inVector[i] * inVector[i] * inVector[i];
                 }
