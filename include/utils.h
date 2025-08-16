@@ -1,5 +1,7 @@
 #include <math.h>
 #include <numbers>
+#include <vector>
+#include <algorithm>
 class Utils
     {
         public:
