@@ -10,7 +10,7 @@ class Utils
             Eigen::VectorXd ReLU(Eigen::VectorXd inVector);
             Eigen::VectorXd Sigmoid(Eigen::VectorXd inVector);
 
-            double addition(double *inp1,double *inp2);
+            Eigen::VectorXd addition(Eigen::VectorXd inVector1,Eigen::VectorXd inVector2);
             double *multiplication(double *inp1,double *inp2,const int n,const int m,double *outp);
             double init(double *inp,const int n);
                         double rms(double *inp);
