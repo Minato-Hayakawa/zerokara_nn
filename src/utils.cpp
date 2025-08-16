@@ -37,14 +37,4 @@ class Utils
                 Eigen::VectorXd squared_Vector=inVector*inVector;
                 return sqrt(ave(squared_Vector));
             }
-            double norm(double *inp,int num){
-                double squared_norm;
-                for (int i=0;i<num;i++){
-                    squared_norm += inp[i]+inp[i];
-                }return sqrt(squared_norm);
-            }
-
-        private:
-            double random_uniform();
-            double random_gaussian();
     };
