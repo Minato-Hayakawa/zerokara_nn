@@ -19,10 +19,7 @@ class Utils
             }
 
             Eigen::VectorXd addition(Eigen::VectorXd inVector1,Eigen::VectorXd inVector2){
-                Eigen::VectorXd outVector;
-                for (int i=0;i<inVector1.size();i++){
-                    outVector[i]=inVector1[i]+inVector2[i];
-                }return outVector;
+                return inVector1+inVector2;
             }
             Eigen::VectorXd multiplication(Eigen::VectorXd inVector1,std::vector<std::vector<double>> inMatrix){
 
