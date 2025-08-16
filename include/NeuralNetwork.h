@@ -12,7 +12,7 @@ class NewralNetwork : public Utils{
 
     public:
 
-        Eigen::VectorXd dense(Eigen::VectorXd inVector,Eigen::MatrixXd bias,std::string activation);
+        Eigen::VectorXd dense(Eigen::VectorXd inVector,std::string activation,int units);
         double convolution(double *inp,int num);
 
 };
