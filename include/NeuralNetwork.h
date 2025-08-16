@@ -13,7 +13,6 @@ class NewralNetwork : public Utils{
     public:
 
         Eigen::VectorXd dense(Eigen::VectorXd inVector,Eigen::MatrixXd bias,std::string activation);
-        void Flatten(double *inp,int num);
         double convolution(double *inp,int num);
 
 };
