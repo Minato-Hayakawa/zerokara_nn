@@ -15,5 +15,5 @@ class Utils
 
             double sum(Eigen::VectorXd inVector);
             double ave(Eigen::VectorXd inVector);
-            double rms(double *inp);
+            double rms(Eigen::VectorXd inVector);
     };
