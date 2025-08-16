@@ -1,11 +1,13 @@
 #include <math.h>
 #include <numbers>
-#include <vector>
+// #include <vector>
 #include <algorithm>
+#include <Eigen/Dense>
+
 class Utils
     {
         public:
-            double ReLU(double *inp);
+            Eigen::VectorXd ReLU(Eigen::VectorXd inVector);
             double Sigmoid(double *inp);
             double tanh(double *inp);
 
