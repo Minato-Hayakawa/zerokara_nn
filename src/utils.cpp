@@ -24,14 +24,14 @@ class Utils
             Eigen::VectorXd multiplication(Eigen::VectorXd inVector1,Eigen::Matrix2Xd inMatrix){
                 return inVector1*inMatrix;
             }
-            double sum(double *inp,int num){
+            double sum(Eigen::VectorXd inVector){
                 double sum = 0;
-                for (int i=0;i<num;i++){
-                    sum += inp[i];
+                for (int i=0;i<inVector.size();i++){
+                    sum += inVector[i];
                 }return sum;
             }
-            double ave(double *inp,int num){
-                return sum(inp,num)/num;
+            double ave(Eigen::VectorXd inVector){
+                return sum(inVector)/inVector.size();
             }
             double rms(double *inp,int num){
                 double squared_inp_sum;
