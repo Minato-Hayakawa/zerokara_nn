@@ -21,13 +21,8 @@ class Utils
             Eigen::VectorXd addition(Eigen::VectorXd inVector1,Eigen::VectorXd inVector2){
                 return inVector1+inVector2;
             }
-            Eigen::VectorXd multiplication(Eigen::VectorXd inVector1,std::vector<std::vector<double>> inMatrix){
-
-            }
-            double init(double *inp,const int n){
-                for(int i=0;i<n;i++){
-                    inp[i]=0;
-                }return *inp;
+            Eigen::VectorXd multiplication(Eigen::VectorXd inVector1,Eigen::Matrix2Xd inMatrix){
+                return inVector1*inMatrix;
             }
             double sum(double *inp,int num){
                 double sum = 0;
