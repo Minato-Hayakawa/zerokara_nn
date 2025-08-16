@@ -4,13 +4,11 @@ class Utils
     {
         public:
     
-            double ReLU(double *inp){
-                if (inp<0){
-                    return 0;
-                }
-                else {
-                    return *inp;
-                }
+            std::vector<double> ReLU(std::vector<double> inVector){
+                std::vector<double> outVector;
+                for (int i=0;i<inVector.size();i++){
+                    outVector[i]=std::max(0.0,inVector[i]);
+                }return outVector;
             }
             double Sigmoid(double *inp){
                 return 1/(1-pow(std::numbers::e,*inp));
@@ -22,14 +20,14 @@ class Utils
             double addition(double *inp1,double *inp2){
                 return *inp1+*inp2;
             }
-            double multiplication(double *inp1,double *inp2,const int n,const int m,double *outp){
+            double *multiplication(double *inp1,double *inp2,const int n,const int m,double *outp){
                 for(int i=0;i<n;i++){
                     for(int j=0;j<m;j++){
                         for(int k=0;k<m;k++){
                             outp[i*m +j] += inp1[i*m+k]*inp2[k*m+j];
                         }
                     }
-                }return *outp;
+                }return outp;
             }
             double init(double *inp,const int n){
                 for(int i=0;i<n;i++){
