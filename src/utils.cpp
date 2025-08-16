@@ -34,7 +34,7 @@ class Utils
                 return sum(inVector)/inVector.size();
             }
             double rms(Eigen::VectorXd inVector){
-                Eigen::VectorXd squared_Vector=inVector*inVector;
+                Eigen::VectorXd squared_Vector=inVector.array().square();
                 return sqrt(ave(squared_Vector));
             }
     };
