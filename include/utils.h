@@ -8,7 +8,7 @@ class Utils
     {
         public:
             Eigen::VectorXd ReLU(Eigen::VectorXd inVector);
-            double Sigmoid(double *inp);
+            Eigen::VectorXd Sigmoid(Eigen::VectorXd inVector);
             double tanh(double *inp);
 
             double addition(double *inp1,double *inp2);
