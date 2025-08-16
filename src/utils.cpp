@@ -18,8 +18,11 @@ class Utils
                 return outVector;
             }
 
-            double addition(double *inp1,double *inp2){
-                return *inp1+*inp2;
+            std::vector<double> addition(std::vector<double> inVector1,std::vector<double> inVector2){
+                std::vector<double> outVector;
+                for (int i=0;i<inVector1.size();i++){
+                    outVector[i]=inVector1[i]+inVector2[i];
+                }return outVector;
             }
             double *multiplication(double *inp1,double *inp2,const int n,const int m,double *outp){
                 for(int i=0;i<n;i++){
