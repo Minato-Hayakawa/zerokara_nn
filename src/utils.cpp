@@ -17,9 +17,6 @@ class Utils
                 }
                 return outVector;
             }
-            double tanh(double *inp){
-                return ((pow(std::numbers::e,*inp)-pow(std::numbers::e,*inp))/(pow(std::numbers::e,*inp)+pow(std::numbers::e,*inp)));
-            }
 
             double addition(double *inp1,double *inp2){
                 return *inp1+*inp2;
