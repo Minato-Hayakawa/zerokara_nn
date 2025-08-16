@@ -13,7 +13,7 @@ class Utils
             Eigen::VectorXd Sigmoid(Eigen::VectorXd inVector){
                 Eigen::VectorXd outVector(inVector.size());
                 for (int i=0;i<inVector.size();i++){
-                    outVector[i]=0.5 + 0.25 * inVector[i] - 0.010416666666666666 * inVector[i] * inVector[i] * inVector[i];
+                    outVector[i]= 1.0/(1.0 + std::exp(-inVector[i]));
                 }
                 return outVector;
             }
