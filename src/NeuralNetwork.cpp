@@ -15,7 +15,14 @@ class NeuralNetwork : public Utils{
             Eigen::MatrixXd input_image,
             Eigen::MatrixXd kernel
         ){
-            
+            int img_rows = input_image.rows();
+            int img_cols = input_image.cols();
+
+            int k_rows = kernel.rows();
+            int k_cols = kernel.cols();
+
+            int fft_rows = img_rows + k_rows - 1;
+            int fft_cols = img_cols + k_cols - 1;
         }
 
 };
