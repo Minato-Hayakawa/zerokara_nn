@@ -18,12 +18,19 @@ class Utils
                 return outVector;
             }
 
-            Eigen::VectorXd addition(Eigen::VectorXd inVector1,Eigen::VectorXd inVector2){
+            Eigen::VectorXd addition(
+                Eigen::VectorXd inVector1,
+                Eigen::VectorXd inVector2
+            ){
                 return inVector1+inVector2;
             }
-            Eigen::VectorXd multiplication(Eigen::VectorXd inVector1,Eigen::MatrixXd inMatrix){
+            Eigen::VectorXd multiplication(
+                Eigen::VectorXd inVector1,
+                Eigen::MatrixXd inMatrix
+            ){
                 return inVector1*inMatrix;
             }
+
             double sum(Eigen::VectorXd inVector){
                 double sum = 0;
                 for (int i=0;i<inVector.size();i++){
