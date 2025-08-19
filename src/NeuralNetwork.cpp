@@ -11,7 +11,10 @@ class NeuralNetwork : public Utils{
                 return Sigmoid(multiplication(inVector,bias));
             }
         }
-        double convolution(double *inp,int num){
+        Eigen::MatrixXd convolution(
+            Eigen::MatrixXd input_image,
+            Eigen::MatrixXd kernel
+        ){
             
         }
 
