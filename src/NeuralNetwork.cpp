@@ -27,6 +27,8 @@ class NeuralNetwork : public Utils{
             Eigen::MatrixXd padded_image = Eigen::MatrixXd::Zero(fft_rows, fft_cols);
             Eigen::MatrixXd padded_kernel = Eigen::MatrixXd::Zero(fft_rows, fft_cols);
             padded_image.block(0, 0, img_rows, img_cols) = input_image;
+            Eigen::MatrixXd reversed_kernel = kernel.reverse();
+            padded_kernel.block(0, 0, k_rows, k_cols) = reversed_kernel;
 
         }
 
