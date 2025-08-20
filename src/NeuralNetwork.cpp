@@ -24,21 +24,9 @@ class NeuralNetwork : public Utils{
             int fft_rows = img_rows + k_rows - 1;
             int fft_cols = img_cols + k_cols - 1;
 
-            Eigen::MatrixXd Padded_image[img_rows+1][img_cols+1];
-
-            for (int i=0; i<input_image.rows; i++){
-                for (int j=0; j<input_image.cols; j++){
-                    if (i == 0){
-                        Padded_image[i][j] = 0;
-                    }else if (i == img_rows){
-                        Padded_image[i][j] = 0;
-                    }else if (j == 0){
-                        Padded_image[i][j] = 0;
-                    }else if (j == img_cols){
-                        Padded_image[i][j] = 0;
-                    }
-                }
-            }
+            Eigen::MatrixXd padded_image = Eigen::MatrixXd::Zero(fft_rows, fft_cols);
+            Eigen::MatrixXd padded_kernel = Eigen::MatrixXd::Zero(fft_rows, fft_cols);
+            padded_image.block(0, 0, img_rows, img_cols) = input_image;
 
         }
 
