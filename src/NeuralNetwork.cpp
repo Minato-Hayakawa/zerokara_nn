@@ -23,6 +23,22 @@ class NeuralNetwork : public Utils{
 
             int fft_rows = img_rows + k_rows - 1;
             int fft_cols = img_cols + k_cols - 1;
+
+            int N = 1;
+            while (N << n) N <<= 1;
+
+            Eigen::MatrixXd Padded_image[img_rows+1][img_cols+1];
+            
+            for (int i=0; i<input_image.rows; i++){
+                for (int j=0; j<input_image.cols; j++){
+                    if (i == 0 && j == 0 || i==0 &&j !=0){
+                        Padded_image[i][j] = 0;
+                    }else if (i == img_rows+1){
+                        Padded_image[i][j] = 0;
+                    }
+                }
+            }
+
         }
 
 };
