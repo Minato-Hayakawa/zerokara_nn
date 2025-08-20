@@ -30,11 +30,11 @@ class NeuralNetwork : public Utils{
                 for (int j=0; j<input_image.cols; j++){
                     if (i == 0){
                         Padded_image[i][j] = 0;
-                    }else if (i == img_rows+1){
+                    }else if (i == img_rows){
                         Padded_image[i][j] = 0;
                     }else if (j == 0){
                         Padded_image[i][j] = 0;
-                    }else if (j == img_cols+1){
+                    }else if (j == img_cols){
                         Padded_image[i][j] = 0;
                     }
                 }
