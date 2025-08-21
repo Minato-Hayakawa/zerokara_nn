@@ -74,6 +74,38 @@ class NeuralNetwork : public Utils{
         Eigen::MatrixXcd multiply_fft_results(const Eigen::MatrixXcd& fft_image, const Eigen::MatrixXcd& fft_kernel) {
             return fft_image.cwiseProduct(fft_kernel);
         }
+
+        Eigen::MatrixXd perform_ifft(const Eigen::MatrixXcd& fft_result) {
+            int rows = fft_result.rows();
+            int cols = fft_result.cols();
+            
+            fftw_complex* in = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * rows * cols);
+            fftw_complex* out = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * rows * cols);
+            
+            for (int i = 0; i < rows; ++i) {
+                for (int j = 0; j < cols; ++j) {
+                    in[i * cols + j][0] = fft_result(i, j).real();
+                    in[i * cols + j][1] = fft_result(i, j).imag();
+                }
+            }
+
+            fftw_plan plan = fftw_plan_dft_2d(rows, cols, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
+            fftw_execute(plan);
+
+            Eigen::MatrixXd ifft_result(rows, cols);
+            double normalization_factor = static_cast<double>(rows * cols);
+            for (int i = 0; i < rows; ++i) {
+                for (int j = 0; j < cols; ++j) {
+                    ifft_result(i, j) = out[i * cols + j][0] / normalization_factor;
+                }
+            }
+
+            fftw_destroy_plan(plan);
+            fftw_free(in);
+            fftw_free(out);
+
+            return ifft_result;
+        }
         }
 
 };
