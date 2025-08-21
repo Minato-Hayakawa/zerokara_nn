@@ -11,7 +11,7 @@ class NeuralNetwork : public Utils{
                 return Sigmoid(multiplication(inVector,bias));
             }
         }
-        Eigen::MatrixXd convolution(
+        Eigen::MatrixXd zero_padding(
             Eigen::MatrixXd input_image,
             Eigen::MatrixXd kernel
         ){
