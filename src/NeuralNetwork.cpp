@@ -52,6 +52,24 @@ class NeuralNetwork : public Utils{
             return eigen_matrix;
         }
 
+        Eigen::MatrixXd perfom_fft(Eigen::Matrixxd input_Matrix){
+            int rows = input_Matrix.rows();
+            int cols = input_Matrix.cols();
+
+            fftw_complex* in = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * rows * cols);
+            fftw_complex* out = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * rows * cols);
+            eigenToFFTW(input_matrix, in);
+            fftw_plan plan = fftw_plan_dft_2d(rows, cols, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
+            fftw_execute(plan);
+            
+            Eigen::MatrixXcd fft_result = fftwToEigen(out, rows, cols);
+
+            fftw_destroy_plan(plan);
+            fftw_free(in);
+            fftw_free(out);
+
+            return fft_result;
+        }
         }
 
 };
