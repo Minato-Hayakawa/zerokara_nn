@@ -61,7 +61,7 @@ class NeuralNetwork : public Utils{
             eigenToFFTW(input_matrix, in);
             fftw_plan plan = fftw_plan_dft_2d(rows, cols, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
             fftw_execute(plan);
-            
+
             Eigen::MatrixXcd fft_result = fftwToEigen(out, rows, cols);
 
             fftw_destroy_plan(plan);
@@ -69,6 +69,10 @@ class NeuralNetwork : public Utils{
             fftw_free(out);
 
             return fft_result;
+        }
+
+        Eigen::MatrixXcd multiply_fft_results(const Eigen::MatrixXcd& fft_image, const Eigen::MatrixXcd& fft_kernel) {
+            return fft_image.cwiseProduct(fft_kernel);
         }
         }
 
