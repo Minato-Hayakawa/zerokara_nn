@@ -39,8 +39,19 @@ class NeuralNetwork : public Utils{
                 for (int j = 0; j < cols; ++j) {
                     fftw_array[i * cols + j][0] = eigen_matrix(i, j);
                     fftw_array[i * cols + j][1] = 0;                 
+                }
+            }
+        
+        Eigen::MatrixXd FFTW_to_Eigen(fftw_complex fftw_array, Eigen::MatrixXd eigen_matrix, int rows, int cols){
+            Eigen::MatrixXcd eigen_matrix(rows, cols);
+            for (int i = 0; i < rows; ++i) {
+                for (int j = 0; j < cols; ++j) {
+                    eigen_matrix(i, j) = std::complex<double>(fftw_array[i * cols + j][0], fftw_array[i * cols + j][1]);
+                }
+            }
+            return eigen_matrix;
         }
-    }
+
         }
 
 };
