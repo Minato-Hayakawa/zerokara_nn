@@ -29,7 +29,18 @@ class NeuralNetwork : public Utils{
             padded_image.block(0, 0, img_rows, img_cols) = input_image;
             Eigen::MatrixXd reversed_kernel = kernel.reverse();
             padded_kernel.block(0, 0, k_rows, k_cols) = reversed_kernel;
+        }
 
+        void Eigen_to_FFTW(Eigen::MatrixXd eigen_matrix, fftw_complex fftw_array){
+            int rows = eigen_matrix.rows();
+            int cols = eigen_matrix.cols();
+
+            for (int i = 0; i < rows; ++i) {
+                for (int j = 0; j < cols; ++j) {
+                    fftw_array[i * cols + j][0] = eigen_matrix(i, j);
+                    fftw_array[i * cols + j][1] = 0;                 
+        }
+    }
         }
 
 };
