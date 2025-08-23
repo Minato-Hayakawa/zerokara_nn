@@ -25,5 +25,6 @@ class NewralNetwork : public Utils{
         void Eigen_to_FFTW(Eigen::MatrixXd eigen_matrix, fftw_complex fftw_array);
         Eigen::MatrixXd FFTW_to_Eigen(fftw_complex fftw_array, Eigen::MatrixXd eigen_matrix, int rows, int cols);
         Eigen::MatrixXd perfom_fft(Eigen::Matrixxd input_Matrix);
-        Eigen::MatrixXcd multiply_fft_results(const Eigen::MatrixXcd& fft_image, const Eigen::MatrixXcd& fft_kernel)
+        Eigen::MatrixXcd multiply_fft_results(const Eigen::MatrixXcd& fft_image, const Eigen::MatrixXcd& fft_kernel);
+        Eigen::MatrixXd perform_ifft(const Eigen::MatrixXcd& fft_result);
 };
