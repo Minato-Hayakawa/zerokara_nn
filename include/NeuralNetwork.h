@@ -1,6 +1,7 @@
-#include <string>
 #include <vector>
 #include <Eigen/Dense>
+#include <iostream>
+#include <fftw3.h>
 
 class NewralNetwork : public Utils{
     private:
@@ -12,7 +13,10 @@ class NewralNetwork : public Utils{
 
     public:
 
-        Eigen::VectorXd dense(Eigen::VectorXd inVector,std::string activation,int units);
+        Eigen::VectorXd dense(
+            Eigen::VectorXd inVector,
+            std::string activation,
+            int units);
         double convolution(double *inp,int num);
 
 };
