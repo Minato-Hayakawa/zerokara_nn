@@ -4,8 +4,8 @@ class layer
     {
         public:
 
-            std::vector<std::vector<double>> weights;
-            std::vector<double> bias;
+            Eigen::MatrixXd weights;
+            Eigen::VectorXd bias;
         
             void weights_init(
                 int width,
