@@ -1,5 +1,4 @@
-#include<vector>
-#include<string>
+#include <Eigen/Dense>
 #include <random>
 class layer
     {
