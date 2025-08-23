@@ -12,4 +12,5 @@ class layer
             Eigen::VectorXd bias;
         
             layer(int input_size, int output_size);
+            void update_params(double &dW, double &dB);
     };
