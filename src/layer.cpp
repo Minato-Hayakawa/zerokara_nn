@@ -1,11 +1,11 @@
 #include "layer.h"
 
-std::random_device rd;
-std::mt19937 gen(rd);
-std::uniform_real_distribution<> dis(-1.0, 1.0);
-
 class layer{
 
+    private:
+        std::random_device rd;
+        std::mt19937 gen(rd);
+        std::uniform_real_distribution<> dis(-1.0, 1.0);
     public:
 
         std::vector<std::vector<double>> weights;
