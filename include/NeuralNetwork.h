@@ -22,5 +22,6 @@ class NewralNetwork : public Utils{
         Eigen::MatrixXd zero_padding(
             Eigen::MatrixXd input_image,
             Eigen::MatrixXd kernel);
+        void Eigen_to_FFTW(Eigen::MatrixXd eigen_matrix, fftw_complex fftw_array);
 
 };
