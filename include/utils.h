@@ -6,11 +6,11 @@
 class Utils
     {
         public:
-            Eigen::VectorXd ReLU(Eigen::VectorXd inVector);
-            Eigen::VectorXd Sigmoid(Eigen::VectorXd inVector);
+            void ReLU(Eigen::VectorXd inVector);
+            void Sigmoid(Eigen::VectorXd inVector);
 
-            Eigen::VectorXd addition(Eigen::VectorXd inVector1,Eigen::VectorXd inVector2);
-            Eigen::VectorXd multiplication(Eigen::VectorXd inVector1,Eigen::Matrix2Xd inMatrix);
+            void addition(Eigen::VectorXd inVector1,Eigen::VectorXd inVector2);
+            void multiplication(Eigen::VectorXd inVector1,Eigen::Matrix2Xd inMatrix);
 
             double sum(Eigen::VectorXd inVector);
             double ave(Eigen::VectorXd inVector);
