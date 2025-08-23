@@ -9,17 +9,18 @@ class Utils
                     outVector[i]=std::max(0.0,inVector[i]);
                 }
             }
-            Eigen::VectorXd Sigmoid(Eigen::VectorXd inVector, Eigen::VectorXd outVector){
+            void Sigmoid(Eigen::VectorXd inVector, Eigen::VectorXd outVector){
                 for (int i=0;i<inVector.size();i++){
                     outVector[i]= 1.0/(1.0 + std::exp(-inVector[i]));
                 }
             }
 
-            Eigen::VectorXd addition(
+            void addition(
                 Eigen::VectorXd inVector1,
-                Eigen::VectorXd inVector2
+                Eigen::VectorXd inVector2,
+                Eigen::VectorXd outVector
             ){
-                return inVector1+inVector2;
+                outVector = inVector1+inVector2;
             }
             Eigen::VectorXd multiplication(
                 Eigen::VectorXd inVector1,
