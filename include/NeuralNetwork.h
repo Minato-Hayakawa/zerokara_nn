@@ -18,6 +18,9 @@ class NewralNetwork : public Utils{
             Eigen::VectorXd outVector,
             std::string activation,
             int units);
-        double convolution(double *inp,int num);
+        
+        Eigen::MatrixXd zero_padding(
+            Eigen::MatrixXd input_image,
+            Eigen::MatrixXd kernel);
 
 };
