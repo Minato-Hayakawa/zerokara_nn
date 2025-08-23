@@ -13,5 +13,7 @@ class layer{
             Eigen::MatrixXd weights = Eigen::MatrixXd::NullaryExpr(output_size,
                  input_size,
                 [&]() {return dis(gen);});
+            
+            Eigen::VectorXd bias = Eigen::VectorXd::NullaryExpr(output_size, [&]() {return dis(gen);});
         }
 };
