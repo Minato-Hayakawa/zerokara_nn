@@ -15,6 +15,7 @@ class NewralNetwork : public Utils{
 
         Eigen::VectorXd dense(
             Eigen::VectorXd inVector,
+            Eigen::VectorXd outVector,
             std::string activation,
             int units);
         double convolution(double *inp,int num);
