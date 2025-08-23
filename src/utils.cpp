@@ -22,11 +22,12 @@ class Utils
             ){
                 outVector = inVector1+inVector2;
             }
-            Eigen::VectorXd multiplication(
+            void multiplication(
                 Eigen::VectorXd inVector1,
-                Eigen::MatrixXd inMatrix
+                Eigen::MatrixXd inMatrix,
+                Eigen::MatrixXd outVector
             ){
-                return inVector1*inMatrix;
+                outVector = inVector1*inMatrix;
             }
 
             double sum(Eigen::VectorXd inVector){
