@@ -4,17 +4,15 @@ class Utils
     {
         public:
     
-            void ReLU(Eigen::VectorXd inVector,Eigen::VectorXd outVector){
+            void ReLU(Eigen::VectorXd inVector, Eigen::VectorXd outVector){
                 for (int i=0;i<inVector.size();i++){
                     outVector[i]=std::max(0.0,inVector[i]);
                 }
             }
-            Eigen::VectorXd Sigmoid(Eigen::VectorXd inVector){
-                Eigen::VectorXd outVector(inVector.size());
+            Eigen::VectorXd Sigmoid(Eigen::VectorXd inVector, Eigen::VectorXd outVector){
                 for (int i=0;i<inVector.size();i++){
                     outVector[i]= 1.0/(1.0 + std::exp(-inVector[i]));
                 }
-                return outVector;
             }
 
             Eigen::VectorXd addition(
