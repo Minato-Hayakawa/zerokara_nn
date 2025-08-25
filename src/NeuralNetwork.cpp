@@ -13,12 +13,10 @@ void NeuralNetwork::dense(
         multiplication(inVector,weights,outVector);
         addition(outVector,bias,outVector);
         ReLU(outVector,outVector);
-        return outVector;
     }else if (activation == "Sigmoid"){
         multiplication(inVector,weights,outVector);
         addition(outVector,bias,outVector);
         Sigmoid(outVector,outVector);
-        return outVector;
     }
 }
 Eigen::MatrixXd NeuralNetwork::zero_padding(
