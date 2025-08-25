@@ -7,22 +7,22 @@ class Utils
     {
         public:
             void ReLU(
-                Eigen::VectorXd inVector,
-                Eigen::VectorXd outVector);
+                Eigen::VectorXd &inVector,
+                Eigen::VectorXd &outVector);
             void Sigmoid(
-                Eigen::VectorXd inVector,
-                Eigen::VectorXd outVector);
+                Eigen::VectorXd &inVector,
+                Eigen::VectorXd &outVector);
 
             void addition(
-                Eigen::VectorXd inVector1,
-                Eigen::VectorXd inVector2,
-                Eigen::VectorXd outVector);
+                Eigen::VectorXd &inVector1,
+                Eigen::VectorXd &inVector2,
+                Eigen::VectorXd &outVector);
             void multiplication(
-                Eigen::VectorXd inVector1,
-                Eigen::MatrixXd inMatrix,
-                Eigen::MatrixXd outVector);
+                Eigen::VectorXd &inVector1,
+                Eigen::MatrixXd &inMatrix,
+                Eigen::MatrixXd &outVector);
 
-            double sum(Eigen::VectorXd inVector);
-            double ave(Eigen::VectorXd inVector);
-            double rms(Eigen::VectorXd inVector);
+            double sum(Eigen::VectorXd &inVector);
+            double ave(Eigen::VectorXd &inVector);
+            double rms(Eigen::VectorXd &inVector);
     };
