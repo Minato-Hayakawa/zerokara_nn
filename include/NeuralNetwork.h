@@ -3,7 +3,7 @@
 #include <iostream>
 #include <fftw3.h>
 
-class NewralNetwork : public Utils{
+class NeuralNetwork : public Utils{
     private:
 
         int input_hight,input_width;
