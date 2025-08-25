@@ -5,7 +5,7 @@ Eigen::VectorXd bias;
 layer::layer(int input_size, int output_size)
 :gen(rd()), dis(-1.0, 1.0)
 {
-    Eigen::MatrixXd weights = Eigen::MatrixXd::NullaryExpr(output_size,
+    weights = Eigen::MatrixXd::NullaryExpr(output_size,
             input_size,
         [&]() {return dis(gen);});
     
