@@ -14,17 +14,24 @@ class NeuralNetwork : public Utils{
     public:
 
         Eigen::VectorXd dense(
-            Eigen::VectorXd inVector,
-            Eigen::VectorXd outVector,
+            Eigen::VectorXd &inVector,
+            Eigen::VectorXd &outVector,
             std::string activation,
             int units);
         
         Eigen::MatrixXd zero_padding(
-            Eigen::MatrixXd input_image,
-            Eigen::MatrixXd kernel);
-        void Eigen_to_FFTW(Eigen::MatrixXd eigen_matrix, fftw_complex fftw_array);
-        Eigen::MatrixXd FFTW_to_Eigen(fftw_complex fftw_array, Eigen::MatrixXd eigen_matrix, int rows, int cols);
-        Eigen::MatrixXd perfom_fft(Eigen::Matrixxd input_Matrix);
-        Eigen::MatrixXcd multiply_fft_results(const Eigen::MatrixXcd& fft_image, const Eigen::MatrixXcd& fft_kernel);
-        Eigen::MatrixXd perform_ifft(const Eigen::MatrixXcd& fft_result);
+            Eigen::MatrixXd &input_image,
+            Eigen::MatrixXd &kernel);
+        void Eigen_to_FFTW(
+            Eigen::MatrixXd &eigen_matrix,
+            fftw_complex fftw_array);
+        Eigen::MatrixXd FFTW_to_Eigen(
+            fftw_complex fftw_array,
+            Eigen::MatrixXd &eigen_matrix,
+            int rows, int cols);
+        Eigen::MatrixXd perfom_fft(Eigen::Matrixxd &input_Matrix);
+        Eigen::MatrixXcd multiply_fft_results(
+            Eigen::MatrixXcd &fft_image,
+            Eigen::MatrixXcd &fft_kernel);
+        Eigen::MatrixXd perform_ifft(Eigen::MatrixXcd &fft_result);
 };

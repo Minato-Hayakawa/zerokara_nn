@@ -2,8 +2,8 @@
 #include "utils.h"
 
 void NeuralNetwork::dense(
-    Eigen::VectorXd inVector,
-    Eigen::VectorXd outVector,
+    Eigen::VectorXd &inVector,
+    Eigen::VectorXd &outVector,
     std::string activation,
     int units)
     {
@@ -22,8 +22,8 @@ void NeuralNetwork::dense(
     }
 }
 Eigen::MatrixXd NeuralNetwork::zero_padding(
-    Eigen::MatrixXd input_image,
-    Eigen::MatrixXd kernel
+    Eigen::MatrixXd &input_image,
+    Eigen::MatrixXd &kernel
 ){
     int img_rows = input_image.rows();
     int img_cols = input_image.cols();
@@ -41,7 +41,9 @@ Eigen::MatrixXd NeuralNetwork::zero_padding(
     padded_kernel.block(0, 0, k_rows, k_cols) = reversed_kernel;
 }
 
-void NeuralNetwork::Eigen_to_FFTW(Eigen::MatrixXd eigen_matrix, fftw_complex fftw_array){
+void NeuralNetwork::Eigen_to_FFTW(
+    Eigen::MatrixXd &eigen_matrix,
+    fftw_complex fftw_array){
     int rows = eigen_matrix.rows();
     int cols = eigen_matrix.cols();
 
@@ -52,7 +54,11 @@ void NeuralNetwork::Eigen_to_FFTW(Eigen::MatrixXd eigen_matrix, fftw_complex fft
         }
     }
 
-Eigen::MatrixXd NeuralNetwork::FFTW_to_Eigen(fftw_complex fftw_array, Eigen::MatrixXd eigen_matrix, int rows, int cols){
+Eigen::MatrixXd NeuralNetwork::FFTW_to_Eigen(
+    fftw_complex fftw_array,
+    Eigen::MatrixXd &eigen_matrix,
+    int rows,
+    int cols){
     Eigen::MatrixXcd eigen_matrix(rows, cols);
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
@@ -62,7 +68,7 @@ Eigen::MatrixXd NeuralNetwork::FFTW_to_Eigen(fftw_complex fftw_array, Eigen::Mat
     return eigen_matrix;
 }
 
-Eigen::MatrixXd NeuralNetwork::perfom_fft(Eigen::Matrixxd input_Matrix){
+Eigen::MatrixXd NeuralNetwork::perfom_fft(Eigen::Matrixxd &input_Matrix){
     int rows = input_Matrix.rows();
     int cols = input_Matrix.cols();
 
@@ -81,11 +87,14 @@ Eigen::MatrixXd NeuralNetwork::perfom_fft(Eigen::Matrixxd input_Matrix){
     return fft_result;
 }
 
-Eigen::MatrixXcd NeuralNetwork::multiply_fft_results(const Eigen::MatrixXcd& fft_image, const Eigen::MatrixXcd& fft_kernel) {
+Eigen::MatrixXcd NeuralNetwork::multiply_fft_results(
+    Eigen::MatrixXcd &fft_image,
+    Eigen::MatrixXcd &fft_kernel) {
     return fft_image.cwiseProduct(fft_kernel);
 }
 
-Eigen::MatrixXd NeuralNetwork::perform_ifft(const Eigen::MatrixXcd& fft_result) {
+Eigen::MatrixXd NeuralNetwork::perform_ifft(
+    Eigen::MatrixXcd f&ft_result) {
     int rows = fft_result.rows();
     int cols = fft_result.cols();
     
