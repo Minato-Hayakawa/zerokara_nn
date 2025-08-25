@@ -19,8 +19,8 @@ class Utils
                 Eigen::VectorXd outVector);
             void multiplication(
                 Eigen::VectorXd inVector1,
-                Eigen::Matrix2Xd inMatrix,
-                Eigen::VectorXd outVector);
+                Eigen::MatrixXd inMatrix,
+                Eigen::MatrixXd outVector);
 
             double sum(Eigen::VectorXd inVector);
             double ave(Eigen::VectorXd inVector);
