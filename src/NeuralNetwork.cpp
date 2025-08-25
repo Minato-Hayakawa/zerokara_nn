@@ -72,7 +72,7 @@ Eigen::MatrixXd NeuralNetwork::perfom_fft(Eigen::Matrixxd &input_Matrix){
 
     fftw_complex* in = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * rows * cols);
     fftw_complex* out = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * rows * cols);
-    eigenToFFTW(input_matrix, in);
+    Eigen_to_FFTW(input_matrix, in);
     fftw_plan plan = fftw_plan_dft_2d(rows, cols, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
     fftw_execute(plan);
 
