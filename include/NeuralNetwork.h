@@ -16,7 +16,9 @@ class NeuralNetwork : public Utils{
         Eigen::VectorXd dense(
             Eigen::VectorXd &inVector,
             Eigen::VectorXd &outVector,
-            std::string activation,
+            void (Utils::*method_ptr)(
+                Eigen::VectorXd,
+                Eigen::VectorXd),
             int units);
         
         Eigen::MatrixXd zero_padding(
