@@ -4,21 +4,18 @@
 void NeuralNetwork::dense(
     Eigen::VectorXd &inVector,
     Eigen::VectorXd &outVector,
-    std::string activation,
+    void (Utils::*method_ptr)(
+        Eigen::VectorXd,
+        Eigen::VectorXd),
     int units)
     {
     Eigen::MatrixXd weights(inVector.size(),units);
     Eigen::VectorXd bias(units)
-    if (activation == "ReLU"){
-        multiplication(inVector,weights,outVector);
-        addition(outVector,bias,outVector);
-        ReLU(outVector,outVector);
-    }else if (activation == "Sigmoid"){
-        multiplication(inVector,weights,outVector);
-        addition(outVector,bias,outVector);
-        Sigmoid(outVector,outVector);
+    Utils obj;
+    multiplication(inVector,weights,outVector);
+    addition(outVector,bias,outVector);
+    obj.*method_ptr(outVector, outVector);
     }
-}
 Eigen::MatrixXd NeuralNetwork::zero_padding(
     Eigen::MatrixXd &input_image,
     Eigen::MatrixXd &kernel
