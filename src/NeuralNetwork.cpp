@@ -10,7 +10,7 @@ void NeuralNetwork::dense(
     int units)
     {
     Eigen::MatrixXd weights(inVector.size(),units);
-    Eigen::VectorXd bias(units)
+    Eigen::VectorXd bias(units);
 
     multiplication(inVector,weights,outVector);
     addition(outVector,bias,outVector);
