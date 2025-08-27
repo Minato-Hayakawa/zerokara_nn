@@ -89,7 +89,7 @@ Eigen::MatrixXd NeuralNetwork::multiply_fft_results(
 }
 
 Eigen::MatrixXcd NeuralNetwork::perform_ifft(
-    Eigen::MatrixXd &ft_result) {
+    Eigen::MatrixXcd &ft_result) {
     int rows = fft_result.rows();
     int cols = fft_result.cols();
     
