@@ -31,7 +31,7 @@ class NeuralNetwork : public Utils{
             fftw_complex *fftw_array,
             Eigen::MatrixXd &eigen_matrix,
             int rows, int cols);
-        Eigen::MatrixXd perfom_fft(Eigen::MatrixXd &input_Matrix);
+        Eigen::MatrixXcd perfom_fft(Eigen::MatrixXd &input_Matrix);
         Eigen::MatrixXcd multiply_fft_results(
             Eigen::MatrixXd &fft_image,
             Eigen::MatrixXd &fft_kernel);
