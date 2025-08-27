@@ -9,11 +9,8 @@ void NeuralNetwork::dense(
         Eigen::VectorXd&),
     int units)
     {
-    Eigen::MatrixXd weights(inVector.size(),units);
-    Eigen::VectorXd bias(units);
-
-    multiplication(inVector,weights,outVector);
-    addition(outVector,bias,outVector);
+    multiplication(inVector,layer::weights,outVector);
+    addition(outVector,layer::bias,outVector);
     (this->*method_ptr)(outVector, outVector);
     }
 Eigen::MatrixXd NeuralNetwork::zero_padding(
@@ -89,7 +86,7 @@ Eigen::MatrixXd NeuralNetwork::multiply_fft_results(
 }
 
 Eigen::MatrixXcd NeuralNetwork::perform_ifft(
-    Eigen::MatrixXcd &ft_result) {
+    Eigen::MatrixXcd &fft_result) {
     int rows = fft_result.rows();
     int cols = fft_result.cols();
     
