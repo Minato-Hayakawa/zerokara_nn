@@ -39,7 +39,7 @@ Eigen::MatrixXd NeuralNetwork::zero_padding(
 
 void NeuralNetwork::Eigen_to_FFTW(
     Eigen::MatrixXd &eigen_matrix,
-    fftw_complex fftw_array){
+    fftw_complex *fftw_array){
     int rows = eigen_matrix.rows();
     int cols = eigen_matrix.cols();
 
@@ -51,7 +51,7 @@ void NeuralNetwork::Eigen_to_FFTW(
     }
 
 Eigen::MatrixXd NeuralNetwork::FFTW_to_Eigen(
-    fftw_complex fftw_array,
+    fftw_complex *fftw_array,
     Eigen::MatrixXd &eigen_matrix,
     int rows,
     int cols){
