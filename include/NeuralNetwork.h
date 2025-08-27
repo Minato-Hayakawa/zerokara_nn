@@ -17,8 +17,8 @@ class NeuralNetwork : public Utils{
             Eigen::VectorXd &inVector,
             Eigen::VectorXd &outVector,
             void (Utils::*method_ptr)(
-                Eigen::VectorXd,
-                Eigen::VectorXd),
+                Eigen::VectorXd&,
+                Eigen::VectorXd&),
             int units);
         
         Eigen::MatrixXd zero_padding(
