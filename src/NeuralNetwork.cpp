@@ -5,8 +5,8 @@ void NeuralNetwork::dense(
     Eigen::VectorXd &inVector,
     Eigen::VectorXd &outVector,
     void (Utils::*method_ptr)(
-        Eigen::VectorXd,
-        Eigen::VectorXd),
+        Eigen::VectorXd&,
+        Eigen::VectorXd&),
     int units)
     {
     Eigen::MatrixXd weights(inVector.size(),units);
