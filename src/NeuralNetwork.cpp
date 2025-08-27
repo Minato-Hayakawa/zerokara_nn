@@ -50,9 +50,9 @@ void NeuralNetwork::Eigen_to_FFTW(
         }
     }
     }
-Eigen::MatrixXd NeuralNetwork::FFTW_to_Eigen(
+Eigen::MatrixXcd NeuralNetwork::FFTW_to_Eigen(
     fftw_complex *fftw_array,
-    Eigen::MatrixXd &eigen_matrix,
+    Eigen::MatrixXcd &eigen_matrix,
     int rows,
     int cols){
     Eigen::MatrixXd eigen_matrix(rows, cols);
