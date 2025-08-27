@@ -121,4 +121,3 @@ Eigen::MatrixXcd NeuralNetwork::perform_ifft(
 
     return ifft_result;
 }
-}
