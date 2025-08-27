@@ -55,7 +55,7 @@ Eigen::MatrixXd NeuralNetwork::FFTW_to_Eigen(
     Eigen::MatrixXd &eigen_matrix,
     int rows,
     int cols){
-    Eigen::MatrixXcd eigen_matrix(rows, cols);
+    Eigen::MatrixXd eigen_matrix(rows, cols);
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
             eigen_matrix(i, j) = std::complex<double>(fftw_array[i * cols + j][0], fftw_array[i * cols + j][1]);
