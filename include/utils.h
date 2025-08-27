@@ -20,7 +20,7 @@ class Utils
             void multiplication(
                 Eigen::VectorXd &inVector1,
                 Eigen::MatrixXd &inMatrix,
-                Eigen::MatrixXd &outVector);
+                Eigen::VectorXd &outVector);
 
             double sum(Eigen::VectorXd &inVector);
             double ave(Eigen::VectorXd &inVector);
