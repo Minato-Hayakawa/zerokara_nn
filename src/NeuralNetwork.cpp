@@ -73,7 +73,7 @@ Eigen::MatrixXd NeuralNetwork::perfom_fft(Eigen::MatrixXd &input_Matrix){
     fftw_plan plan = fftw_plan_dft_2d(rows, cols, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
     fftw_execute(plan);
 
-    Eigen::MatrixXcd fft_result = fftwToEigen(out, rows, cols);
+    Eigen::MatrixXcd fft_result = FFTW_to_Eigen(out, rows, cols);
 
     fftw_destroy_plan(plan);
     fftw_free(in);
