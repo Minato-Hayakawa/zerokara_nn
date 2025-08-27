@@ -13,7 +13,7 @@ class NeuralNetwork : public Utils{
 
     public:
 
-        Eigen::VectorXd dense(
+        void dense(
             Eigen::VectorXd &inVector,
             Eigen::VectorXd &outVector,
             void (Utils::*method_ptr)(
