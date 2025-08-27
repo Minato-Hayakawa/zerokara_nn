@@ -9,7 +9,7 @@ layer::layer(int input_size, int output_size)
             input_size,
         [&]() {return dis(gen);});
     
-    Eigen::VectorXd bias = Eigen::VectorXd::NullaryExpr(output_size, [&]() {return dis(gen);});
+    bias = Eigen::VectorXd::NullaryExpr(output_size, [&]() {return dis(gen);});
 }
 
 void layer::update_params(
