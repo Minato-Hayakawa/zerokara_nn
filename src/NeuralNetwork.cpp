@@ -64,7 +64,7 @@ Eigen::MatrixXd NeuralNetwork::FFTW_to_Eigen(
     return eigen_matrix;
 }
 
-Eigen::MatrixXd NeuralNetwork::perfom_fft(Eigen::Matrixxd &input_Matrix){
+Eigen::MatrixXd NeuralNetwork::perfom_fft(Eigen::MatriXd &input_Matrix){
     int rows = input_Matrix.rows();
     int cols = input_Matrix.cols();
 
