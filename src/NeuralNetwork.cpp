@@ -14,7 +14,7 @@ void NeuralNetwork::dense(
     Utils obj;
     multiplication(inVector,weights,outVector);
     addition(outVector,bias,outVector);
-    obj.*method_ptr(outVector, outVector);
+    (obj.*method_ptr)(outVector, outVector);
     }
 Eigen::MatrixXd NeuralNetwork::zero_padding(
     Eigen::MatrixXd &input_image,
