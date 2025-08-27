@@ -34,6 +34,7 @@ Eigen::MatrixXd NeuralNetwork::zero_padding(
     padded_image.block(0, 0, img_rows, img_cols) = input_image;
     Eigen::MatrixXd reversed_kernel = kernel.reverse();
     padded_kernel.block(0, 0, k_rows, k_cols) = reversed_kernel;
+    return padded_image;
 }
 
 void NeuralNetwork::Eigen_to_FFTW(
