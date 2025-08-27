@@ -1,7 +1,5 @@
 #include "layer.h"
 
-Eigen::MatrixXd weights;
-Eigen::VectorXd bias;
 layer::layer(int input_size, int output_size)
 :gen(rd()), dis(-1.0, 1.0)
 {
