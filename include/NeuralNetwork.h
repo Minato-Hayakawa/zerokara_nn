@@ -27,7 +27,7 @@ class NeuralNetwork : public Utils{
         void Eigen_to_FFTW(
             Eigen::MatrixXd &eigen_matrix,
             fftw_complex *fftw_array);
-        Eigen::MatrixXd FFTW_to_Eigen(
+        Eigen::MatrixXcd FFTW_to_Eigen(
             fftw_complex *fftw_array,
             Eigen::MatrixXd &eigen_matrix,
             int rows, int cols);
