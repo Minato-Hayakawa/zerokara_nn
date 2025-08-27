@@ -83,9 +83,9 @@ Eigen::MatrixXd NeuralNetwork::perfom_fft(Eigen::MatrixXd &input_Matrix){
     return fft_result;
 }
 
-Eigen::MatrixXcd NeuralNetwork::multiply_fft_results(
-    Eigen::MatrixXcd &fft_image,
-    Eigen::MatrixXcd &fft_kernel) {
+Eigen::MatrixXd NeuralNetwork::multiply_fft_results(
+    Eigen::MatrixXd &fft_image,
+    Eigen::MatrixXd &fft_kernel) {
     return fft_image.cwiseProduct(fft_kernel);
 }
 

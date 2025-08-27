@@ -33,7 +33,7 @@ class NeuralNetwork : public Utils{
             int rows, int cols);
         Eigen::MatrixXd perfom_fft(Eigen::MatrixXd &input_Matrix);
         Eigen::MatrixXcd multiply_fft_results(
-            Eigen::MatrixXcd &fft_image,
-            Eigen::MatrixXcd &fft_kernel);
+            Eigen::MatrixXd &fft_image,
+            Eigen::MatrixXd &fft_kernel);
         Eigen::MatrixXd perform_ifft(Eigen::MatrixXd &fft_result);
 };
