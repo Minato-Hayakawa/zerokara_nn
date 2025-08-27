@@ -22,7 +22,7 @@ void Utils::addition(
 void Utils::multiplication(
     Eigen::VectorXd &inVector1,
     Eigen::MatrixXd &inMatrix,
-    Eigen::MatrixXd &outVector
+    Eigen::VectorXd &outVector
 ){
     outVector = inVector1*inMatrix;
 }
