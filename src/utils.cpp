@@ -26,17 +26,3 @@ void Utils::multiplication(
 ){
     outVector = inVector1*inMatrix;
 }
-
-double Utils::sum(Eigen::VectorXd &inVector){
-    double sum = 0;
-    for (int i=0;i<inVector.size();i++){
-        sum += inVector[i];
-    }return sum;
-}
-double Utils::ave(Eigen::VectorXd &inVector){
-    return sum(inVector)/inVector.size();
-}
-double Utils::rms(Eigen::VectorXd &inVector){
-    Eigen::VectorXd squared_Vector=inVector.array().square();
-    return sqrt(ave(squared_Vector));
-}

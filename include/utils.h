@@ -21,8 +21,4 @@ class Utils
                 Eigen::VectorXd &inVector1,
                 Eigen::MatrixXd &inMatrix,
                 Eigen::VectorXd &outVector);
-
-            double sum(Eigen::VectorXd &inVector);
-            double ave(Eigen::VectorXd &inVector);
-            double rms(Eigen::VectorXd &inVector);
     };
