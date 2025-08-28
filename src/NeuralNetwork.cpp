@@ -118,4 +118,16 @@ Eigen::MatrixXcd NeuralNetwork::perform_ifft(
     fftw_free(out);
 
     return ifft_result;
+
+Eigen::MatrixXd fft_convolution(
+    Eigen::MatrixXd &image,
+    Eigen::MatrixXd &kernel){
+        auto padded_image = zero_padding(image, kernel);
+        auto padded_kernel = zero_padding(kernel, image);
+        auto fft_image = perfom_fft(padded_image);
+        auto fft_kernel = perform_ifft(padded_kernel);
+        auto fft_mult = multiply_fft_results(fft_image, fft_kernel);
+        return perform_ifft(fft_mult);
+        
+}
 }

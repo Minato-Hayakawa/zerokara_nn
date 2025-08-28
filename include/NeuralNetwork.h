@@ -36,4 +36,7 @@ class NeuralNetwork : public Utils{
             Eigen::MatrixXcd &fft_image,
             Eigen::MatrixXcd &fft_kernel);
         Eigen::MatrixXd perform_ifft(Eigen::MatrixXcd &fft_result);
+        Eigen::MatrixXd fft_convolution(
+            Eigen::MatrixXd &image,
+            Eigen::MatrixXd &kernel);
 };
