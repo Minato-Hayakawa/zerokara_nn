@@ -14,6 +14,7 @@ class NeuralNetwork : public Utils{
     public:
 
         void dense(
+            layer &l,
             Eigen::VectorXd &inVector,
             Eigen::VectorXd &outVector,
             void (Utils::*method_ptr)(

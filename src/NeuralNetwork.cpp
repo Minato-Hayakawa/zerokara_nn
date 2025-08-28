@@ -1,7 +1,9 @@
 #include "NeuralNetwork.h"
 #include "utils.h"
+#include "layer.h"
 
 void NeuralNetwork::dense(
+    layer &l,
     Eigen::VectorXd &inVector,
     Eigen::VectorXd &outVector,
     void (Utils::*method_ptr)(
@@ -9,8 +11,8 @@ void NeuralNetwork::dense(
         Eigen::VectorXd&),
     int units)
     {
-    multiplication(inVector,layer::weights,outVector);
-    addition(outVector,layer::bias,outVector);
+    multiplication(inVector,l.weights,outVector);
+    addition(outVector,l.bias,outVector);
     (this->*method_ptr)(outVector, outVector);
     }
 Eigen::MatrixXd NeuralNetwork::zero_padding(
