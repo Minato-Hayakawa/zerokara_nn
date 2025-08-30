@@ -30,5 +30,5 @@ void Utils::multiplication(
 ){
     assert(inVector.size() == inMatrix.cols());
     outVector.resize(inVector.size());
-    outVector = inVector*inMatrix;
+    outVector = inMatrix*inVector;
 }
