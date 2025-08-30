@@ -11,8 +11,8 @@ void NeuralNetwork::dense(
         Eigen::VectorXd&),
     int units)
     {
-    multiplication(inVector,l.weights,outVector);
-    addition(outVector,l.bias,outVector);
+    multiplication(l.weights,inVector,outVector);
+    addition(l.bias,outVector,outVector);
     (this->*method_ptr)(outVector, outVector);
     }
 Eigen::MatrixXd NeuralNetwork::zero_padding(
