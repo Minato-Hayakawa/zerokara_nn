@@ -1,6 +1,6 @@
 #include "layer.h"
 
-layer::layer(int input_size, int output_size)
+layer::layer(const int input_size, const int output_size)
 :gen(rd()), dis(-1.0, 1.0)
 {
     weights = Eigen::MatrixXd::NullaryExpr(output_size,
