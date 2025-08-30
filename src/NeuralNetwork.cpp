@@ -125,7 +125,7 @@ Eigen::MatrixXd fft_convolution(
         auto padded_image = zero_padding(image, kernel);
         auto padded_kernel = zero_padding(kernel, image);
         auto fft_image = perfom_fft(padded_image);
-        auto fft_kernel = perform_ifft(padded_kernel);
+        auto fft_kernel = perform_fft(padded_kernel);
         auto fft_mult = multiply_fft_results(fft_image, fft_kernel);
         return perform_ifft(fft_mult);
         
