@@ -7,11 +7,10 @@ void NeuralNetwork::dense(
     Eigen::VectorXd &inVector,
     Eigen::VectorXd &outVector,
     void (Utils::*method_ptr)(
-        Eigen::VectorXd&,
-        Eigen::VectorXd&),
+        Eigen::VectorXd &,
+        Eigen::VectorXd &),
     const int units)
     {
-    l.layer(inVector.size(),units);
     multiplication(l.weights,inVector,outVector);
     addition(l.bias,outVector,outVector);
     (this->*method_ptr)(outVector, outVector);
@@ -43,8 +42,8 @@ void NeuralNetwork::Eigen_to_FFTW(
     int rows = eigen_matrix.rows();
     int cols = eigen_matrix.cols();
 
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < cols; ++j) {
+    for (int j = 0; j < rows; ++i) {
+        for (int i = 0; i < cols; ++j) {
             fftw_array[i * cols + j][0] = eigen_matrix(i, j);
             fftw_array[i * cols + j][1] = 0;                 
         }
