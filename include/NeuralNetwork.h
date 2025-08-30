@@ -4,7 +4,7 @@
 #include <fftw3.h>
 
 class NeuralNetwork : public Utils{
-    
+
     public:
 
         void dense(
@@ -14,7 +14,7 @@ class NeuralNetwork : public Utils{
             void (Utils::*method_ptr)(
                 Eigen::VectorXd&,
                 Eigen::VectorXd&),
-            int units);
+            const int units);
         
         Eigen::MatrixXd zero_padding(
             Eigen::MatrixXd &input_image,
@@ -24,7 +24,7 @@ class NeuralNetwork : public Utils{
             fftw_complex *fftw_array);
         Eigen::MatrixXcd FFTW_to_Eigen(
             fftw_complex *fftw_array,
-            int rows, int cols);
+            const int rows, const int cols);
         Eigen::MatrixXd perfom_fft(Eigen::MatrixXd &input_Matrix);
         Eigen::MatrixXcd multiply_fft_results(
             Eigen::MatrixXcd &fft_image,
