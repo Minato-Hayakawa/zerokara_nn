@@ -19,12 +19,16 @@ void Utils::addition(
     Eigen::VectorXd &inVector2,
     Eigen::VectorXd &outVector
 ){
+    assert(inVector1.size() == inVector2.size());
+    outVector.resize(inVector1.size());
     outVector = inVector1+inVector2;
 }
 void Utils::multiplication(
-    Eigen::VectorXd &inVector1,
+    Eigen::VectorXd &inVector,
     Eigen::MatrixXd &inMatrix,
     Eigen::VectorXd &outVector
 ){
-    outVector = inVector1*inMatrix;
+    assert(inVector.size() == inMatrix.cols());
+    outVector.resize(inVector.size());
+    outVector = inVector*inMatrix;
 }
