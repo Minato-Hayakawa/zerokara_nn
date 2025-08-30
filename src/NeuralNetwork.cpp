@@ -63,7 +63,7 @@ Eigen::MatrixXcd NeuralNetwork::FFTW_to_Eigen(
     return eigen_matrix;
 }
 
-Eigen::MatrixXd NeuralNetwork::perfom_fft(Eigen::MatrixXd &input_Matrix){
+Eigen::MatrixXd NeuralNetwork::perform_fft(Eigen::MatrixXd &input_Matrix){
     int rows = input_Matrix.rows();
     int cols = input_Matrix.cols();
 
@@ -125,7 +125,7 @@ Eigen::MatrixXd fft_convolution(
     Eigen::MatrixXd &kernel){
         auto padded_image = zero_padding(image, kernel);
         auto padded_kernel = zero_padding(kernel, image);
-        auto fft_image = perfom_fft(padded_image);
+        auto fft_image = perform_fft(padded_image);
         auto fft_kernel = perform_fft(padded_kernel);
         auto fft_mult = multiply_fft_results(fft_image, fft_kernel);
         return perform_ifft(fft_mult);
