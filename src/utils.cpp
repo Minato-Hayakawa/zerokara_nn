@@ -19,8 +19,6 @@ void Utils::addition(
     Eigen::VectorXd &inVector2,
     Eigen::VectorXd &outVector
 ){
-    assert(inVector1.size() == inVector2.size());
-    outVector.resize(inVector1.size());
     outVector = inVector1+inVector2;
 }
 void Utils::multiplication(
@@ -28,7 +26,5 @@ void Utils::multiplication(
     Eigen::MatrixXd &inMatrix,
     Eigen::VectorXd &outVector
 ){
-    assert(inVector.size() == inMatrix.cols());
-    outVector.resize(inVector.size());
     outVector = inMatrix*inVector;
 }
