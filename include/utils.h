@@ -15,6 +15,9 @@ class Utils
             double CrossEntropy(
                 Eigen::VectorXd &TargetVector,
                 Eigen::VectorXd outVector);
+            Eigen::VectorXd output_delta(
+                Eigen::VectorXd &y,
+                Eigen::VectorXd &t);
             void addition(
                 Eigen::VectorXd &inVector1,
                 Eigen::VectorXd &inVector2,
