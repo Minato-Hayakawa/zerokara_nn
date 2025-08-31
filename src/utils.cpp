@@ -22,6 +22,13 @@ double CrossEntropy(
     return -(TargetVector.array()*log_out).sum();
 }
 
+Eigen::VectorXd output_delta(
+    Eigen::VectorXd &y,
+    Eigen::VectorXd &t
+){
+    return y-t;
+}
+
 void Utils::addition(
     Eigen::VectorXd &inVector1,
     Eigen::VectorXd &inVector2,
