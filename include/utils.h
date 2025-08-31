@@ -12,7 +12,9 @@ class Utils
             void Sigmoid(
                 Eigen::VectorXd &inVector,
                 Eigen::VectorXd &outVector);
-
+            double CrossEntropy(
+                Eigen::VectorXd &TargetVector,
+                Eigen::VectorXd outVector);
             void addition(
                 Eigen::VectorXd &inVector1,
                 Eigen::VectorXd &inVector2,
