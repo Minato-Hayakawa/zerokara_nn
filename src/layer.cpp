@@ -15,6 +15,6 @@ void layer::update_params(
     const Eigen::VectorXd &dB,
     const double learning_rate)
 {
-    weights+=learning_rate*dW;
-    bias+=learning_rate*dB;
+    weights-=learning_rate*dW;
+    bias-=learning_rate*dB;
 }
