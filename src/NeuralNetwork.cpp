@@ -15,6 +15,19 @@ void NeuralNetwork::dense(
     addition(l.bias,outVector,outVector);
     (this->*method_ptr)(outVector, outVector);
     }
+
+void dense_backward(
+    layer &l,
+    const Eigen::VectorXd inVector,
+    const Eigen::VectorXd delta,
+    Eigen::VectorXd &dW,
+    Eigen::VectorXd &dB,
+    double delta_prev
+){
+    dW = delta * inVector.transpose();
+    dB = delta;
+    delta_prev = l.weights * delta.transpose();
+}
 Eigen::MatrixXd NeuralNetwork::zero_padding(
     Eigen::MatrixXd &input_image,
     Eigen::MatrixXd &kernel
