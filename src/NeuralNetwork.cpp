@@ -26,7 +26,7 @@ void dense_backward(
 ){
     dW = delta * inVector.transpose();
     dB = delta;
-    delta_prev = l.weights * delta.transpose();
+    delta_prev = l.weights.transpose() * delta;
 }
 Eigen::MatrixXd NeuralNetwork::zero_padding(
     Eigen::MatrixXd &input_image,
