@@ -3,3 +3,6 @@
 
 # fftw library
 fftw/
+
+# opencv library
+opencv/
