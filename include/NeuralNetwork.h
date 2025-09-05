@@ -25,11 +25,11 @@ class NeuralNetwork : public Utils{
         Eigen::MatrixXcd FFTW_to_Eigen(
             fftw_complex *fftw_array,
             const int rows, const int cols);
-        Eigen::MatrixXd perform_fft(Eigen::MatrixXd &input_Matrix);
+        Eigen::MatrixXd peform_fft(Eigen::MatrixXd &input_Matrix);
         Eigen::MatrixXcd multiply_fft_results(
             Eigen::MatrixXcd &fft_image,
             Eigen::MatrixXcd &fft_kernel);
-        Eigen::MatrixXcd perform_ifft(Eigen::MatrixXcd &fft_result);
+        Eigen::MatrixXcd peform_ifft(Eigen::MatrixXcd &fft_result);
         Eigen::MatrixXd fft_convolution(
             Eigen::MatrixXd &image,
             Eigen::MatrixXd &kernel);
