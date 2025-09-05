@@ -55,10 +55,10 @@ void NeuralNetwork::Eigen_to_FFTW(
     int rows = eigen_matrix.rows();
     int cols = eigen_matrix.cols();
 
-    for (int j = 0; j < rows; ++i) {
-        for (int i = 0; i < cols; ++j) {
-            fftw_array[i * cols + j][0] = eigen_matrix(i, j);
-            fftw_array[i * cols + j][1] = 0;                 
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            fftw_array[j * cols + i][0] = eigen_matrix(j, i);
+            fftw_array[j * cols + i][1] = 0;                 
         }
     }
     }
