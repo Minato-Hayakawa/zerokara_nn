@@ -19,11 +19,11 @@ class Utils
                 Eigen::VectorXd &y,
                 Eigen::VectorXd &t);
             void addition(
-                Eigen::VectorXd &inVector1,
-                Eigen::VectorXd &inVector2,
+                const Eigen::VectorXd &inVector1,
+                const Eigen::VectorXd &inVector2,
                 Eigen::VectorXd &outVector);
             void multiplication(
-                Eigen::VectorXd &inVector1,
-                Eigen::MatrixXd &inMatrix,
+                const Eigen::VectorXd &inVector1,
+                const Eigen::MatrixXd &inMatrix,
                 Eigen::VectorXd &outVector);
     };

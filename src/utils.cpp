@@ -30,15 +30,15 @@ Eigen::VectorXd Utils::output_delta(
 }
 
 void Utils::addition(
-    Eigen::VectorXd &inVector1,
-    Eigen::VectorXd &inVector2,
+    const Eigen::VectorXd &inVector1,
+    const Eigen::VectorXd &inVector2,
     Eigen::VectorXd &outVector
 ){
     outVector = inVector1+inVector2;
 }
 void Utils::multiplication(
-    Eigen::VectorXd &inVector,
-    Eigen::MatrixXd &inMatrix,
+    const Eigen::VectorXd &inVector,
+    const Eigen::MatrixXd &inMatrix,
     Eigen::VectorXd &outVector
 ){
     outVector = inMatrix*inVector;

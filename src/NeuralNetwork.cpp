@@ -11,7 +11,7 @@ void NeuralNetwork::dense(
         Eigen::VectorXd &),
     const int units)
     {
-    Utils::multiplication(inVector,l.weights,outVector);
+    multiplication(inVector,l.weights,outVector);
     addition(l.bias,outVector,outVector);
     (this->*method_ptr)(outVector, outVector);
     }
@@ -22,7 +22,7 @@ void dense_backward(
     const Eigen::VectorXd delta,
     Eigen::MatrixXd &dW,
     Eigen::VectorXd &dB,
-    double delta_prev
+    Eigen::VectorXd delta_prev
 ){
     dW = delta * inVector.transpose();
     dB = delta;
@@ -136,10 +136,10 @@ Eigen::MatrixXcd NeuralNetwork::perform_ifft(
 Eigen::MatrixXcd NeuralNetwork::fft_convolution(
     const Eigen::MatrixXd &image,
     const Eigen::MatrixXd &kernel){
-        const Eigen::MatrixXd padded_image = zero_padding(&image, &kernel);
-        const Eigen::MatrixXd padded_kernel = zero_padding(&kernel, &image);
-        const Eigen::MatrixXd fft_image = perform_fft(&padded_image);
-        const Eigen::MatrixXd fft_kernel = perform_fft(&padded_kernel);
-        const Eigen::MatrixXcd fft_mult = multiply_fft_results(&fft_image, &fft_kernel);
+        const Eigen::MatrixXd padded_image = zero_padding(image, kernel);
+        const Eigen::MatrixXd padded_kernel = zero_padding(kernel, image);
+        const Eigen::MatrixXd fft_image = perform_fft(padded_image);
+        const Eigen::MatrixXd fft_kernel = perform_fft(padded_kernel);
+        const Eigen::MatrixXcd fft_mult = multiply_fft_results(fft_image, fft_kernel);
         return perform_ifft(fft_mult);
         }
