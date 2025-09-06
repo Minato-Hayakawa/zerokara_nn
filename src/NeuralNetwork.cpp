@@ -20,7 +20,7 @@ void dense_backward(
     layer &l,
     const Eigen::VectorXd inVector,
     const Eigen::VectorXd delta,
-    Eigen::VectorXd &dW,
+    Eigen::MatrixXd &dW,
     Eigen::VectorXd &dB,
     double delta_prev
 ){
