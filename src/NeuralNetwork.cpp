@@ -75,7 +75,7 @@ Eigen::MatrixXcd NeuralNetwork::FFTW_to_Eigen(
     return eigen_matrix;
 }
 
-Eigen::MatrixXd NeuralNetwork::peform_fft(const Eigen::MatrixXd &input_Matrix){
+Eigen::MatrixXd NeuralNetwork::perform_fft(const Eigen::MatrixXd &input_Matrix){
     int rows = input_Matrix.rows();
     int cols = input_Matrix.cols();
 
@@ -100,7 +100,7 @@ Eigen::MatrixXcd NeuralNetwork::multiply_fft_results(
     return fft_image.cwiseProduct(fft_kernel);
 }
 
-Eigen::MatrixXcd NeuralNetwork::peform_ifft(
+Eigen::MatrixXcd NeuralNetwork::perform_ifft(
     const Eigen::MatrixXcd &fft_result) {
     int rows = fft_result.rows();
     int cols = fft_result.cols();
@@ -138,8 +138,8 @@ Eigen::MatrixXcd NeuralNetwork::fft_convolution(
     const Eigen::MatrixXd &kernel){
         const Eigen::MatrixXd padded_image = zero_padding(&image, &kernel);
         const Eigen::MatrixXd padded_kernel = zero_padding(&kernel, &image);
-        const Eigen::MatrixXd fft_image = peform_fft(&padded_image);
-        const Eigen::MatrixXd fft_kernel = peform_fft(&padded_kernel);
+        const Eigen::MatrixXd fft_image = perform_fft(&padded_image);
+        const Eigen::MatrixXd fft_kernel = perform_fft(&padded_kernel);
         const Eigen::MatrixXcd fft_mult = multiply_fft_results(&fft_image, &fft_kernel);
-        return peform_ifft(fft_mult);
+        return perform_ifft(fft_mult);
         }
