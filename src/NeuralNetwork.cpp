@@ -11,7 +11,7 @@ void NeuralNetwork::dense(
         Eigen::VectorXd &),
     const int units)
     {
-    Utils::multiplication(l.weights,inVector,outVector);
+    Utils::multiplication(inVector,l.weights,outVector);
     addition(l.bias,outVector,outVector);
     (this->*method_ptr)(outVector, outVector);
     }
