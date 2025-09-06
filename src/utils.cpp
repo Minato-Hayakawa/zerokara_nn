@@ -14,7 +14,7 @@ void Utils::Sigmoid(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
     }
 }
 
-double CrossEntropy(
+double Utils::CrossEntropy(
     Eigen::VectorXd &TargetVector,
     Eigen::VectorXd outVector){
     double epsilon = 1e-12;
@@ -22,7 +22,7 @@ double CrossEntropy(
     return -(TargetVector.array()*log_out).sum();
 }
 
-Eigen::VectorXd output_delta(
+Eigen::VectorXd Utils::output_delta(
     Eigen::VectorXd &y,
     Eigen::VectorXd &t
 ){
