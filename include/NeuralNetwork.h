@@ -19,8 +19,8 @@ class NeuralNetwork : public Utils{
             layer &l,
             const Eigen::VectorXd inVector,
             const Eigen::VectorXd delta,
-            Eigen::MatrixXd &dW,
-            Eigen::VectorXd &dB,
+            Eigen::MatrixXd *dWptr,
+            Eigen::VectorXd *dBptr,
             Eigen::VectorXd delta_prev);
         
         Eigen::MatrixXd zero_padding(

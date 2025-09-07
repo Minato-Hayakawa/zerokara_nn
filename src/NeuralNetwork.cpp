@@ -19,12 +19,12 @@ void NeuralNetwork::dense_backward(
     layer &l,
     const Eigen::VectorXd inVector,
     const Eigen::VectorXd delta,
-    Eigen::MatrixXd &dW,
-    Eigen::VectorXd &dB,
+    Eigen::MatrixXd *dWptr,
+    Eigen::VectorXd *dBptr,
     Eigen::VectorXd delta_prev
 ){
-    dW = delta * inVector.transpose();
-    dB = delta;
+    *dWptr = delta * inVector.transpose();
+    *dBptr = delta;
     delta_prev = l.weights.transpose() * delta;
 }
 Eigen::MatrixXd NeuralNetwork::zero_padding(
