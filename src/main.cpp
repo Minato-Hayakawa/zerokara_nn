@@ -32,66 +32,43 @@ int main(){
 
     layer hiddenlayer(inputsize, hiddensize);
     layer outputlayer(hiddensize, outputsize);
-    layer *hddnlyrptr = &hiddenlayer;
-    layer *outlyrptr = &outputlayer;
+    layer *hlayerptr = &hiddenlayer;
+    layer *olayerptr = &outputlayer;
 
     for (int i=0; i<epoch; i++){
         NNObj.dense(
-            lyrptr,
+            hlayerptr,
             inVector,
             PredictedProbability,
             ReLUptr);
+        delta_hidden = NNObj.output_delta(GroundTruth, PredictedProbability);
+
         NNObj.dense(
-            lyrptr,
+            olayerptr,
             inVector,
             PredictedProbability,
             ReLUptr);
-        NNObj.dense(
-            lyrptr,
-            inVector,
-            PredictedProbability,
-            ReLUptr);
-        NNObj.dense(
-            lyrptr,
-            inVector,
-            PredictedProbability,
-            Sigmoidptr);
+            delta_output = NNObj.output_delta(GroundTruth, PredictedProbability);
+
         NNObj.dense_backward(
-            lyrptr,
+            hlayerptr,
             PredictedProbability,
-            deltaptr,
-            dWptr,
-            dBptr,
+            delta_hptr,
+            dW_hptr,
+            dB_hptr,
             NNObj.output_delta(GroundTruth, PredictedProbability)
         );
-        lyrObj.update_params(dWptr, dBptr, learnigrate);
+        hiddenlayer.update_params(dW_hptr, dB_hptr, learnigrate);
+
         NNObj.dense_backward(
-            lyrptr,
+            olayerptr,
             PredictedProbability,
-            deltaptr,
-            dWptr,
-            dBptr,
+            delta_optr,
+            dW_optr,
+            dB_optr,
             NNObj.output_delta(GroundTruth, PredictedProbability)
         );
-        lyrObj.update_params(dWptr, dBptr, learnigrate);
-        NNObj.dense_backward(
-            lyrptr,
-            PredictedProbability,
-            deltaptr,
-            dWptr,
-            dBptr,
-            NNObj.output_delta(GroundTruth, PredictedProbability)
-        );
-        lyrObj.update_params(dWptr, dBptr, learnigrate);
-        NNObj.dense_backward(
-            lyrptr,
-            PredictedProbability,
-            deltaptr,
-            dWptr,
-            dBptr,
-            NNObj.output_delta(GroundTruth, PredictedProbability)
-        );
-        lyrObj.update_params(&dW, &dB, learnigrate);
+        outputlayer.update_params(dW_optr, dB_optr, learnigrate);
         printf("CrossEntropy = %d\n", NNObj.CrossEntropy(GroundTruth, PredictedProbability));
     }
     return 0;
