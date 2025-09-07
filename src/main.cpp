@@ -5,9 +5,10 @@
 int main(){
     NeuralNetwork NNObj;
     Utils UtlsObj;
-    typedef void (Utils::*ReLUptr)(Eigen::MatrixXd inVector, Eigen::MatrixXd outVector);
-    typedef void (Utils::*Sigmoidptr)(Eigen::MatrixXd inVector, Eigen::MatrixXd outVector);
-    
+    typedef void (Utils::*ReLU)(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector);
+    typedef void (Utils::*Sigmoid)(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector);
+    ReLU ReLUptr = &Utils::ReLU;
+    Sigmoid Sigmoidptr = &Utils::Sigmoid;
     Eigen::VectorXd inVector = NNObj.fft_convolution(image, kernel);
     Eigen::VectorXd PredictedProbability;
     Eigen::VectorXd GroundTruth;
@@ -17,11 +18,27 @@ int main(){
     const int outputsize = PredictedProbability.size();
 
     layer lyrObj(inputsize, outputsize);
+
     for (int i=0; i<epoch; i++){
-        NNObj.dense(&lyrObj, inVector, PredictedProbability, void (Utils::ReLU));
-        NNObj.dense();
-        NNObj.dense();
-        NNObj.dense();
-        UtlsObj.CrossEntropy(PredictedProbability,GroundTruth)
+        NNObj.dense(
+            &lyrObj,
+            inVector,
+            PredictedProbability,
+            ReLUptr);
+        NNObj.dense(
+            &lyrObj,
+            inVector,
+            PredictedProbability,
+            ReLUptr);
+        NNObj.dense(
+            &lyrObj,
+            inVector,
+            PredictedProbability,
+            ReLUptr);
+        NNObj.dense(
+            &lyrObj,
+            inVector,
+            PredictedProbability,
+            ReLUptr);
     }
 }
