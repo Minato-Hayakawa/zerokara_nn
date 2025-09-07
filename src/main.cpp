@@ -22,12 +22,13 @@ int main(){
 
     Eigen::MatrixXd dW_hidden, dW_output;
     Eigen::VectorXd dB_hidden, dB_output;
-    Eigen::VectorXd delta = {};
+    Eigen::VectorXd delta_hidden, delta_output;
     Eigen::MatrixXd *dW_hptr = &dW_hidden;
     Eigen::MatrixXd *dW_optr = &dW_output;
     Eigen::VectorXd *dB_hptr = &dB_hidden;
     Eigen::VectorXd *dB_optr = &dB_output;
-    Eigen::VectorXd *deltaptr = &delta;
+    Eigen::VectorXd *delta_hptr = &delta_hidden;
+    Eigen::VectorXd *delta_optr = &delta_output;
 
     layer hiddenlayer(inputsize, hiddensize);
     layer outputlayer(hiddensize, outputsize);
@@ -93,4 +94,5 @@ int main(){
         lyrObj.update_params(&dW, &dB, learnigrate);
         printf("CrossEntropy = %d\n", NNObj.CrossEntropy(GroundTruth, PredictedProbability));
     }
+    return 0;
 }
