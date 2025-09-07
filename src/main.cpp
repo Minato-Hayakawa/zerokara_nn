@@ -19,6 +19,7 @@ int main(){
     const int hiddensize = 128;
     const int outputsize = PredictedProbability.size();
     const double learnigrate = 0.001;
+    double loss;
 
     Eigen::MatrixXd dW_hidden, dW_output;
     Eigen::VectorXd dB_hidden, dB_output;
@@ -69,7 +70,9 @@ int main(){
             NNObj.output_delta(GroundTruth, PredictedProbability)
         );
         outputlayer.update_params(dW_optr, dB_optr, learnigrate);
-        printf("CrossEntropy = %d\n", NNObj.CrossEntropy(GroundTruth, PredictedProbability));
+
+        loss = NNObj.CrossEntropy(GroundTruth, PredictedProbability);
+        std::cout << "Epoch =" << i+1 << "CrossEntropy = " << loss<< std::endl;
     }
     return 0;
 }
