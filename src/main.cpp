@@ -19,7 +19,10 @@ int main(){
 
     Eigen::MatrixXd dW = {};
     Eigen::VectorXd dB = {};
-    Eigen::MatrixXd delta = {};
+    Eigen::VectorXd delta = {};
+    Eigen::MatrixXd *dWptr = &dW;
+    Eigen::VectorXd *dBptr = &dB;
+    Eigen::VectorXd *deltaptr = &delta;
 
     layer lyrObj(inputsize, outputsize);
 
@@ -46,35 +49,40 @@ int main(){
             ReLUptr);
         NNObj.dense_backward(
             &lyrObj,
-            delta,
-            &dW,
-            &dB,
+            PredictedProbability,
+            deltaptr,
+            dWptr,
+            dBptr,
             NNObj.output_delta(GroundTruth, PredictedProbability)
         );
-        lyrObj.update_params(&dW, &dB, learnigrate);
+        lyrObj.update_params(dWptr, dBptr, learnigrate);
         NNObj.dense_backward(
             &lyrObj,
-            delta,
-            &dW,
-            &dB,
+            PredictedProbability,
+            deltaptr,
+            dWptr,
+            dBptr,
             NNObj.output_delta(GroundTruth, PredictedProbability)
         );
-        lyrObj.update_params(&dW, &dB, learnigrate);
+        lyrObj.update_params(dWptr, dBptr, learnigrate);
         NNObj.dense_backward(
             &lyrObj,
-            delta,
-            &dW,
-            &dB,
+            PredictedProbability,
+            deltaptr,
+            dWptr,
+            dBptr,
             NNObj.output_delta(GroundTruth, PredictedProbability)
         );
-        lyrObj.update_params(&dW, &dB, learnigrate);
+        lyrObj.update_params(dWptr, dBptr, learnigrate);
         NNObj.dense_backward(
             &lyrObj,
-            delta,
-            &dW,
-            &dB,
+            PredictedProbability,
+            deltaptr,
+            dWptr,
+            dBptr,
             NNObj.output_delta(GroundTruth, PredictedProbability)
         );
         lyrObj.update_params(&dW, &dB, learnigrate);
+        printf("CrossEntropy = %d\n", NNObj.CrossEntropy(GroundTruth, PredictedProbability));
     }
 }
