@@ -18,7 +18,7 @@ class NeuralNetwork : public Utils{
         void dense_backward(
             layer &l,
             const Eigen::VectorXd inVector,
-            const Eigen::VectorXd delta,
+            Eigen::VectorXd *deltaptr,
             Eigen::MatrixXd *dWptr,
             Eigen::VectorXd *dBptr,
             Eigen::VectorXd delta_prev);
