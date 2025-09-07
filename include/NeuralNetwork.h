@@ -13,7 +13,15 @@ class NeuralNetwork : public Utils{
             Eigen::VectorXd &outVector,
             void (Utils::*method_ptr)(
                 Eigen::VectorXd &,
-                Eigen::VectorXd &),);
+                Eigen::VectorXd &));
+        
+        void dense_backward(
+            layer &l,
+            const Eigen::VectorXd inVector,
+            const Eigen::VectorXd delta,
+            Eigen::MatrixXd &dW,
+            Eigen::VectorXd &dB,
+            Eigen::VectorXd delta_prev);
         
         Eigen::MatrixXd zero_padding(
             const Eigen::MatrixXd &input_image,

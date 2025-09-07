@@ -8,14 +8,14 @@ void NeuralNetwork::dense(
     Eigen::VectorXd &outVector,
     void (Utils::*method_ptr)(
         Eigen::VectorXd &,
-        Eigen::VectorXd &),)
+        Eigen::VectorXd &))
     {
     multiplication(inVector,l.weights,outVector);
     addition(l.bias,outVector,outVector);
     (this->*method_ptr)(outVector, outVector);
     }
 
-void dense_backward(
+void NeuralNetwork::dense_backward(
     layer &l,
     const Eigen::VectorXd inVector,
     const Eigen::VectorXd delta,
