@@ -11,10 +11,10 @@ layer::layer(const int input_size, const int output_size)
 }
 
 void layer::update_params(
-    Eigen::MatrixXd *dW,
-    Eigen::VectorXd *dB,
+    Eigen::MatrixXd *dWptr,
+    Eigen::VectorXd *dBptr,
     const double learning_rate)
 {
-    weights-=learning_rate*(*dW);
-    bias-=learning_rate*(*dB);
+    weights-=learning_rate*(*dWptr);
+    bias-=learning_rate*(*dBptr);
 }

@@ -13,7 +13,7 @@ class layer
         
             layer(const int input_size, const int output_size);
             void update_params(
-                Eigen::MatrixXd *dW,
-                Eigen::VectorXd *dB,
+                Eigen::MatrixXd *dWptr,
+                Eigen::VectorXd *dBptr,
                 const double learning_rate);
     };
