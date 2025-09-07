@@ -8,7 +8,7 @@ class NeuralNetwork : public Utils{
     public:
 
         void dense(
-            layer &l,
+            layer *lyrptr,
             Eigen::VectorXd &inVector,
             Eigen::VectorXd &outVector,
             void (Utils::*method_ptr)(
@@ -16,7 +16,7 @@ class NeuralNetwork : public Utils{
                 Eigen::VectorXd &));
         
         void dense_backward(
-            layer &l,
+            layer *lyrptr,
             const Eigen::VectorXd inVector,
             Eigen::VectorXd *deltaptr,
             Eigen::MatrixXd *dWptr,
