@@ -1,25 +1,40 @@
 #include "layer.h"
 #include "NeuralNetwork.h"
 #include "utils.h"
-#include "opencv.hpp"
 
 int main(){
-    NeuralNetwork NNObj;
-    typedef void (Utils::*ReLU)(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector);
-    typedef void (Utils::*Sigmoid)(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector);
-    ReLU ReLUptr = &Utils::ReLU;
-    Sigmoid Sigmoidptr = &Utils::Sigmoid;
-    
-    Eigen::VectorXd inVector = NNObj.fft_convolution(image, kernel);
-    Eigen::VectorXd PredictedProbability;
-    Eigen::VectorXd GroundTruth;
 
     const int epoch = 10;
-    const int inputsize = inVector.size();
-    const int hiddensize = 128;
-    const int outputsize = PredictedProbability.size();
+    const int kernelsize = 3;
     const double learnigrate = 0.001;
     double loss;
+
+    NeuralNetwork NNObj;
+
+    Eigen::MatrixXd images;
+    NNObj.cv_to_Eigen(cv::imread("images"), images);
+
+    Eigen::VectorXd PredictedProbability;
+    Eigen::VectorXd GroundTruth = Eigen::VectorXd::Zero(2);
+    GroundTruth(0) = 1;
+
+    Eigen::MatrixXd kernel = Eigen::MatrixXd::Random(kernelsize, kernelsize);
+    Eigen::VectorXd conv_output = NNObj.fft_convolution(images, kernel);
+
+    typedef void (Utils::*ReLU)(Eigen::VectorXd &conv_output, Eigen::VectorXd &outVector);
+    typedef void (Utils::*Sigmoid)(Eigen::VectorXd &conv_output, Eigen::VectorXd &outVector);
+    ReLU ReLUptr = &Utils::ReLU;
+    Sigmoid Sigmoidptr = &Utils::Sigmoid;
+
+    const int inputsize = conv_output.size();
+    const int hiddensize = 128;
+    const int outputsize = PredictedProbability.size();
+
+
+    layer hiddenlayer(inputsize, hiddensize);
+    layer outputlayer(hiddensize, outputsize);
+    layer *hlayerptr = &hiddenlayer;
+    layer *olayerptr = &outputlayer;
 
     Eigen::MatrixXd dW_hidden, dW_output;
     Eigen::VectorXd dB_hidden, dB_output;
@@ -31,22 +46,17 @@ int main(){
     Eigen::VectorXd *delta_hptr = &delta_hidden;
     Eigen::VectorXd *delta_optr = &delta_output;
 
-    layer hiddenlayer(inputsize, hiddensize);
-    layer outputlayer(hiddensize, outputsize);
-    layer *hlayerptr = &hiddenlayer;
-    layer *olayerptr = &outputlayer;
-
     for (int i=0; i<epoch; i++){
         NNObj.dense(
             hlayerptr,
-            inVector,
+            conv_output,
             PredictedProbability,
             ReLUptr);
         delta_hidden = NNObj.output_delta(GroundTruth, PredictedProbability);
 
         NNObj.dense(
             olayerptr,
-            inVector,
+            conv_output,
             PredictedProbability,
             ReLUptr);
             delta_output = NNObj.output_delta(GroundTruth, PredictedProbability);
