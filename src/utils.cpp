@@ -1,6 +1,5 @@
 #include "utils.h"
 
-
 void Utils::ReLU(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
     outVector.resize(inVector.size());
     for (int i=0;i<inVector.size();i++){
@@ -42,4 +41,15 @@ void Utils::multiplication(
     Eigen::VectorXd &outVector
 ){
     outVector = inMatrix*inVector;
+}
+
+void Utils::cv_to_Eigen(
+    const cv::Mat &inMat,
+    Eigen::MatrixXd &outMat
+){
+    for (int i = 0; i < inMat.rows; ++i) {
+        for (int j = 0; j < inMat.cols; ++j) {
+            outMat(i, j) = static_cast<double>(inMat.at<uchar>(i, j));
+        }
+    }
 }

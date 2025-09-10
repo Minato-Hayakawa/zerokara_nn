@@ -2,6 +2,7 @@
 #include <numbers>
 #include <algorithm>
 #include <Eigen/Dense>
+#include "opencv.hpp"
 
 class Utils
     {
@@ -26,4 +27,7 @@ class Utils
                 const Eigen::VectorXd &inVector1,
                 const Eigen::MatrixXd &inMatrix,
                 Eigen::VectorXd &outVector);
+            void Utils::cv_to_Eigen(
+                const cv::Mat &inMat,
+                Eigen::MatrixXd &outMat);
     };
