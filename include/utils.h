@@ -28,6 +28,6 @@ class Utils
                 const Eigen::MatrixXd &inMatrix,
                 Eigen::VectorXd &outVector);
             void Utils::cv_to_Eigen(
-                const cv::Mat &inMat,
+                std::vector<cv::Mat> loaded_images,
                 Eigen::MatrixXd &outMat);
     };

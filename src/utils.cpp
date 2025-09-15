@@ -44,12 +44,36 @@ void Utils::multiplication(
 }
 
 void Utils::cv_to_Eigen(
-    const cv::Mat &inMat,
-    Eigen::MatrixXd &outMat
+    std::vector<cv::Mat> loaded_images,
+    Eigen::MatrixXd outMat
 ){
-    for (int i = 0; i < inMat.rows; ++i) {
-        for (int j = 0; j < inMat.cols; ++j) {
+    for (int i = 0; i < loaded_images[i].rows() ++i) {
+        for (int j = 0; j < loaded_images[j].cols(); ++j) {
             outMat(i, j) = static_cast<double>(inMat.at<uchar>(i, j));
         }
     }
+}
+
+Eigen::Matrix <double, 3, 3> Utils::load_images(std::string name){
+    std::string pathpattern = "images/*.jpg;";
+
+    std::vector<std::string> filenames;
+
+    cv::glob(pathpattern, filenames, false);
+    std::vector<cv::Mat> loaded_images;
+
+    for (const std::string &filename : filenames){
+        cv::Mat image = cv::imread(filename);
+
+        if (image.empty()){
+            std::cout << "画像ファイルが読み込めませんでした" << filename << std::endl;
+            continue;
+        }
+
+        loaded_images.push_back(image);
+    }
+
+    Eigen::Matrix<double, 3, 3> outMatrix;
+    Utils::cv_to_Eigen(loaded_images, outMatrix);
+    return outMatrix
 }
