@@ -50,24 +50,17 @@ int main(){
             conv_output,
             PredictedProbability,
             ReLUptr);
-        delta_hidden = NNObj.output_delta(GroundTruth, PredictedProbability);
 
         NNObj.dense(
             olayerptr,
             conv_output,
             PredictedProbability,
             Sigmoidptr);
-            delta_output = NNObj.output_delta(GroundTruth, PredictedProbability);
 
-        NNObj.dense_backward(
-            hlayerptr,
-            PredictedProbability,
-            delta_hptr,
-            dW_hptr,
-            dB_hptr,
-            NNObj.output_delta(GroundTruth, PredictedProbability)
-        );
-        hiddenlayer.update_params(dW_hptr, dB_hptr, learnigrate);
+        loss = NNObj.CrossEntropy(GroundTruth, PredictedProbability);
+        std::cout << "Epoch =" << i+1 << "CrossEntropy = " << loss<< std::endl;
+
+        delta_output = NNObj.output_delta(GroundTruth, PredictedProbability);
 
         NNObj.dense_backward(
             olayerptr,
@@ -75,12 +68,21 @@ int main(){
             delta_optr,
             dW_optr,
             dB_optr,
-            NNObj.output_delta(GroundTruth, PredictedProbability)
+            delta_output
         );
-        outputlayer.update_params(dW_optr, dB_optr, learnigrate);
 
-        loss = NNObj.CrossEntropy(GroundTruth, PredictedProbability);
-        std::cout << "Epoch =" << i+1 << "CrossEntropy = " << loss<< std::endl;
+        NNObj.dense_backward(
+            hlayerptr,
+            PredictedProbability,
+            nullptr,
+            dW_hptr,
+            dB_hptr,
+            *delta_optr
+        );
+        
+        outputlayer.update_params(dW_optr, dB_optr, learningrate);
+        outputlayer.update_params(dW_hptr, dB_hptr, learningrate);
+
     }
     return 0;
 }
