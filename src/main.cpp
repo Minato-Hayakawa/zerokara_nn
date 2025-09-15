@@ -6,30 +6,28 @@ int main(){
 
     const int epoch = 10;
     const int kernelsize = 3;
-    const double learnigrate = 0.001;
+    const int classes_num = 2;
+    const double learningrate = 0.001;
     double loss;
 
     NeuralNetwork NNObj;
 
     Eigen::MatrixXd images;
-    NNObj.cv_to_Eigen(cv::imread("images"), images);
+    NNObj.cv_to_Eigen(cv::imread("images/"), images);
 
-    Eigen::VectorXd PredictedProbability;
-    Eigen::VectorXd GroundTruth = Eigen::VectorXd::Zero(2);
+    Eigen::VectorXd PredictedProbability = Eigen::VectorXd::Zero(classes_num);
+    Eigen::VectorXd GroundTruth = Eigen::VectorXd::Zero(classes_num);
     GroundTruth(0) = 1;
 
     Eigen::MatrixXd kernel = Eigen::MatrixXd::Random(kernelsize, kernelsize);
     Eigen::VectorXd conv_output = NNObj.fft_convolution(images, kernel);
 
-    typedef void (Utils::*ReLU)(Eigen::VectorXd &conv_output, Eigen::VectorXd &outVector);
-    typedef void (Utils::*Sigmoid)(Eigen::VectorXd &conv_output, Eigen::VectorXd &outVector);
-    ReLU ReLUptr = &Utils::ReLU;
-    Sigmoid Sigmoidptr = &Utils::Sigmoid;
-
     const int inputsize = conv_output.size();
     const int hiddensize = 128;
-    const int outputsize = PredictedProbability.size();
+    const int outputsize = classes_num;
 
+    auto ReLUptr = &Utils::ReLU;
+    auto Sigmoidptr = &Utils::Sigmoid;
 
     layer hiddenlayer(inputsize, hiddensize);
     layer outputlayer(hiddensize, outputsize);
@@ -58,7 +56,7 @@ int main(){
             olayerptr,
             conv_output,
             PredictedProbability,
-            ReLUptr);
+            Sigmoidptr);
             delta_output = NNObj.output_delta(GroundTruth, PredictedProbability);
 
         NNObj.dense_backward(
