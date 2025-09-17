@@ -39,6 +39,6 @@ class NeuralNetwork : public Utils{
         Eigen::MatrixXcd NeuralNetwork::perform_ifft(
             const Eigen::MatrixXcd &fft_result);
         Eigen::Tensor <double, 3> fft_convolution(
-            const Eigen::MatrixXd &image,
-            const Eigen::MatrixXd &kernel);
+            const Eigen::Tensor <double, 3> &images,
+            const Eigen::Tensor <double, 3> &kernels);
 };
