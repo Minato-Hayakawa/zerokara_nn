@@ -23,9 +23,9 @@ class NeuralNetwork : public Utils{
             Eigen::VectorXd *dBptr,
             Eigen::VectorXd delta_prev);
         
-        Eigen::MatrixXd zero_padding(
-            const Eigen::MatrixXd &input_image,
-            const Eigen::MatrixXd &kernel);
+        Eigen::Tensor <double, 2> NeuralNetwork::zero_padding(
+            const Eigen::Tensor <double, 2> &input_image,
+            const Eigen::Tensor <double, 2> &kernel);
         void Eigen_to_FFTW(
             const Eigen::MatrixXd &eigen_matrix,
             fftw_complex *fftw_array);
