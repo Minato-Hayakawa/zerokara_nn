@@ -32,4 +32,7 @@ class Utils
                 const std::vector<cv::Mat> &images,
                 Eigen::Tensor<double, 3> &outTensor);
             Eigen::Tensor <double, 3> Utils::load_images();
+            Eigen::MatrixXd convert_tensor_to_matrix(
+                Eigen::Tensor<double, 2> inTensor,
+                Eigen::MatrixXd outMatrix);
     };
