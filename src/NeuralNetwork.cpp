@@ -132,13 +132,21 @@ Eigen::MatrixXcd NeuralNetwork::perform_ifft(
     return ifft_result;
 }
 
-Eigen::MatrixXcd NeuralNetwork::fft_convolution(
-    const Eigen::MatrixXd &image,
-    const Eigen::MatrixXd &kernel){
-        const Eigen::MatrixXd padded_image = zero_padding(image, kernel);
-        const Eigen::MatrixXd padded_kernel = zero_padding(kernel, image);
-        const Eigen::MatrixXd fft_image = perform_fft(padded_image);
-        const Eigen::MatrixXd fft_kernel = perform_fft(padded_kernel);
-        const Eigen::MatrixXcd fft_mult = multiply_fft_results(fft_image, fft_kernel);
-        return perform_ifft(fft_mult);
+Eigen::Tensor <double, 3> NeuralNetwork::fft_convolution(
+    const Eigen::Tensor <double, 3> &images,
+    const Eigen::Tensor <double, 3> &kernels){
+        const Eigen::Tensor <double, 3> outTensor;
+        const Eigen::MatrixXd image;
+        const Eigen::MatrixXd kernel;
+        for (int i = 0; i<images.size(); i++){
+            convert_tensor_to_matrix(images[i], image);
+            convert_tensor_to_matrix(kernels[i], kernel);
+            const Eigen::MatrixXd padded_image = zero_padding(image, kernel);
+            const Eigen::MatrixXd padded_kernel = zero_padding(kernel, image);
+            const Eigen::MatrixXd fft_image = perform_fft(padded_image);
+            const Eigen::MatrixXd fft_kernel = perform_fft(padded_kernel);
+            const Eigen::MatrixXcd fft_mult = multiply_fft_results(fft_image, fft_kernel);
+            convert_matrix_to_tensor(outTensor, perform_fft(fft_mult));
+        }
+        return outTensor;
         }
