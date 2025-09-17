@@ -80,3 +80,14 @@ Eigen::Tensor <double, 3> Utils::load_images(){
     Utils::convert_to_Eigen_tensor(loaded_images, outTensor);
     return outTensor;
 }
+
+Eigen::MatrixXd Utils::convert_tensor_to_matrix(
+    Eigen::Tensor<double, 2> inTensor,
+    Eigen::MatrixXd outMatrix
+){
+    for (int i=0; i<inTensor.dimensions()[0]; i++){
+        for (int j=0; j<inTensor.dimensions()[1]; j++){
+            outMatrix(i, j) = inTensor(i, j);
+        }
+    }
+}
