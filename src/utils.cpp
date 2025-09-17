@@ -43,18 +43,21 @@ void Utils::multiplication(
     outVector = inMatrix*inVector;
 }
 
-void Utils::cv_to_Eigen(
-    std::vector<cv::Mat> loaded_images,
-    Eigen::MatrixXd outMat
+void Utils::convert_to_Eigen_tensor(
+    const std::vector<cv::Mat> &images,
+    Eigen::Tensor<double, 3> &outTensor
 ){
-    for (int i = 0; i < loaded_images[i].rows() ++i) {
-        for (int j = 0; j < loaded_images[j].cols(); ++j) {
-            outMat(i, j) = static_cast<double>(inMat.at<uchar>(i, j));
+    outTensor.resize(images.size(), images[0].rows, images[0].cols);
+    for (int i = 0; i < images.size(); i++){
+        for (int j = 0; j < images[i].rows; j++) {
+            for (int k = 0; k < images[i].cols; k++) {
+                outTensor(i, j, k) = static_cast<double>(images[i].at<uchar>(i, j, k));
+            }
         }
     }
 }
 
-Eigen::Matrix <double, 3, 3> Utils::load_images(std::string name){
+Eigen::Tensor <double, 3> Utils::load_images(){
     std::string pathpattern = "images/*.jpg;";
 
     std::vector<std::string> filenames;
@@ -73,7 +76,7 @@ Eigen::Matrix <double, 3, 3> Utils::load_images(std::string name){
         loaded_images.push_back(image);
     }
 
-    Eigen::Matrix<double, 3, 3> outMatrix;
-    Utils::cv_to_Eigen(loaded_images, outMatrix);
-    return outMatrix
+    Eigen::Tensor <double, 3> outTensor;
+    Utils::convert_to_Eigen_tensor(loaded_images, outTensor);
+    return outTensor;
 }
