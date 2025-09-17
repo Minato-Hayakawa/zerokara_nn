@@ -31,4 +31,5 @@ class Utils
             void Utils::convert_to_Eigen_tensor(
                 const std::vector<cv::Mat> &images,
                 Eigen::Tensor<double, 3> &outTensor);
+            Eigen::Matrix <double, 3, 3> Utils::load_images();
     };
