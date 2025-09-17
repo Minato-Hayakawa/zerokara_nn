@@ -2,6 +2,7 @@
 #include <numbers>
 #include <algorithm>
 #include <Eigen/Dense>
+#include <unsupported/Eigen/CXX11/Tensor>
 #include "opencv.hpp"
 
 class Utils
@@ -27,7 +28,7 @@ class Utils
                 const Eigen::VectorXd &inVector1,
                 const Eigen::MatrixXd &inMatrix,
                 Eigen::VectorXd &outVector);
-            void Utils::cv_to_Eigen(
-                std::vector<cv::Mat> loaded_images,
-                Eigen::MatrixXd &outMat);
+            void Utils::convert_to_Eigen_tensor(
+                const std::vector<cv::Mat> &images,
+                Eigen::Tensor<double, 3> &outTensor);
     };
