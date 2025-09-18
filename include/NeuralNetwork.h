@@ -9,8 +9,8 @@ class NeuralNetwork : public Utils{
 
         void dense(
             layer *lyrptr,
-            Eigen::Tensor<double, 2> &inVector,
-            Eigen::Tensor<double, 2> &outVector,
+            Eigen::VectorXd &inVector,
+            Eigen::VectorXd &outVector,
             void (Utils::*method_ptr)(
                 Eigen::VectorXd &,
                 Eigen::VectorXd &));
