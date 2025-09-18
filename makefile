@@ -15,7 +15,11 @@ SRC = src/main.cpp src/NeuralNetwork.cpp src/layer.cpp src/utils.cpp
 OBJ = $(SRC:.cpp=.o)
 TARGET = my_nn
 
+.PHONY: all clean
+
 all: $(TARGET)
+	@echo "--- Running main program ---"
+	./$(TARGET)
 
 $(TARGET): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
@@ -25,5 +29,3 @@ $(TARGET): $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(TARGET)
-
-.PHONY: all clean
