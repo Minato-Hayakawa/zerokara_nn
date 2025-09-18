@@ -146,7 +146,7 @@ Eigen::Tensor <double, 3> NeuralNetwork::fft_convolution(
             const Eigen::MatrixXd fft_image = perform_fft(padded_image);
             const Eigen::MatrixXd fft_kernel = perform_fft(padded_kernel);
             const Eigen::MatrixXcd fft_mult = multiply_fft_results(fft_image, fft_kernel);
-            convert_matrix_to_tensor(outTensor, perform_fft(fft_mult));
+            convert_matrix_to_tensor(outTensor,perform_fft(fft_mult));
         }
         return outTensor;
         }
