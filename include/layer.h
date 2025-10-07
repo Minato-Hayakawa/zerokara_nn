@@ -6,6 +6,7 @@ class layer
             std::random_device rd;
             std::mt19937 gen;
             std::uniform_real_distribution<> dis;
+            
         public:
 
             Eigen::MatrixXd weights;
