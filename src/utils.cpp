@@ -49,7 +49,7 @@ void Utils::convert_to_Eigen_tensor(
     for (int i = 0; i < images.size(); i++){
         for (int j = 0; j < images[i].rows; j++) {
             for (int k = 0; k < images[i].cols; k++) {
-                outTensor(i, j, k) = static_cast<double>(images[i].at<uchar>(i, j, k));
+                outTensor(i, j, k) = static_cast<double>(images[i].at<uchar>(j, k)) / 255.0;
             }
         }
     }
@@ -79,9 +79,9 @@ Eigen::Tensor <double, 3> Utils::load_images(){
     return outTensor;
 }
 
-Eigen::MatrixXd Utils::convert_tensor_to_matrix(
-    Eigen::Tensor<double, 2> inTensor,
-    Eigen::MatrixXd outMatrix
+void convert_tensor_to_matrix(
+    Eigen::Tensor<double, 2> &inTensor,
+    Eigen::MatrixXd &outMatrix
 ){
     for (int i=0; i<inTensor.dimensions()[0]; i++){
         for (int j=0; j<inTensor.dimensions()[1]; j++){
@@ -90,9 +90,9 @@ Eigen::MatrixXd Utils::convert_tensor_to_matrix(
     }
 }
 
-Eigen::MatrixXd Utils::convert_matrix_to_tensor(
-    Eigen::Tensor<double, 2> inTensor,
-    Eigen::MatrixXd outMatrix
+void convert_matrix_to_tensor(
+    Eigen::Tensor<double, 2> &inTensor,
+    Eigen::MatrixXd &outMatrix
 ){
     for (int i=0; i<inTensor.dimensions()[0]; i++){
         for (int j=0; j<inTensor.dimensions()[1]; j++){
