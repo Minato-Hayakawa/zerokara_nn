@@ -12,8 +12,8 @@ void Utils::Sigmoid(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
 }
 
 double Utils::CrossEntropy(
-    Eigen::VectorXd &TargetVector,
-    Eigen::VectorXd outVector){
+    const Eigen::VectorXd &TargetVector,
+    const Eigen::VectorXd &outVector){
     double epsilon = 1e-12;
     Eigen::ArrayXd log_out = Eigen::log(outVector.array() + epsilon);
     return -(TargetVector.array()*log_out).sum();
