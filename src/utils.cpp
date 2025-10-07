@@ -6,9 +6,9 @@ void Utils::ReLU(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
 }
 void Utils::Sigmoid(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
     outVector.resize(inVector.size());
-    for (int i=0;i<inVector.size();i++){
-        outVector[i]= 1.0/(1.0 + std::exp(-inVector[i]));
-    }
+    outVector = inVector.array().unaryExpr([](double x) {
+        return 1.0 / (1.0 + std::exp(-x));
+    });
 }
 
 double Utils::CrossEntropy(
