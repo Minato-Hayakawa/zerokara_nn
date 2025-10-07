@@ -6,7 +6,7 @@ class layer
             std::random_device rd;
             std::mt19937 gen;
             std::uniform_real_distribution<> dis;
-            
+
         public:
 
             Eigen::MatrixXd weights;
@@ -14,7 +14,7 @@ class layer
         
             layer(const int input_size, const int output_size);
             void update_params(
-                Eigen::MatrixXd *dWptr,
-                Eigen::VectorXd *dBptr,
+                Eigen::MatrixXd &dW,
+                Eigen::VectorXd &dB,
                 const double learning_rate);
     };
