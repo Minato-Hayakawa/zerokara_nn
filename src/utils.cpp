@@ -2,9 +2,7 @@
 
 void Utils::ReLU(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
     outVector.resize(inVector.size());
-    for (int i=0;i<inVector.size();i++){
-        outVector[i]=std::max(0.0,inVector[i]);
-    }
+    outVector=inVector.array().cwiseMax(0.0);
 }
 void Utils::Sigmoid(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
     outVector.resize(inVector.size());
