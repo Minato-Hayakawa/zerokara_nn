@@ -9,12 +9,12 @@ layer::layer(const int input_size, const int output_size)
             input_size,
         [&]() {return d(gen);});
     
-    bias = Eigen::VectorXd::NullaryExpr(output_size, [&]() {return dis(gen);});
+    bias = Eigen::VectorXd::Zero(output_size);
 }
 
 void layer::update_params(
-    Eigen::MatrixXd &dW,
-    Eigen::VectorXd &dB,
+    const Eigen::MatrixXd &dW,
+    const Eigen::VectorXd &dB,
     const double learning_rate)
 {
     weights-=learning_rate*dW;
