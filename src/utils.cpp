@@ -64,7 +64,7 @@ Eigen::Tensor <double, 3> Utils::load_images(){
     std::vector<cv::Mat> loaded_images;
 
     for (const std::string &filename : filenames){
-        cv::Mat image = cv::imread(filename);
+        cv::Mat image = cv::imread(filename, cv::IMREAD_GRAYSCALE);;
 
         if (image.empty()){
             std::cout << "画像ファイルが読み込めませんでした" << filename << std::endl;
