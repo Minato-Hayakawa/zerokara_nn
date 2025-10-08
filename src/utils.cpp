@@ -79,7 +79,7 @@ Eigen::Tensor <double, 3> Utils::load_images(){
     return outTensor;
 }
 
-void convert_tensor_to_matrix(
+void Utils::convert_tensor_to_matrix(
     Eigen::Tensor<double, 2> &inTensor,
     Eigen::MatrixXd &outMatrix
 ){
@@ -90,7 +90,7 @@ void convert_tensor_to_matrix(
     }
 }
 
-void convert_matrix_to_tensor(
+void Utils::convert_matrix_to_tensor(
     Eigen::Tensor<double, 2> &inTensor,
     Eigen::MatrixXd &outMatrix
 ){
