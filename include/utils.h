@@ -18,8 +18,8 @@ class Utils
                 const Eigen::VectorXd &TargetVector,
                 const Eigen::VectorXd &outVector);
             Eigen::VectorXd output_delta(
-                Eigen::VectorXd &y,
-                Eigen::VectorXd &t);
+                const Eigen::VectorXd &y,
+                const Eigen::VectorXd &t);
             void addition(
                 const Eigen::VectorXd &inVector1,
                 const Eigen::VectorXd &inVector2,
@@ -33,9 +33,9 @@ class Utils
                 Eigen::Tensor<double, 3> &outTensor);
             Eigen::Tensor <double, 3> load_images();
             void convert_tensor_to_matrix(
-                Eigen::Tensor<double, 2> &inTensor,
+                const Eigen::Tensor<double, 2> &inTensor,
                 Eigen::MatrixXd &outMatrix);
             void convert_matrix_to_tensor(
-                Eigen::Tensor<double, 2> &inTensor,
-                Eigen::MatrixXd &outMatrix);
+                const Eigen::MatrixXd &inMatrix,
+                Eigen::Tensor<double, 2> &outTensor);
     };

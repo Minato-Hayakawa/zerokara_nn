@@ -18,8 +18,8 @@ double Utils::CrossEntropy(
 }
 
 Eigen::VectorXd Utils::output_delta(
-    Eigen::VectorXd &y,
-    Eigen::VectorXd &t
+    const Eigen::VectorXd &y,
+    const Eigen::VectorXd &t
 ){
     return y-t;
 }
@@ -78,7 +78,7 @@ Eigen::Tensor <double, 3> Utils::load_images(){
 }
 
 void Utils::convert_tensor_to_matrix(
-    Eigen::Tensor<double, 2> &inTensor,
+    const Eigen::Tensor<double, 2> &inTensor,
     Eigen::MatrixXd &outMatrix
 ){
     for (int i=0; i<inTensor.dimensions()[0]; i++){
@@ -89,12 +89,12 @@ void Utils::convert_tensor_to_matrix(
 }
 
 void Utils::convert_matrix_to_tensor(
-    Eigen::Tensor<double, 2> &inTensor,
-    Eigen::MatrixXd &outMatrix
+    const Eigen::MatrixXd &inMatrix,
+    Eigen::Tensor<double, 2> &outTensor
 ){
-    for (int i=0; i<inTensor.dimensions()[0]; i++){
-        for (int j=0; j<inTensor.dimensions()[1]; j++){
-            inTensor(i, j) = outMatrix(i, j);
+    for (int i=0; i<inMatrix.rows(); i++){
+        for (int j=0; j<inMatrix.cols(); j++){
+            outTensor(i, j) = inMatrix(i, j);
         }
     }
 }
