@@ -17,11 +17,11 @@ class NeuralNetwork : public Utils{
         
         void dense_backward(
             layer *lyrptr,
-            const Eigen::VectorXd inVector,
-            Eigen::VectorXd *deltaptr,
-            Eigen::MatrixXd *dWptr,
-            Eigen::VectorXd *dBptr,
-            Eigen::VectorXd delta_prev);
+            const Eigen::VectorXd &inVector,
+            Eigen::VectorXd &delta,
+            Eigen::MatrixXd &dW,
+            Eigen::VectorXd &dB,
+            Eigen::VectorXd &delta_prev);
         
         Eigen::MatrixXd zero_padding(
             const Eigen::MatrixXd &input_image,

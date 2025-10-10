@@ -17,15 +17,15 @@ void NeuralNetwork::dense(
 
 void NeuralNetwork::dense_backward(
     layer *lyrptr,
-    const Eigen::VectorXd inVector,
-    Eigen::VectorXd *deltaptr,
-    Eigen::MatrixXd *dWptr,
-    Eigen::VectorXd *dBptr,
-    Eigen::VectorXd delta_prev
+    const Eigen::VectorXd &inVector,
+    Eigen::VectorXd &delta,
+    Eigen::MatrixXd &dW,
+    Eigen::VectorXd &dB,
+    Eigen::VectorXd &delta_prev
 ){
-    *dWptr = *deltaptr * inVector.transpose();
-    *dBptr = *deltaptr;
-    delta_prev = (*lyrptr).weights.transpose() * (*deltaptr);
+    dW = delta * inVector.transpose();
+    dB = delta;
+    delta_prev = (*lyrptr).weights.transpose() * (delta);
 }
 Eigen::MatrixXd NeuralNetwork::zero_padding(
     const Eigen::MatrixXd &input_image,
@@ -139,14 +139,14 @@ Eigen::Tensor <double, 3> NeuralNetwork::fft_convolution(
         const Eigen::MatrixXd image;
         const Eigen::MatrixXd kernel;
         for (int i = 0; i<images.size(); i++){
-            convert_tensor_to_matrix(images[i], image);
-            convert_tensor_to_matrix(kernels[i], kernel);
+            convert_tensor_to_matrix(&images[i], &image);
+            convert_tensor_to_matrix(&kernels[i], &kernel);
             const Eigen::MatrixXd padded_image = zero_padding(image, kernel);
             const Eigen::MatrixXd padded_kernel = zero_padding(kernel, image);
             const Eigen::MatrixXd fft_image = perform_fft(padded_image);
             const Eigen::MatrixXd fft_kernel = perform_fft(padded_kernel);
             const Eigen::MatrixXcd fft_mult = multiply_fft_results(fft_image, fft_kernel);
-            convert_matrix_to_tensor(outTensor,perform_fft(fft_mult));
+            convert_matrix_to_tensor(&outTensor,perform_fft(fft_mult));
         }
         return outTensor;
         }
