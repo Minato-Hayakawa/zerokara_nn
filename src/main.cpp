@@ -9,7 +9,6 @@ int main(){
     const int classes_num = 2;
     const double learningrate = 0.001;
     double loss;
-
     NeuralNetwork NNObj;
 
     Eigen::Tensor <double, 3> images;
