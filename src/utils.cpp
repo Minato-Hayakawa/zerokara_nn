@@ -81,6 +81,7 @@ void Utils::convert_tensor_to_matrix(
     const Eigen::Tensor<double, 2> &inTensor,
     Eigen::MatrixXd &outMatrix
 ){
+    outMatrix.resize(inTensor.dimension(0), inTensor.dimension(1));
     for (int i=0; i<inTensor.dimensions()[0]; i++){
         for (int j=0; j<inTensor.dimensions()[1]; j++){
             outMatrix(i, j) = inTensor(i, j);
@@ -92,6 +93,7 @@ void Utils::convert_matrix_to_tensor(
     const Eigen::MatrixXd &inMatrix,
     Eigen::Tensor<double, 2> &outTensor
 ){
+    outTensor.resize(inMatrix.rows(), inMatrix.cols());
     for (int i=0; i<inMatrix.rows(); i++){
         for (int j=0; j<inMatrix.cols(); j++){
             outTensor(i, j) = inMatrix(i, j);
