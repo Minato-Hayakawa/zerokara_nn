@@ -143,8 +143,8 @@ Eigen::Tensor <double, 3> NeuralNetwork::fft_convolution(
             convert_tensor_to_matrix(&kernels.chip(i, 0), &kernel);
             const Eigen::MatrixXd padded_image = zero_padding(image, kernel);
             const Eigen::MatrixXd padded_kernel = zero_padding(kernel, image);
-            const Eigen::MatrixXd fft_image = perform_fft(padded_image);
-            const Eigen::MatrixXd fft_kernel = perform_fft(padded_kernel);
+            const Eigen::MatrixXcd fft_image = perform_fft(padded_image);
+            const Eigen::MatrixXcd fft_kernel = perform_fft(padded_kernel);
             const Eigen::MatrixXcd fft_mult = multiply_fft_results(fft_image, fft_kernel);
             convert_matrix_to_tensor(&outTensor,perform_ifft(fft_mult));
         }
