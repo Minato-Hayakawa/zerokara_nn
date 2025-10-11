@@ -9,10 +9,10 @@ class Utils
     {
         public:
             void ReLU(
-                Eigen::VectorXd &inVector,
+                const Eigen::VectorXd &inVector,
                 Eigen::VectorXd &outVector);
             void Sigmoid(
-                Eigen::VectorXd &inVector,
+                const Eigen::VectorXd &inVector,
                 Eigen::VectorXd &outVector);
             double CrossEntropy(
                 const Eigen::VectorXd &TargetVector,

@@ -1,9 +1,9 @@
 #include "utils.h"
 
-void Utils::ReLU(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
+void Utils::ReLU(const Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
     outVector=inVector.array().cwiseMax(0.0);
 }
-void Utils::Sigmoid(Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
+void Utils::Sigmoid(const Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
     outVector = inVector.array().unaryExpr([](double x) {
         return 1.0 / (1.0 + std::exp(-x));
     });
