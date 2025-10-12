@@ -149,8 +149,8 @@ Eigen::Tensor<double, 3> NeuralNetwork::fft_convolution(
         Eigen::Tensor<double, 2> kernel_chip = kernels.chip(i, 0);
         Eigen::Map<const Eigen::MatrixXd> kernel(kernel_chip.data(), kernels.dimension(1), kernels.dimension(2));
 
-        Eigen::MatrixXd padded_image = zero_padding_image(image, kernel);
-        Eigen::MatrixXd padded_kernel = zero_padding_kernel(kernel, image); // カーネルもパディング＆反転
+        Eigen::MatrixXd padded_image = zero_padding(image, kernel);
+        Eigen::MatrixXd padded_kernel = zero_padding(kernel, image); // カーネルもパディング＆反転
 
         Eigen::MatrixXcd fft_image = perform_fft(padded_image);
         Eigen::MatrixXcd fft_kernel = perform_fft(padded_kernel);
