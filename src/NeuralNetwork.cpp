@@ -132,21 +132,37 @@ Eigen::MatrixXd NeuralNetwork::perform_ifft(
     return ifft_result;
 }
 
-Eigen::Tensor <double, 3> NeuralNetwork::fft_convolution(
-    Eigen::Tensor <double, 3> &images,
-    Eigen::Tensor <double, 3> &kernels){
-        Eigen::Tensor <double, 3> outTensor;
-        const Eigen::MatrixXd image;
-        const Eigen::MatrixXd kernel;
-        for (int i = 0; i<images.dimension(0); i++){
-            convert_tensor_to_matrix(&images.chip(i, 0), &image);
-            convert_tensor_to_matrix(&kernels.chip(i, 0), &kernel);
-            const Eigen::MatrixXd padded_image = zero_padding(image, kernel);
-            const Eigen::MatrixXd padded_kernel = zero_padding(kernel, image);
-            const Eigen::MatrixXcd fft_image = perform_fft(padded_image);
-            const Eigen::MatrixXcd fft_kernel = perform_fft(padded_kernel);
-            const Eigen::MatrixXcd fft_mult = multiply_fft_results(fft_image, fft_kernel);
-            convert_matrix_to_tensor(&outTensor,perform_ifft(fft_mult));
+Eigen::Tensor<double, 3> NeuralNetwork::fft_convolution(
+    const Eigen::Tensor<double, 3>& images,
+    const Eigen::Tensor<double, 3>& kernels)
+{
+    const long num_images = images.dimension(0);
+    const long img_height = images.dimension(1);
+    const long img_width = images.dimension(2);
+    Eigen::Tensor<double, 3> outTensor(num_images, img_height, img_width);
+
+    for (int i = 0; i < num_images; ++i) {
+
+        Eigen::Tensor<double, 2> image_chip = images.chip(i, 0);
+        Eigen::Map<const Eigen::MatrixXd> image(image_chip.data(), img_height, img_width);
+
+        Eigen::Tensor<double, 2> kernel_chip = kernels.chip(i, 0);
+        Eigen::Map<const Eigen::MatrixXd> kernel(kernel_chip.data(), kernels.dimension(1), kernels.dimension(2));
+
+        Eigen::MatrixXd padded_image = zero_padding_image(image, kernel);
+        Eigen::MatrixXd padded_kernel = zero_padding_kernel(kernel, image); // カーネルもパディング＆反転
+
+        Eigen::MatrixXcd fft_image = perform_fft(padded_image);
+        Eigen::MatrixXcd fft_kernel = perform_fft(padded_kernel);
+
+        Eigen::MatrixXcd fft_mult = multiply_fft_results(fft_image, fft_kernel);
+        Eigen::MatrixXd conv_result_full = perform_ifft(fft_mult);
+
+        for (long r = 0; r < img_height; ++r) {
+            for (long c = 0; c < img_width; ++c) {
+                outTensor(i, r, c) = conv_result_full(r, c);
+            }
         }
-        return outTensor;
-        }
+    }
+    return outTensor;
+}
