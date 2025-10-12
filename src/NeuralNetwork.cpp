@@ -3,20 +3,20 @@
 #include "layer.h"
 
 void NeuralNetwork::dense(
-    layer *lyrptr,
+    layer &lyrobj,
     Eigen::VectorXd &inVector,
     Eigen::VectorXd &outVector,
     void (Utils::*method_ptr)(
         Eigen::VectorXd &,
         Eigen::VectorXd &))
     {
-    multiplication(inVector,(*lyrptr).weights,outVector);
-    addition((*lyrptr).bias,outVector,outVector);
+    multiplication(inVector,lyrobj.weights,outVector);
+    addition(lyrobj.bias,outVector,outVector);
     (this->*method_ptr)(outVector, outVector);
     }
 
 void NeuralNetwork::dense_backward(
-    layer *lyrptr,
+    layer &lyrobj,
     const Eigen::VectorXd &inVector,
     Eigen::VectorXd &delta,
     Eigen::MatrixXd &dW,
@@ -25,7 +25,7 @@ void NeuralNetwork::dense_backward(
 ){
     dW = delta * inVector.transpose();
     dB = delta;
-    delta_prev = (*lyrptr).weights.transpose() * (delta);
+    delta_prev = lyrobj.weights.transpose() * (delta);
 }
 Eigen::MatrixXd NeuralNetwork::zero_padding(
     const Eigen::MatrixXd &input_image,
