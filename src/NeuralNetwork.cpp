@@ -3,10 +3,10 @@
 #include "layer.h"
 
 void NeuralNetwork::dense(
-    layer &lyrobj,
-    Eigen::VectorXd &inVector,
+    const layer &lyrobj,
+    const Eigen::VectorXd &inVector,
     Eigen::VectorXd &outVector,
-    void (Utils::*method_ptr)(
+    const void (Utils::*method_ptr)(
         Eigen::VectorXd &,
         Eigen::VectorXd &))
     {
@@ -16,9 +16,9 @@ void NeuralNetwork::dense(
     }
 
 void NeuralNetwork::dense_backward(
-    layer &lyrobj,
+    const layer &lyrobj,
     const Eigen::VectorXd &inVector,
-    Eigen::VectorXd &delta,
+    const Eigen::VectorXd &delta,
     Eigen::MatrixXd &dW,
     Eigen::VectorXd &dB,
     Eigen::VectorXd &delta_prev
