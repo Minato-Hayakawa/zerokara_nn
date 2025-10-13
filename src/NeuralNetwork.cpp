@@ -27,7 +27,7 @@ void NeuralNetwork::dense_backward(
     dB = delta;
     delta_prev = lyrobj.weights.transpose() * (delta);
 }
-Eigen::MatrixXd NeuralNetwork::zero_padding(
+std::pair <Eigen::MatrixXd, Eigen::MatrixXd> NeuralNetwork::zero_padding(
     const Eigen::MatrixXd &input_image,
     const Eigen::MatrixXd &kernel
 ){
@@ -45,7 +45,7 @@ Eigen::MatrixXd NeuralNetwork::zero_padding(
     padded_image.block(0, 0, img_rows, img_cols) = input_image;
     Eigen::MatrixXd reversed_kernel = kernel.reverse();
     padded_kernel.block(0, 0, k_rows, k_cols) = reversed_kernel;
-    return padded_image;
+    return {padded_image, padded_kernel};
 }
 
 void NeuralNetwork::Eigen_to_FFTW(
@@ -149,8 +149,8 @@ Eigen::Tensor<double, 3> NeuralNetwork::fft_convolution(
         Eigen::Tensor<double, 2> kernel_chip = kernels.chip(i, 0);
         Eigen::Map<const Eigen::MatrixXd> kernel(kernel_chip.data(), kernels.dimension(1), kernels.dimension(2));
 
-        Eigen::MatrixXd padded_image = zero_padding(image, kernel);
-        Eigen::MatrixXd padded_kernel = zero_padding(kernel, image); // カーネルもパディング＆反転
+        Eigen::MatrixXd padded_image, padded_kernel;
+        std::tie(padded_image, padded_kernel) = zero_padding(image, kernel);
 
         Eigen::MatrixXcd fft_image = perform_fft(padded_image);
         Eigen::MatrixXcd fft_kernel = perform_fft(padded_kernel);
