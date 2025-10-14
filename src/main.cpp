@@ -30,8 +30,6 @@ int main(){
 
     layer hiddenlayer(inputsize, hiddensize);
     layer outputlayer(hiddensize, outputsize);
-    layer *hlayerptr = &hiddenlayer;
-    layer *olayerptr = &outputlayer;
 
     Eigen::MatrixXd dW_hidden, dW_output;
     Eigen::VectorXd dB_hidden, dB_output;
@@ -41,13 +39,13 @@ int main(){
         NNObj.convert_tensor_to_matrix(conv_outputs_Tensor(i), conv_outputs_Vector);
         for (int j=0; i<epoch; j++){
             NNObj.dense(
-                hlayerptr,
+                hiddenlayer,
                 conv_outputs_Vector,
                 PredictedProbability,
                 ReLUptr);
 
             NNObj.dense(
-                olayerptr,
+                output,
                 conv_outputs_Vector,
                 PredictedProbability,
                 Sigmoidptr);
