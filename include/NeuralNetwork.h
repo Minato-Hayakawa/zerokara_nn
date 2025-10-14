@@ -2,6 +2,7 @@
 #include <Eigen/Dense>
 #include <iostream>
 #include <fftw3.h>
+#include <utility>
 
 class NeuralNetwork : public Utils{
 
