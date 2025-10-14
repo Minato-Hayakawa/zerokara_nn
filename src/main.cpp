@@ -36,14 +36,8 @@ int main(){
     Eigen::MatrixXd dW_hidden, dW_output;
     Eigen::VectorXd dB_hidden, dB_output;
     Eigen::VectorXd delta_hidden, delta_output;
-    Eigen::MatrixXd *dW_hptr = &dW_hidden;
-    Eigen::MatrixXd *dW_optr = &dW_output;
-    Eigen::VectorXd *dB_hptr = &dB_hidden;
-    Eigen::VectorXd *dB_optr = &dB_output;
-    Eigen::VectorXd *delta_hptr = &delta_hidden;
-    Eigen::VectorXd *delta_optr = &delta_output;
 
-    for (int i=0; i<images.size(); i++){
+    for (int i=0; i<images.dimension(0); i++){
         NNObj.convert_tensor_to_matrix(conv_outputs_Tensor(i), conv_outputs_Vector);
         for (int j=0; i<epoch; j++){
             NNObj.dense(
