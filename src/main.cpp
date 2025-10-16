@@ -44,13 +44,13 @@ int main(){
         for (int j=0; i<epoch; j++){
             NNObj.dense(
                 hiddenlayer,
-                conv_outputs,
-                PredictedProbability,
+                conv_outputs_Vector,
+                hidden_Vector,
                 ReLUptr);
 
             NNObj.dense(
-                output,
-                conv_outputs_Vector,
+                hiddenlayer,
+                hidden_Vector,
                 PredictedProbability,
                 Sigmoidptr);
 
