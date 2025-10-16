@@ -60,25 +60,23 @@ int main(){
             delta_output = NNObj.output_delta(GroundTruth, PredictedProbability);
 
             NNObj.dense_backward(
-                olayerptr,
+                outputlayer,
                 PredictedProbability,
-                delta_optr,
-                dW_optr,
-                dB_optr,
-                delta_output
+                delta_output,
+                dW_output,
+                dB_output,
+                delta_hidden
             );
 
             NNObj.dense_backward(
-                hlayerptr,
+                hiddenlayer,
                 PredictedProbability,
-                nullptr,
-                dW_hptr,
-                dB_hptr,
-                *delta_optr
+                dW_hidden,
+                dB_hidden,
             );
 
-            outputlayer.update_params(dW_optr, dB_optr, learningrate);
-            outputlayer.update_params(dW_hptr, dB_hptr, learningrate);
+            outputlayer.update_params(dW_output, dB_output, learningrate);
+            outputlayer.update_params(dW_hidden, dB_hidden, learningrate);
             }
 
 
