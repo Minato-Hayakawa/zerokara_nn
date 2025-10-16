@@ -38,4 +38,7 @@ class Utils
             void convert_matrix_to_tensor(
                 const Eigen::MatrixXd &inMatrix,
                 Eigen::Tensor<double, 2> &outTensor);
+            void convert_matrix_to_vector(
+                const Eigen::MatrixXd inMatrix,
+                Eigen::VectorXd outVector);
     };

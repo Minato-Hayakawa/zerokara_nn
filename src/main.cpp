@@ -20,6 +20,7 @@ int main(){
 
     Eigen::Tensor<double, 3> kernel = Eigen::Tensor<double, 3>(kernelsize, kernelsize);
     Eigen::Tensor <double, 3> conv_outputs_Tensor = NNObj.fft_convolution(images, kernel);
+    Eigen::MatrixXd conv_outputs_Matrix;
     Eigen::VectorXd conv_outputs_Vector;
     const int inputsize = conv_outputs_Tensor.size();
     const int hiddensize = 128;
@@ -34,13 +35,16 @@ int main(){
     Eigen::MatrixXd dW_hidden, dW_output;
     Eigen::VectorXd dB_hidden, dB_output;
     Eigen::VectorXd delta_hidden, delta_output;
+    Eigen::VectorXd hidden_Vector;
+    Eigen::VectorXd output_Vector;
 
     for (int i=0; i<images.dimension(0); i++){
-        NNObj.convert_tensor_to_matrix(conv_outputs_Tensor(i), conv_outputs_Vector);
+        NNObj.convert_tensor_to_matrix(conv_outputs_Tensor(i), conv_outputs_Matrix);
+        NNObj.convert_matrix_to_vector(conv_outputs_Matrix, conv_outputs_Vector);
         for (int j=0; i<epoch; j++){
             NNObj.dense(
                 hiddenlayer,
-                conv_outputs_Vector,
+                conv_outputs,
                 PredictedProbability,
                 ReLUptr);
 
