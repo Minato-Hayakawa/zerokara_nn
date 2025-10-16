@@ -22,7 +22,7 @@ int main(){
     Eigen::Tensor <double, 3> conv_outputs_Tensor = NNObj.fft_convolution(images, kernel);
     Eigen::MatrixXd conv_outputs_Matrix;
     Eigen::VectorXd conv_outputs_Vector;
-    const int inputsize = conv_outputs_Tensor.size();
+    const int inputsize = conv_outputs_Tensor.dimension(0) * conv_outputs_Tensor.dimension(1);
     const int hiddensize = 128;
     const int outputsize = classes_num;
 
