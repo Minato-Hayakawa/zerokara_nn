@@ -41,7 +41,7 @@ int main(){
     for (int i=0; i<images.dimension(0); i++){
         NNObj.convert_tensor_to_matrix(conv_outputs_Tensor(i), conv_outputs_Matrix);
         NNObj.convert_matrix_to_vector(conv_outputs_Matrix, conv_outputs_Vector);
-        for (int j=0; i<epoch; j++){
+        for (int j=0; j<epoch; j++){
             NNObj.dense(
                 hiddenlayer,
                 conv_outputs_Vector,
