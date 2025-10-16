@@ -49,7 +49,7 @@ int main(){
                 ReLUptr);
 
             NNObj.dense(
-                hiddenlayer,
+                outputlayer,
                 hidden_Vector,
                 PredictedProbability,
                 Sigmoidptr);
