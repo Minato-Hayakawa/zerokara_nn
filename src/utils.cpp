@@ -100,3 +100,15 @@ void Utils::convert_matrix_to_tensor(
         }
     }
 }
+
+void Utils::convert_matrix_to_vector(
+    const Eigen::MatrixXd inMatrix,
+    Eigen::VectorXd outVector
+){
+    outVector.resize(inMatrix.rows() * inMatrix.cols());
+    for (int i=0; i<inMatrix.rows(); i+){
+        for (int j=0; j<inMatrix.cols(); j++){
+            outVector(i+j) = inMatrix(i, j);
+        }
+    }
+}
