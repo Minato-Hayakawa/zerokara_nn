@@ -42,4 +42,8 @@ class NeuralNetwork : public Utils{
         Eigen::Tensor <double, 3> fft_convolution(
             const Eigen::Tensor <double, 3> &images,
             const Eigen::Tensor <double, 3> &kernels);
+        void convert_matrix_to_vector(
+            const Eigen::MatrixXd inMatrix,
+            Eigen::VectorXd outVector
+        );
 };
