@@ -61,7 +61,7 @@ int main(){
 
             NNObj.dense_backward(
                 outputlayer,
-                PredictedProbability,
+                hidden_Vector,
                 delta_output,
                 dW_output,
                 dB_output,
@@ -70,10 +70,11 @@ int main(){
 
             NNObj.dense_backward(
                 hiddenlayer,
-                PredictedProbability,
+                conv_outputs_Vector,
                 delta_hidden,
                 dW_hidden,
                 dB_hidden,
+                delta_hidden
             );
 
             outputlayer.update_params(dW_output, dB_output, learningrate);
