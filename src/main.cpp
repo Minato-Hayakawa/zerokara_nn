@@ -38,10 +38,10 @@ int main(){
     Eigen::VectorXd hidden_Vector;
     Eigen::VectorXd output_Vector;
 
-    for (int i=0; i<images.dimension(0); i++){
+    for (int i=0; i<epoch; i++){
         NNObj.convert_tensor_to_matrix(conv_outputs_Tensor(i), conv_outputs_Matrix);
         NNObj.convert_matrix_to_vector(conv_outputs_Matrix, conv_outputs_Vector);
-        for (int j=0; j<epoch; j++){
+        for (int j=0; j<images.dimension(0); j++){
             NNObj.dense(
                 hiddenlayer,
                 conv_outputs_Vector,
