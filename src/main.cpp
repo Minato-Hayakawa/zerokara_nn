@@ -71,6 +71,7 @@ int main(){
             NNObj.dense_backward(
                 hiddenlayer,
                 PredictedProbability,
+                delta_hidden,
                 dW_hidden,
                 dB_hidden,
             );
