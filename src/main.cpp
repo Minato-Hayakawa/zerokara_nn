@@ -77,7 +77,7 @@ int main(){
             );
 
             outputlayer.update_params(dW_output, dB_output, learningrate);
-            outputlayer.update_params(dW_hidden, dB_hidden, learningrate);
+            hiddenlayer.update_params(dW_hidden, dB_hidden, learningrate);
             }
 
 
