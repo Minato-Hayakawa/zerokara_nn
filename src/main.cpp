@@ -39,7 +39,7 @@ int main(){
     Eigen::VectorXd output_Vector;
 
     for (int i=0; i<epoch; i++){
-        NNObj.convert_tensor_to_matrix(conv_outputs_Tensor(i), conv_outputs_Matrix);
+        NNObj.convert_tensor_to_matrix(conv_outputs_Tensor(i, 0), conv_outputs_Matrix);
         NNObj.convert_matrix_to_vector(conv_outputs_Matrix, conv_outputs_Vector);
         for (int j=0; j<images.dimension(0); j++){
             NNObj.dense(
