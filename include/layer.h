@@ -13,8 +13,14 @@ class layer
             Eigen::VectorXd bias;
         
             layer(const int input_size, const int output_size);
+
             void update_params(
                 const Eigen::MatrixXd &dW,
                 const Eigen::VectorXd &dB,
+                const double learning_rate);
+
+            void update_kernels(
+                const Eigen::MatrixXd &dW,
+                const Eigen::MatrixXd &dB,
                 const double learning_rate);
     };
