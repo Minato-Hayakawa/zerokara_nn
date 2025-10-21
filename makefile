@@ -1,18 +1,21 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -O2
 
-OPENCV_FLAGS = $(shell pkg-config --cflags opencv4)
-EIGEN_FLAGS = -I/usr/include/eigen3
-FFTW_FLAGS = $(shell pkg-config --cflags fftw3)
+OPENCV_DIR := $(CURDIR)/opencv
 
-OPENCV_LIBS = $(shell pkg-config --libs opencv4)
-FFTW_LIBS = $(shell pkg-config --libs fftw3)
+EIGEN_DIR := C:/c/eigen-3.4.0
 
-CXXFLAGS += $(OPENCV_FLAGS) $(EIGEN_FLAGS) $(FFTW_FLAGS)
-LDFLAGS = $(OPENCV_LIBS) $(FFTW_LIBS)
+FFTW_FLAGS := $(shell pkg-config --cflags fftw3)
+FFTW_LIBS := $(shell pkg-config --libs fftw3)
 
-SRC = src/main.cpp src/NeuralNetwork.cpp src/layer.cpp src/utils.cpp
-OBJ = $(SRC:.cpp=.o)
+CXXFLAGS += -Iinclude -I$(OPENCV_DIR)/include -I$(EIGEN_DIR) $(FFTW_FLAGS)
+
+LDFLAGS := -L$(OPENCV_DIR)/lib -lopencv_core -lopencv_highgui -lopencv_imgproc $(FFTW_LIBS)
+
+SRC = $(wildcard src/*.cpp)
+OBJ_DIR = obj
+
+OBJ = $(patsubst src/%.cpp,$(OBJ_DIR)/%.o,$(SRC))
 TARGET = my_nn
 
 .PHONY: all clean
@@ -24,8 +27,12 @@ all: $(TARGET)
 $(TARGET): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
-%.o: %.cpp
+$(OBJ_DIR)/%.o: src/%.cpp | $(OBJ_DIR)
+	@echo "Compiling $<..."
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
 clean:
-	rm -f $(OBJ) $(TARGET)
+	rm -rf $(OBJ_DIR) $(TARGET)
