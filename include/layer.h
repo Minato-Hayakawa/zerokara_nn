@@ -13,7 +13,10 @@ class layer
             Eigen::VectorXd bias;
             double kernel_bias;
         
-            layer(const int input_size, const int output_size);
+            layer(
+                const int input_size,
+                const int output_size,
+                const int kernel_size);
 
             void update_params(
                 const Eigen::MatrixXd &dW,

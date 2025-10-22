@@ -1,6 +1,6 @@
 #include "layer.h"
 
-layer::layer(const int input_size, const int output_size)
+layer::layer(const int input_size, const int output_size, const int kernel_size)
 :gen(rd())
 {
     const double limit = std::sqrt(6/(input_size + output_size));
@@ -10,6 +10,9 @@ layer::layer(const int input_size, const int output_size)
         [&]() {return d(gen);});
     
     bias = Eigen::VectorXd::Zero(output_size);
+    const double limit = std::sqrt(6.0 / (kernel_size * kernel_size * 2)); // 簡易版
+    std::uniform_real_distribution<> d(-limit, limit);
+    kernel_bias = 0.0;
 }
 
 void layer::update_params(
