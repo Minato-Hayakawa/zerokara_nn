@@ -17,7 +17,7 @@ class layer
 
             void update_params(
                 const Eigen::MatrixXd &dW,
-                const Eigen::MatrixXd &dB,
+                const Eigen::VectorXd &dB,
                 const double learning_rate);
 
             void update_kernels(
