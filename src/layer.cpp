@@ -27,5 +27,5 @@ void layer::update_kernels(
     const double learning_rate)
 {
     weights-=learning_rate*dW;
-    bias-=learning_rate*dB;
+    kernel_bias-=learning_rate*dB;
 }

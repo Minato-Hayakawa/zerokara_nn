@@ -11,6 +11,7 @@ class layer
 
             Eigen::MatrixXd weights;
             Eigen::VectorXd bias;
+            double kernel_bias;
         
             layer(const int input_size, const int output_size);
 
