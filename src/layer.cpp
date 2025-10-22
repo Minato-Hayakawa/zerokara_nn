@@ -23,7 +23,7 @@ void layer::update_params(
 
 void layer::update_kernels(
     const Eigen::MatrixXd &dW,
-    const Eigen::VectorXd &dB,
+    const double &dB,
     const double learning_rate)
 {
     weights-=learning_rate*dW;
