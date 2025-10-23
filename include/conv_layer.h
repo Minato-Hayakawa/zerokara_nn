@@ -7,8 +7,8 @@ class ConvLayer : public DenseLayer{
         Eigen::MatrixXd kernel;
 
         ConvLayer(const int kernel_size);
-        
-        void update_kernel(
+
+        void update_kernels(
             const Eigen::MatrixXd &dW,
             const double kernel_bias,
             const double learning_rate);
