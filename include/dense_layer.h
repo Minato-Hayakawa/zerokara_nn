@@ -15,8 +15,7 @@ class DenseLayer
         
             DenseLayer(
                 const int input_size,
-                const int output_size,
-                const int kernel_size);
+                const int output_size);
 
             void update_params(
                 const Eigen::MatrixXd &dW,
