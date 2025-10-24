@@ -5,6 +5,9 @@ class ConvLayer : public DenseLayer{
 
         double kernel_bias;
         Eigen::MatrixXd kernel;
+        
+        std::random_device rd;
+        std::mt19937 gen;
 
         ConvLayer(const int kernel_size);
 
