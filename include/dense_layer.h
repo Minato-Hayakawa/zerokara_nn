@@ -30,6 +30,12 @@ class DenseLayer : LayerBase
             Eigen::VectorXd bias;
             Eigen::MatrixXd dW;
             Eigen::VectorXd dB;
-            void dense_forward();
-            void dense_backward();
+            void dense_forward(
+                Eigen::VectorXd inVector,
+                Eigen::VectorXd outVector
+            );
+            void dense_backward(
+                Eigen::VectorXd inVector,
+                Eigen::VectorXd outVector
+            );
     };
