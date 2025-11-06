@@ -36,6 +36,7 @@ class DenseLayer : LayerBase
             );
             void dense_backward(
                 Eigen::VectorXd inVector,
-                Eigen::VectorXd outVector
+                Eigen::VectorXd outVector,
+                Eigen::VectorXd &delta_prev
             );
     };
