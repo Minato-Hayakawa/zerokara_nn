@@ -21,6 +21,27 @@ void DenseLayer::forward(
         outVector
     );
 }
+
+void DenseLayer::backward(
+    const Eigen::VectorXd &inVector,
+    const Eigen::VectorXd &delta,
+    Eigen::VectorXd &delta_prev
+){
+    dense_backward(inVector,delta,delta_prev);
+}
+
+void DenseLayer::update_params(
+    const double learning_rate)
+{
+    update_dense_params(learning_rate);
+}
+
+void DenseLayer::update_dense_params(
+    const double learning_rate
+){
+    this -> weights -= learning_rate * this -> dW;
+    this -> bias -= learning_rate * this -> dB;
+}
 void DenseLayer::dense_forward(
     const Eigen::VectorXd &inVector,
     Eigen::VectorXd &outVector
@@ -30,23 +51,12 @@ void DenseLayer::dense_forward(
         outVector += this -> bias;
     }
 
-void dense_backward(
+void DenseLayer::dense_backward(
     const Eigen::VectorXd &inVector,
     const Eigen::VectorXd &delta,
-    Eigen::MatrixXd &dW,
-    Eigen::MatrixXd &dB,
     Eigen::VectorXd &delta_prev
 ){
-    this.dW = delta * inVector.transpose();
-    this.dB = delta;
-    delta_prev = this.weights.transpose() * (delta);
-}
-
-void DenseLayer::update_params(
-    const Eigen::MatrixXd &dW,
-    const Eigen::VectorXd &dB,
-    const double learning_rate)
-{
-    weights-=learning_rate*dW;
-    bias-=learning_rate*dB;
+    this ->  dW = delta * inVector.transpose();
+    this -> dB = delta;
+    delta_prev = this -> weights.transpose() * (delta);
 }
