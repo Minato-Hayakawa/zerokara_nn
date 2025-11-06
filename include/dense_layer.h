@@ -4,15 +4,6 @@
 
 class DenseLayer : LayerBase
     {
-        private:
-            std::random_device rd;
-            std::mt19937 gen;
-            std::uniform_real_distribution<> dis;
-            Eigen::MatrixXd weights;
-            Eigen::VectorXd bias;
-            Eigen::MatrixXd dW;
-            Eigen::VectorXd dB;
-
         public:
         
             DenseLayer(
@@ -32,6 +23,13 @@ class DenseLayer : LayerBase
             )override;
         
         private:
+            std::random_device rd;
+            std::mt19937 gen;
+            std::uniform_real_distribution<> dis;
+            Eigen::MatrixXd weights;
+            Eigen::VectorXd bias;
+            Eigen::MatrixXd dW;
+            Eigen::VectorXd dB;
             void dense_forward();
             void dense_backward();
     };
