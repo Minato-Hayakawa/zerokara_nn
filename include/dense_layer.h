@@ -2,7 +2,7 @@
 #include <random>
 #include "layer_base.h"
 
-class DenseLayer:LayerBase
+class DenseLayer : LayerBase
     {
         private:
             std::random_device rd;
