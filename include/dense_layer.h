@@ -10,8 +10,6 @@ class DenseLayer : LayerBase
                 const int input_size,
                 const int output_size);
 
-            void update_params(double learning_rate)override;
-
             void forward(
                 const Eigen::VectorXd &inVector,
                 Eigen::VectorXd &outVector)override;
@@ -21,6 +19,8 @@ class DenseLayer : LayerBase
                 const Eigen::VectorXd &delta,
                 Eigen::VectorXd &delta_prev
             )override;
+
+            void update_params(double learning_rate)override;
         
         private:
             std::random_device rd;
