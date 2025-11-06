@@ -8,11 +8,7 @@ public:
     virtual void update_params(double learning_rate) = 0;
     virtual void forward(
         const Eigen::VectorXd &inVector,
-        Eigen::VectorXd &outVector,
-        const void (*method_ptr)(
-            Eigen::VectorXd &,
-            Eigen::VectorXd &)
-    ) = 0;
+        Eigen::VectorXd &outVector) = 0;
     virtual void backward(
         const Eigen::VectorXd &inVector,
         const Eigen::VectorXd &delta,
