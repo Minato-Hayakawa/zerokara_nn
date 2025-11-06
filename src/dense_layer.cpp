@@ -12,6 +12,36 @@ DenseLayer::DenseLayer(const int input_size, const int output_size)
     bias = Eigen::VectorXd::Zero(output_size);
 }
 
+void DenseLayer::forward(
+    const Eigen::VectorXd &inVector,
+    Eigen::VectorXd &outVector
+){
+    dense_forward(
+        inVector,
+        outVector
+    );
+}
+void DenseLayer::dense_forward(
+    const Eigen::VectorXd &inVector,
+    Eigen::VectorXd &outVector
+)
+    {
+        outVector = inVector * this -> weights;
+        outVector += this -> bias;
+    }
+
+void dense_backward(
+    const Eigen::VectorXd &inVector,
+    const Eigen::VectorXd &delta,
+    Eigen::MatrixXd &dW,
+    Eigen::MatrixXd &dB,
+    Eigen::VectorXd &delta_prev
+){
+    this.dW = delta * inVector.transpose();
+    this.dB = delta;
+    delta_prev = this.weights.transpose() * (delta);
+}
+
 void DenseLayer::update_params(
     const Eigen::MatrixXd &dW,
     const Eigen::VectorXd &dB,

@@ -31,8 +31,8 @@ class DenseLayer : LayerBase
             Eigen::MatrixXd dW;
             Eigen::VectorXd dB;
             void dense_forward(
-                Eigen::VectorXd inVector,
-                Eigen::VectorXd outVector
+                const Eigen::VectorXd &inVector,
+                Eigen::VectorXd &outVector
             );
             void dense_backward(
                 Eigen::VectorXd inVector,
