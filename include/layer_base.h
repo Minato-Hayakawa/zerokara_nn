@@ -6,6 +6,15 @@ public:
     virtual ~LayerBase() {}
     
     virtual void update_params(double learning_rate) = 0;
-    virtual void forward(const Eigen::MatrixXd &input) = 0;
-    virtual void backward(const Eigen::MatrixXd &input) = 0;
+    virtual void forward(
+        const Eigen::VectorXd &inVector,
+        Eigen::VectorXd &outVector,
+        const void (*method_ptr)(
+            Eigen::VectorXd &,
+            Eigen::VectorXd &)
+    ) = 0;
+    virtual void backward(
+        const Eigen::VectorXd &inVector,
+        const Eigen::VectorXd &delta,
+        Eigen::VectorXd &delta_prev) = 0;
 };
