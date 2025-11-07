@@ -1,5 +1,3 @@
-#include <Eigen/Dense>
-#include <random>
 #include "layer_base.h"
 
 class DenseLayer : LayerBase

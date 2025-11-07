@@ -1,18 +1,33 @@
-#include "dense_layer.h"
+#include "layer_base.h"
 
-class ConvLayer : public DenseLayer{
+class ConvLayer : LayerBase{
     public:
 
-        double kernel_bias;
-        Eigen::MatrixXd kernel;
-        
-        std::random_device rd;
-        std::mt19937 gen;
+        ConvLayer(
+            const int input_size,
+            const int output_size);
 
-        ConvLayer(const int kernel_size);
+        void forward(
+            const Eigen::VectorXd &inVector,
+            Eigen::VectorXd &outVector)override;
 
-        void update_kernels(
-            const Eigen::MatrixXd &dW,
-            const double kernel_bias,
-            const double learning_rate);
+        void backward(
+            const Eigen::VectorXd &inVector,
+            const Eigen::VectorXd &delta,
+            Eigen::VectorXd &delta_prev
+        )override;
+
+        void update_params(double learning_rate)override;
+
+        private:
+            double kernel_bias;
+            Eigen::MatrixXd kernel;
+            double dB;
+            Eigen::MatrixXd dW;
+
+            std::random_device rd;
+            std::mt19937 gen;
+
+            void update_kernels(
+                const double learning_rate); 
 };
