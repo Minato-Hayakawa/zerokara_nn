@@ -1,31 +1,26 @@
-#include "layer_base.h"
+#include <Eigen/Dense>
+#include <random>
 
-class ConvLayer : LayerBase{
-    public:
+class ConvLayer {
+public:
+    ConvLayer(const int kernel_size);
 
-        ConvLayer(
-            const int input_size,
-            const int output_size);
+    Eigen::MatrixXd forward(const Eigen::MatrixXd& input_image);
 
-        void forward(
-            const Eigen::VectorXd &inVector,
-            Eigen::VectorXd &outVector)override;
+    Eigen::MatrixXd backward(const Eigen::MatrixXd& delta_map);
 
-        void backward(
-            const Eigen::VectorXd &delta
-        )override;
+    void update_params(double learning_rate);
 
-        void update_params(double learning_rate)override;
+private:
 
-        private:
-            double kernel_bias;
-            Eigen::MatrixXd kernel;
-            double dB;
-            Eigen::MatrixXd dW;
+    Eigen::MatrixXd kernel;
+    double kernel_bias;
 
-            std::random_device rd;
-            std::mt19937 gen;
+    Eigen::MatrixXd dW;
+    double dB;
 
-            void update_kernels(
-                const double learning_rate); 
+    Eigen::MatrixXd last_input_image;
+
+    std::random_device rd;
+    std::mt19937 gen;
 };
