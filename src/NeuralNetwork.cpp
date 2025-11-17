@@ -2,31 +2,6 @@
 #include "utils.h"
 #include "layer.h"
 
-void NeuralNetwork::dense(
-    const layer &lyrobj,
-    const Eigen::VectorXd &inVector,
-    Eigen::VectorXd &outVector,
-    const void (Utils::*method_ptr)(
-        Eigen::VectorXd &,
-        Eigen::VectorXd &))
-    {
-    multiplication(inVector,lyrobj.weights,outVector);
-    addition(lyrobj.bias,outVector,outVector);
-    (this->*method_ptr)(outVector, outVector);
-    }
-
-void NeuralNetwork::dense_backward(
-    const layer &lyrobj,
-    const Eigen::VectorXd &inVector,
-    const Eigen::VectorXd &delta,
-    Eigen::MatrixXd &dW,
-    Eigen::VectorXd &dB,
-    Eigen::VectorXd &delta_prev
-){
-    dW = delta * inVector.transpose();
-    dB = delta;
-    delta_prev = lyrobj.weights.transpose() * (delta);
-}
 std::pair <Eigen::MatrixXd, Eigen::MatrixXd> NeuralNetwork::zero_padding(
     const Eigen::MatrixXd &input_image,
     const Eigen::MatrixXd &kernel
