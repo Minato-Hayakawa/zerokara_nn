@@ -12,9 +12,7 @@ class ConvLayer : LayerBase{
             Eigen::VectorXd &outVector)override;
 
         void backward(
-            const Eigen::VectorXd &inVector,
-            const Eigen::VectorXd &delta,
-            Eigen::VectorXd &delta_prev
+            const Eigen::VectorXd &delta
         )override;
 
         void update_params(double learning_rate)override;
