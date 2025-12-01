@@ -122,7 +122,7 @@ Eigen::Tensor<double, 3> ConvLayer::forward(
     const Eigen::Tensor<double, 3> &input_images)
 {
     this -> last_input_images = input_images / 255.0;
-    Eigen::Tensor<double, 3> output_tensor;
+    Eigen::Tensor<double, 3> output_tensor(input_images.dimension(0), input_images.dimension(1), input_images.dimension(2));
     long num_images = input_images.dimension(0);
     long height = input_images.dimension(1);
     long width = input_images.dimension(2);
@@ -150,12 +150,12 @@ Eigen::Tensor<double, 3> ConvLayer::backward(
             long num_images = delta_map.dimension(0);
             long width = delta_map.dimension(1);
             long hight = delta_map.dimension(2);
-            long kernel_size = this -> kernel.size();
+            long kernel_size = this -> kernel.rows();
 
             this -> dW = Eigen::MatrixXd::Zero(kernel_size, kernel_size);
             this -> dB = 0.0;
 
-            Eigen::Tensor<double, 3> delta_prev;
+            Eigen::Tensor<double, 3> delta_prev(delta_map.dimension(0), delta_map.dimension(1), delta_map.dimension(2));
             for (int i=0; i<num_images; i++){
                 Eigen::Tensor<double, 2> delta_chip = delta_map.chip(i, 0);
                 Eigen::Map<const Eigen::MatrixXd> delta_matrix(delta_chip.data(), hight, width);
@@ -163,21 +163,21 @@ Eigen::Tensor<double, 3> ConvLayer::backward(
                 Eigen::Tensor<double, 2> input_chip = last_input_images.chip(i, 0);
                 Eigen::Map<const Eigen::MatrixXd> input_matrix(input_chip.data(), hight, width);
 
-                dB = delta_matrix.sum();
+                dB += delta_matrix.sum();
 
                 std::pair<Eigen::MatrixXd, Eigen::MatrixXd> padded_dW = zero_padding(input_matrix, delta_matrix);
 
-                Eigen::MatrixXd fft_input_dW = perform_fft(input_matrix);
-                Eigen::MatrixXd fft_delta_dW = perform_fft(delta_matrix);
-                Eigen::MatrixXd fft_mult_dW = multiply_fft_results(fft_input_dW, fft_delta_dW);
+                Eigen::MatrixXd fft_input_dW = perform_fft(padded_dW.first);
+                Eigen::MatrixXcd fft_delta_dW = perform_fft(padded_dW.second);
+                Eigen::MatrixXcd fft_mult_dW = multiply_fft_results(fft_input_dW, fft_delta_dW);
                 Eigen::MatrixXd fft_result_dW =perform_ifft(fft_mult_dW);
-                this -> dW = fft_result_dW.block(0, 0, kernel_size, kernel_size);
+                this -> dW += fft_result_dW.block(0, 0, kernel_size, kernel_size);
 
-                std::pair<Eigen::MatrixXd, Eigen::MatrixXd> padded_prev = zero_padding(delta_matrix, this -> kernel.transpose());
+                std::pair<Eigen::MatrixXd, Eigen::MatrixXd> padded_prev = zero_padding(delta_matrix, this -> kernel.reverse());
 
-                Eigen::MatrixXd fft_delta_prev = perform_fft(delta_matrix);
-                Eigen::MatrixXd fft_kernel_prev = perform_fft(kernel);
-                Eigen::MatrixXd fft_mult_delta_prev= multiply_fft_results(fft_delta_prev, fft_kernel_prev);
+                Eigen::MatrixXd fft_delta_prev = perform_fft(padded_prev.first);
+                Eigen::MatrixXcd fft_kernel_prev = perform_fft(padded_prev.second);
+                Eigen::MatrixXcd fft_mult_delta_prev= multiply_fft_results(fft_delta_prev, fft_kernel_prev);
                 Eigen::MatrixXd result_delta_prev = perform_ifft(fft_mult_delta_prev);
 
                 for (int r=0; r<hight; r++){
