@@ -1,4 +1,4 @@
-#include <Eigen/Dense>>
+#include <Eigen/Dense>
 #include <random>
 #include <fftw3.h>
 #include <unsupported/Eigen/CXX11/Tensor>
@@ -23,7 +23,7 @@ private:
     Eigen::MatrixXd dW;
     double dB;
 
-    Eigen::MatrixXd last_input_image;
+    Eigen::Tensor<double, 3> last_input_images;
 
     std::random_device rd;
     std::mt19937 gen;
