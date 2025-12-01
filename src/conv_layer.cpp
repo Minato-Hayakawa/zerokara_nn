@@ -121,8 +121,8 @@ Eigen::MatrixXd ConvLayer::perform_ifft(
 Eigen::Tensor<double, 3> ConvLayer::forward(
     const Eigen::Tensor<double, 3> &input_images)
 {
-    this -> last_input_images = input_images;
-
+    this -> last_input_images = input_images / 255.0;
+    Eigen::Tensor<double, 3> output_tensor;
     long num_images = input_images.dimension(0);
     long height = input_images.dimension(1);
     long width = input_images.dimension(2);
@@ -137,17 +137,45 @@ Eigen::Tensor<double, 3> ConvLayer::forward(
         Eigen::MatrixXd conv_result = perform_ifft(fft_mult);
 
         conv_result.array() += this -> kernel_bias;
-        Eigen::Tensor<double, 3> output_tensor;
         for (long r = 0; r < height; ++r) {
             for (long c = 0; c < width; ++c) {
                 output_tensor(i, r, c) = conv_result(r, c); // (crop処理は省略)
             }
         }
-        return output_tensor;
-    }
+    }return output_tensor;
 };
+
+Eigen::Tensor<double, 3> ConvLayer::backward(
+        const Eigen::Tensor<double, 3> &delta_map){
+            long num_images = delta_map.dimension(0);
+            long width = delta_map.dimension(1);
+            long hight = delta_map.dimension(2);
+            long kernel_size = this -> kernel.size();
+
+            this -> dW = Eigen::MatrixXd::Zero(kernel_size, kernel_size);
+            this -> dB = 0.0;
+
+            Eigen::Tensor<double, 3> delta_prev;
+            for (int i=0; i<num_images; i++){
+                Eigen::Tensor<double, 2> delta_chip = delta_map.chip(i, 0);
+                Eigen::Map<const Eigen::MatrixXd> delta_matrix(delta_chip.data(), hight, width);
+
+                Eigen::Tensor<double, 2> input_chip = last_input_images.chip(i, 0);
+                Eigen::Map<const Eigen::MatrixXd> input_matrix(input_chip.data(), hight, width);
+
+                dB = delta_matrix.sum();
+
+                std::pair<Eigen::MatrixXd, Eigen::MatrixXd> padded_dW = zero_padding(input_matrix, delta_matrix);
+
+                Eigen::MatrixXd fft_input_dW = perform_fft(input_matrix);
+                Eigen::MatrixXd fft_delta_dW = perform_fft(delta_matrix);
+                Eigen::MatrixXd fft_mult_dW = multiply_fft_results(fft_input_dW, fft_delta_dW);
+                Eigen::MatrixXd fft_result_dW =perform_ifft(fft_mult_dW);
+                this -> dW = fft_result_dW.block(0, 0, kernel_size, kernel_size);
+            }
+        }
 
 void ConvLayer::update_params(double learning_rate){
     this -> kernel -= this -> dW * learning_rate;
-    this -> kernel_bias -= this -> dB;
+    this -> kernel_bias -= this -> dB * learning_rate;
 }
