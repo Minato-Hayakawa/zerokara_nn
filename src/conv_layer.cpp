@@ -149,7 +149,7 @@ Eigen::Tensor<double, 3> ConvLayer::backward(
         const Eigen::Tensor<double, 3> &delta_map){
             long num_images = delta_map.dimension(0);
             long width = delta_map.dimension(1);
-            long hight = delta_map.dimension(2);
+            long height = delta_map.dimension(2);
             long kernel_size = this -> kernel.rows();
 
             this -> dW = Eigen::MatrixXd::Zero(kernel_size, kernel_size);
@@ -158,10 +158,10 @@ Eigen::Tensor<double, 3> ConvLayer::backward(
             Eigen::Tensor<double, 3> delta_prev(delta_map.dimension(0), delta_map.dimension(1), delta_map.dimension(2));
             for (int i=0; i<num_images; i++){
                 Eigen::Tensor<double, 2> delta_chip = delta_map.chip(i, 0);
-                Eigen::Map<const Eigen::MatrixXd> delta_matrix(delta_chip.data(), hight, width);
+                Eigen::Map<const Eigen::MatrixXd> delta_matrix(delta_chip.data(), height, width);
 
                 Eigen::Tensor<double, 2> input_chip = last_input_images.chip(i, 0);
-                Eigen::Map<const Eigen::MatrixXd> input_matrix(input_chip.data(), hight, width);
+                Eigen::Map<const Eigen::MatrixXd> input_matrix(input_chip.data(), height, width);
 
                 dB += delta_matrix.sum();
 
@@ -180,7 +180,7 @@ Eigen::Tensor<double, 3> ConvLayer::backward(
                 Eigen::MatrixXcd fft_mult_delta_prev= multiply_fft_results(fft_delta_prev, fft_kernel_prev);
                 Eigen::MatrixXd result_delta_prev = perform_ifft(fft_mult_delta_prev);
 
-                for (int r=0; r<hight; r++){
+                for (int r=0; r<height; r++){
                     for (int c=0; c<width; c++){
                         delta_prev(i, r, c) = result_delta_prev(r, c);
                     }
