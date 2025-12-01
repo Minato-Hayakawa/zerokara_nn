@@ -172,6 +172,20 @@ Eigen::Tensor<double, 3> ConvLayer::backward(
                 Eigen::MatrixXd fft_mult_dW = multiply_fft_results(fft_input_dW, fft_delta_dW);
                 Eigen::MatrixXd fft_result_dW =perform_ifft(fft_mult_dW);
                 this -> dW = fft_result_dW.block(0, 0, kernel_size, kernel_size);
+
+                std::pair<Eigen::MatrixXd, Eigen::MatrixXd> padded_prev = zero_padding(delta_matrix, this -> kernel.transpose());
+
+                Eigen::MatrixXd fft_delta_prev = perform_fft(delta_matrix);
+                Eigen::MatrixXd fft_kernel_prev = perform_fft(kernel);
+                Eigen::MatrixXd fft_mult_delta_prev= multiply_fft_results(fft_delta_prev, fft_kernel_prev);
+                Eigen::MatrixXd result_delta_prev = perform_ifft(fft_mult_delta_prev);
+
+                for (int r=0; r<hight; r++){
+                    for (int c=0; c<width; c++){
+                        delta_prev(i, r, c) = result_delta_prev(r, c);
+                    }
+                }
+
             }
         }
 
