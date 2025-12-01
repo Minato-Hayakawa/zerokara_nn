@@ -186,7 +186,7 @@ Eigen::Tensor<double, 3> ConvLayer::backward(
                     }
                 }
 
-            }
+            }return delta_prev;
         }
 
 void ConvLayer::update_params(double learning_rate){
