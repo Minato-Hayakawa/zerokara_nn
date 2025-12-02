@@ -3,7 +3,7 @@
 ConvLayer::ConvLayer(const int kernel_size)
 :gen(rd())
 {
-    const double limit = std::sqrt(6.0 / (kernel_size * kernel_size * 2)); // 簡易版
+    const double limit = std::sqrt(6.0 / (kernel_size * kernel_size * 2)); 
     std::uniform_real_distribution<> d(-limit, limit);
 
     this -> kernel = Eigen::MatrixXd::NullaryExpr(kernel_size,
@@ -139,7 +139,7 @@ Eigen::Tensor<double, 3> ConvLayer::forward(
         conv_result.array() += this -> kernel_bias;
         for (long r = 0; r < height; ++r) {
             for (long c = 0; c < width; ++c) {
-                output_tensor(i, r, c) = conv_result(r, c); // (crop処理は省略)
+                output_tensor(i, r, c) = conv_result(r, c);
             }
         }
     }return output_tensor;
