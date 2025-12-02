@@ -62,17 +62,11 @@ int main(){
             delta_output = utilsObj.output_delta(GroundTruth, PredictedProbability);
 
             Eigen::VectorXd delta_hidden =dense_outputObj.backward(delta_output);
-            
-            Eigen::VectorXd delta_input = dense_outputObj.backward(delta_hidden);
-            NNObj.dense_backward(
-                hiddenlayer,
-                conv_outputs_Vector,
-                delta_hidden,
-                dW_hidden,
-                dB_hidden,
-                delta_hidden
-            );
 
+            Eigen::VectorXd delta_input = dense_outputObj.backward(delta_hidden);
+            
+            
+            convObj.backward()
             outputlayer.update_params(dW_output, dB_output, learningrate);
             hiddenlayer.update_params(dW_hidden, dB_hidden, learningrate);
             }
