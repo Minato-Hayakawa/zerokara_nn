@@ -1,5 +1,5 @@
-#include "layer.h"
-#include "NeuralNetwork.h"
+#include "conv_layer.h"
+#include "dense_layer.h"
 #include "utils.h"
 
 int main(){
@@ -9,28 +9,35 @@ int main(){
     const int classes_num = 2;
     const double learningrate = 0.001;
     double loss;
-    NeuralNetwork NNObj;
+    ConvLayer convObj(kernelsize);
+    DenseLayer denseObj();
+    Utils utilsObj;
 
     Eigen::Tensor <double, 3> images;
-    images = NNObj.load_images();
+    images = utilsObj.load_images();
 
     Eigen::VectorXd PredictedProbability = Eigen::VectorXd::Zero(classes_num);
     Eigen::VectorXd GroundTruth = Eigen::VectorXd::Zero(classes_num);
     GroundTruth(0) = 1;
 
-    Eigen::Tensor<double, 3> kernel = Eigen::Tensor<double, 3>(kernelsize, kernelsize);
-    Eigen::Tensor <double, 3> conv_outputs_Tensor = NNObj.fft_convolution(images, kernel);
-    Eigen::MatrixXd conv_outputs_Matrix;
-    Eigen::VectorXd conv_outputs_Vector;
-    const int inputsize = conv_outputs_Tensor.dimension(1) * conv_outputs_Tensor.dimension(1);
+    Eigen::Tensor<double, 3> kernel = Eigen::Tensor<double, 3>(images.dimension(0), kernelsize, kernelsize);
+    Eigen::Tensor <double, 3> conv_outputs_tensor = convObj.forward(images);
+
+    const int inputsize = conv_outputs_tensor.dimension(1) * conv_outputs_tensor.dimension(1);
     const int hiddensize = 128;
     const int outputsize = classes_num;
+    
+    DenseLayer denseObj(inputsize, outputsize);
+    // Eigen::Tensor <double, 3> conv_outputs_Tensor = NNObj.fft_convolution(images, kernel);
+    // Eigen::MatrixXd conv_outputs_Matrix;
+    // Eigen::VectorXd conv_outputs_Vector;
+    // const int inputsize = conv_outputs_Tensor.dimension(1) * conv_outputs_Tensor.dimension(1);
 
     auto ReLUptr = &Utils::ReLU;
     auto Sigmoidptr = &Utils::Sigmoid;
 
-    layer hiddenlayer(inputsize, hiddensize);
-    layer outputlayer(hiddensize, outputsize);
+    // layer hiddenlayer(inputsize, hiddensize);
+    // layer outputlayer(hiddensize, outputsize);
 
     Eigen::MatrixXd dW_hidden, dW_output;
     Eigen::VectorXd dB_hidden, dB_output;
@@ -41,9 +48,7 @@ int main(){
     for (int i=0; i<epoch; i++){
         for (int j=0; j<images.dimension(0); j++){
 
-            Eigen::Tensor<double, 2> image_chip = conv_outputs_Tensor.chip(j, 0);
-            NNObj.convert_tensor_to_matrix(image_chip, conv_outputs_Matrix);
-            NNObj.convert_matrix_to_vector(conv_outputs_Matrix, conv_outputs_Vector);
+            convObj.forward(images);
 
             NNObj.dense(
                 hiddenlayer,
