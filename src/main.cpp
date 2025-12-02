@@ -9,8 +9,8 @@ int main(){
     const int classes_num = 2;
     const double learningrate = 0.001;
     double loss;
+
     ConvLayer convObj(kernelsize);
-    DenseLayer denseObj();
     Utils utilsObj;
 
     Eigen::Tensor <double, 3> images;
@@ -26,56 +26,44 @@ int main(){
     const int inputsize = conv_outputs_tensor.dimension(1) * conv_outputs_tensor.dimension(1);
     const int hiddensize = 128;
     const int outputsize = classes_num;
-    
-    DenseLayer denseObj(inputsize, outputsize);
+
+    DenseLayer dense_outputObj(inputsize, hiddensize);
+    DenseLayer dense_outputObj(hiddensize, outputsize);
     // Eigen::Tensor <double, 3> conv_outputs_Tensor = NNObj.fft_convolution(images, kernel);
     // Eigen::MatrixXd conv_outputs_Matrix;
     // Eigen::VectorXd conv_outputs_Vector;
     // const int inputsize = conv_outputs_Tensor.dimension(1) * conv_outputs_Tensor.dimension(1);
-
-    auto ReLUptr = &Utils::ReLU;
-    auto Sigmoidptr = &Utils::Sigmoid;
-
     // layer hiddenlayer(inputsize, hiddensize);
     // layer outputlayer(hiddensize, outputsize);
 
     Eigen::MatrixXd dW_hidden, dW_output;
     Eigen::VectorXd dB_hidden, dB_output;
     Eigen::VectorXd delta_hidden, delta_output;
-    Eigen::VectorXd hidden_Vector;
-    Eigen::VectorXd output_Vector;
+    Eigen::MatrixXd input_image;
+    Eigen::MatrixXd input_matrix;
+    Eigen::VectorXd input_vector;
+    Eigen::VectorXd hidden_vector;
+    Eigen::VectorXd output_vector;
 
     for (int i=0; i<epoch; i++){
         for (int j=0; j<images.dimension(0); j++){
 
-            convObj.forward(images);
+            Eigen::Tensor <double, 2> input_image = conv_outputs_tensor(i);
+            utilsObj.convert_tensor_to_matrix(input_image, input_matrix);
+            utilsObj.convert_matrix_to_vector(input_matrix, input_vector);
 
-            NNObj.dense(
-                hiddenlayer,
-                conv_outputs_Vector,
-                hidden_Vector,
-                ReLUptr);
+            dense_outputObj.forward(input_vector, hidden_vector);
+            
+            dense_outputObj.forward(hidden_vector, output_vector);
 
-            NNObj.dense(
-                outputlayer,
-                hidden_Vector,
-                PredictedProbability,
-                Sigmoidptr);
-
-            loss = NNObj.CrossEntropy(GroundTruth, PredictedProbability);
+            loss = utilsObj.CrossEntropy(GroundTruth, PredictedProbability);
             std::cout << "Epoch =" << i+1 << "CrossEntropy = " << loss<< std::endl;
 
-            delta_output = NNObj.output_delta(GroundTruth, PredictedProbability);
+            delta_output = utilsObj.output_delta(GroundTruth, PredictedProbability);
 
-            NNObj.dense_backward(
-                outputlayer,
-                hidden_Vector,
-                delta_output,
-                dW_output,
-                dB_output,
-                delta_hidden
-            );
-
+            Eigen::VectorXd delta_hidden =dense_outputObj.backward(delta_output);
+            
+            Eigen::VectorXd delta_input = dense_outputObj.backward(delta_hidden);
             NNObj.dense_backward(
                 hiddenlayer,
                 conv_outputs_Vector,
