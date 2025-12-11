@@ -47,7 +47,7 @@ int main(){
 
     for (int i=0; i<epoch; i++){
         for (int j=0; j<images.dimension(0); j++){
-
+            conv_outputs_tensor = convObj.forward(images);
             Eigen::Tensor <double, 2> input_image = conv_outputs_tensor(i);
             utilsObj.convert_tensor_to_matrix(input_image, input_matrix);
             utilsObj.convert_matrix_to_vector(input_matrix, input_vector);
