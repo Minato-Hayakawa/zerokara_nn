@@ -35,6 +35,7 @@ int main(){
     Eigen::VectorXd delta_hidden, delta_output;
     Eigen::Tensor <double, 3> conv_delta;
     Eigen::Tensor <double, 2> delta_image;
+    Eigen::Tensor <double, 2> delta_input;
     Eigen::MatrixXd input_image;
     Eigen::MatrixXd input_matrix;
     Eigen::VectorXd input_vector;
@@ -63,7 +64,7 @@ int main(){
 
             delta_hidden =dense_outputObj.backward(delta_output);
 
-            delta_image = dense_outputObj.backward(delta_hidden);
+            delta_input = dense_outputObj.backward(delta_hidden);
 
             for (int r=0; r<input_image.dimension(0); r++){
                 for (int c=0; c<input_image.dimension(1); c++){
