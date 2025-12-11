@@ -26,8 +26,7 @@ int main(){
     const int hiddensize = 128;
     const int outputsize = classes_num;
 
-    const int inputsize = conv_outputs_tensor.dimension(1) * conv_outputs_tensor.dimension(1);
-    DenseLayer dense_hiddenObj(inputsize, hiddensize);
+    DenseLayer dense_hiddenObj(images.dimension(0)*images.dimension(1), hiddensize);
     DenseLayer dense_outputObj(hiddensize, outputsize);
 
     Eigen::MatrixXd dW_hidden, dW_output;
