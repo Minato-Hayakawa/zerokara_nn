@@ -45,6 +45,7 @@ int main(){
     Eigen::VectorXd hidden_vector;
     Eigen::VectorXd output_vector;
 
+    std::cout<< "start training"<< std::endl;
     for (int i=0; i<epoch; i++){
         for (int j=0; j<images.dimension(0); j++){
             conv_outputs_tensor = convObj.forward(images);
@@ -52,7 +53,7 @@ int main(){
             utilsObj.convert_tensor_to_matrix(input_image, input_matrix);
             utilsObj.convert_matrix_to_vector(input_matrix, input_vector);
 
-            dense_outputObj.forward(input_vector, hidden_vector);
+            dense_hiddenObj.forward(input_vector, hidden_vector);
             
             dense_outputObj.forward(hidden_vector, output_vector);
 
