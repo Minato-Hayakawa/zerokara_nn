@@ -26,12 +26,6 @@ int main(){
     const int hiddensize = 128;
     const int outputsize = classes_num;
 
-    for (int i=0; i<epoch; i++){
-        conv_outputs_tensor = convObj.forward(images);
-        convObj.backward(input_image);
-        convObj.update_params(learningrate);
-    }
-
     const int inputsize = conv_outputs_tensor.dimension(1) * conv_outputs_tensor.dimension(1);
     DenseLayer dense_hiddenObj(inputsize, hiddensize);
     DenseLayer dense_outputObj(hiddensize, outputsize);
@@ -39,16 +33,21 @@ int main(){
     Eigen::MatrixXd dW_hidden, dW_output;
     Eigen::VectorXd dB_hidden, dB_output;
     Eigen::VectorXd delta_hidden, delta_output;
+    Eigen::Tensor <double, 3> conv_delta;
+    Eigen::Tensor <double, 2> delta_image;
     Eigen::MatrixXd input_image;
     Eigen::MatrixXd input_matrix;
     Eigen::VectorXd input_vector;
     Eigen::VectorXd hidden_vector;
     Eigen::VectorXd output_vector;
 
-    std::cout<< "start training"<< std::endl;
+
+    std::cout<< "Start Training"<< std::endl;
     for (int i=0; i<epoch; i++){
         for (int j=0; j<images.dimension(0); j++){
+
             conv_outputs_tensor = convObj.forward(images);
+
             Eigen::Tensor <double, 2> input_image = conv_outputs_tensor(i);
             utilsObj.convert_tensor_to_matrix(input_image, input_matrix);
             utilsObj.convert_matrix_to_vector(input_matrix, input_vector);
@@ -62,15 +61,20 @@ int main(){
 
             delta_output = utilsObj.output_delta(GroundTruth, PredictedProbability);
 
-            Eigen::VectorXd delta_hidden =dense_outputObj.backward(delta_output);
+            delta_hidden =dense_outputObj.backward(delta_output);
 
-            Eigen::VectorXd delta_input = dense_outputObj.backward(delta_hidden);
+            delta_image = dense_outputObj.backward(delta_hidden);
 
+            for (int r=0; r<input_image.dimension(0); r++){
+                for (int c=0; c<input_image.dimension(1); c++){
+                    conv_delta(j, r, c) = delta_image(r, c);
+                }
+            }
             dense_hiddenObj.update_params(learningrate);
             dense_outputObj.update_params(learningrate);
             }
-
-
+            convObj.backward(conv_delta);
+            convObj.update_params(learningrate);
     }
     return 0;
 }
