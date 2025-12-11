@@ -32,7 +32,7 @@ int main(){
     Eigen::MatrixXd dW_hidden, dW_output;
     Eigen::VectorXd dB_hidden, dB_output;
     Eigen::VectorXd delta_hidden, delta_output;
-    Eigen::Tensor <double, 3> conv_delta;
+    Eigen::Tensor <double, 3> conv_delta(images.dimension(0), images.dimension(1), images.dimension(2));
     Eigen::Tensor <double, 2> delta_input;
     Eigen::MatrixXd input_matrix;
     Eigen::VectorXd input_vector;
