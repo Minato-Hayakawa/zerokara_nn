@@ -40,5 +40,5 @@ class Utils
                 Eigen::Tensor<double, 2> &outTensor);
             void convert_matrix_to_vector(
                 const Eigen::MatrixXd inMatrix,
-                Eigen::VectorXd outVector);
+                Eigen::VectorXd &outVector);
     };

@@ -39,19 +39,19 @@ void Utils::multiplication(
     outVector = inMatrix*inVector;
 }
 
-void Utils::convert_to_Eigen_tensor(
-    const std::vector<cv::Mat> &images,
-    Eigen::Tensor<double, 3> &outTensor
-){
-    outTensor.resize(images.size(), images[0].rows, images[0].cols);
-    for (int i = 0; i < images.size(); i++){
-        for (int j = 0; j < images[i].rows; j++) {
-            for (int k = 0; k < images[i].cols; k++) {
-                outTensor(i, j, k) = static_cast<double>(images[i].at<uchar>(j, k)) / 255.0;
-            }
-        }
-    }
-}
+// void Utils::convert_to_Eigen_tensor(
+//     const std::vector<cv::Mat> &images,
+//     Eigen::Tensor<double, 3> &outTensor
+// ){
+//     outTensor.resize(images.size(), images[0].rows, images[0].cols);
+//     for (int i = 0; i < images.size(); i++){
+//         for (int j = 0; j < images[i].rows; j++) {
+//             for (int k = 0; k < images[i].cols; k++) {
+//                 outTensor(i, j, k) = static_cast<double>(images[i].at<uchar>(j, k)) / 255.0;
+//             }
+//         }
+//     }
+// }
 
 Eigen::Tensor <double, 3> Utils::load_images(){
     std::string pathpattern = "images/*.jpg;";
