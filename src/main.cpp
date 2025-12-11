@@ -26,7 +26,7 @@ int main(){
     const int hiddensize = 128;
     const int outputsize = classes_num;
 
-    DenseLayer dense_hiddenObj(images.dimension(0)*images.dimension(1), hiddensize);
+    DenseLayer dense_hiddenObj(images.dimension(1)*images.dimension(2), hiddensize);
     DenseLayer dense_outputObj(hiddensize, outputsize);
 
     Eigen::MatrixXd dW_hidden, dW_output;
@@ -44,7 +44,7 @@ int main(){
     for (int i=0; i<epoch; i++){
 
         conv_outputs_tensor = convObj.forward(images);
-        
+
         for (int j=0; j<images.dimension(0); j++){
 
             Eigen::Tensor <double, 2> input_image = conv_outputs_tensor.chip(j, 0);
