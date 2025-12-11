@@ -20,13 +20,19 @@ int main(){
     Eigen::VectorXd GroundTruth = Eigen::VectorXd::Zero(classes_num);
     GroundTruth(0) = 1;
 
+    Eigen::Tensor <double, 3> conv_outputs_tensor;
+    Eigen::Tensor <double, 2> input_image;
     Eigen::Tensor<double, 3> kernel = Eigen::Tensor<double, 3>(images.dimension(0), kernelsize, kernelsize);
-    Eigen::Tensor <double, 3> conv_outputs_tensor = convObj.forward(images);
-
-    const int inputsize = conv_outputs_tensor.dimension(1) * conv_outputs_tensor.dimension(1);
     const int hiddensize = 128;
     const int outputsize = classes_num;
 
+    for (int i=0; i<epoch; i++){
+        conv_outputs_tensor = convObj.forward(images);
+        convObj.backward(input_image);
+        convObj.update_params(learningrate);
+    }
+
+    const int inputsize = conv_outputs_tensor.dimension(1) * conv_outputs_tensor.dimension(1);
     DenseLayer dense_outputObj(inputsize, hiddensize);
     DenseLayer dense_outputObj(hiddensize, outputsize);
     // Eigen::Tensor <double, 3> conv_outputs_Tensor = NNObj.fft_convolution(images, kernel);
@@ -65,8 +71,6 @@ int main(){
 
             Eigen::VectorXd delta_input = dense_outputObj.backward(delta_hidden);
             
-            
-            convObj.backward()
             outputlayer.update_params(dW_output, dB_output, learningrate);
             hiddenlayer.update_params(dW_hidden, dB_hidden, learningrate);
             }
