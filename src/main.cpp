@@ -33,7 +33,6 @@ int main(){
     Eigen::VectorXd dB_hidden, dB_output;
     Eigen::VectorXd delta_hidden, delta_output;
     Eigen::Tensor <double, 3> conv_delta;
-    Eigen::Tensor <double, 2> delta_image;
     Eigen::Tensor <double, 2> delta_input;
     Eigen::MatrixXd input_matrix;
     Eigen::VectorXd input_vector;
@@ -47,7 +46,7 @@ int main(){
 
             conv_outputs_tensor = convObj.forward(images);
 
-            Eigen::Tensor <double, 2> input_image = conv_outputs_tensor(i);
+            Eigen::Tensor <double, 2> input_image = conv_outputs_tensor.chip(j, 0);
             utilsObj.convert_tensor_to_matrix(input_image, input_matrix);
             utilsObj.convert_matrix_to_vector(input_matrix, input_vector);
 
@@ -66,7 +65,7 @@ int main(){
 
             for (int r=0; r<input_image.dimension(0); r++){
                 for (int c=0; c<input_image.dimension(1); c++){
-                    conv_delta(j, r, c) = delta_image(r, c);
+                    conv_delta(j, r, c) = delta_input(r, c);
                 }
             }
             dense_hiddenObj.update_params(learningrate);
