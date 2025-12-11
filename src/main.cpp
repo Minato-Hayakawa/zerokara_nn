@@ -36,7 +36,6 @@ int main(){
     Eigen::Tensor <double, 3> conv_delta;
     Eigen::Tensor <double, 2> delta_image;
     Eigen::Tensor <double, 2> delta_input;
-    Eigen::MatrixXd input_image;
     Eigen::MatrixXd input_matrix;
     Eigen::VectorXd input_vector;
     Eigen::VectorXd hidden_vector;
