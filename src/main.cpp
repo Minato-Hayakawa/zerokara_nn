@@ -33,7 +33,7 @@ int main(){
     }
 
     const int inputsize = conv_outputs_tensor.dimension(1) * conv_outputs_tensor.dimension(1);
-    DenseLayer dense_outputObj(inputsize, hiddensize);
+    DenseLayer dense_hiddenObj(inputsize, hiddensize);
     DenseLayer dense_outputObj(hiddensize, outputsize);
     // Eigen::Tensor <double, 3> conv_outputs_Tensor = NNObj.fft_convolution(images, kernel);
     // Eigen::MatrixXd conv_outputs_Matrix;
@@ -70,9 +70,9 @@ int main(){
             Eigen::VectorXd delta_hidden =dense_outputObj.backward(delta_output);
 
             Eigen::VectorXd delta_input = dense_outputObj.backward(delta_hidden);
-            
-            outputlayer.update_params(dW_output, dB_output, learningrate);
-            hiddenlayer.update_params(dW_hidden, dB_hidden, learningrate);
+
+            dense_hiddenObj.update_params(learningrate);
+            dense_outputObj.update_params(learningrate);
             }
 
 
