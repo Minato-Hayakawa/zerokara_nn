@@ -42,9 +42,10 @@ int main(){
 
     std::cout<< "Start Training"<< std::endl;
     for (int i=0; i<epoch; i++){
-        for (int j=0; j<images.dimension(0); j++){
 
-            conv_outputs_tensor = convObj.forward(images);
+        conv_outputs_tensor = convObj.forward(images);
+        
+        for (int j=0; j<images.dimension(0); j++){
 
             Eigen::Tensor <double, 2> input_image = conv_outputs_tensor.chip(j, 0);
             utilsObj.convert_tensor_to_matrix(input_image, input_matrix);
