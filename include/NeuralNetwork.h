@@ -1,4 +1,3 @@
-#include <vector>
 #include <Eigen/Dense>
 #include <iostream>
 #include <fftw3.h>

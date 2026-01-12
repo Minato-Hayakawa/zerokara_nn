@@ -1,38 +1,41 @@
-CXX = g++
-CXXFLAGS = -std=c++17 -Wall -O2
+CXX      := g++
+CXXFLAGS := -std=c++14 -O3 -Wall
 
-OPENCV_DIR := $(CURDIR)/opencv
+EIGEN_PATH  := C:/igen-3.4.0/eigen-3.4.0
 
-EIGEN_DIR := C:/c/eigen-3.4.0
+OPENCV_PATH := C:/opencv/opencv-4.12/build
 
-FFTW_FLAGS := $(shell pkg-config --cflags fftw3)
-FFTW_LIBS := $(shell pkg-config --libs fftw3)
+FFTW_PATH   := C:/fftw/fftw-3.3.5-dll64
 
-CXXFLAGS += -Iinclude -I$(OPENCV_DIR)/include -I$(EIGEN_DIR) $(FFTW_FLAGS)
+INCLUDES := -I. \
+            -I$(SRC_DIR) \
+            -I$(EIGEN_PATH) \
+            -I$(OPENCV_PATH)/include \
+            -I$(FFTW_PATH)/include
 
-LDFLAGS := -L$(OPENCV_DIR)/lib -lopencv_core -lopencv_highgui -lopencv_imgproc $(FFTW_LIBS)
+LIB_DIRS := -L$(OPENCV_PATH)/x64/mingw/lib \
+            -L$(FFTW_PATH)
 
-SRC = $(wildcard src/*.cpp)
-OBJ_DIR = obj
+# 注意: OpenCVのバージョンによって数字(460など)を変えてください
+# フォルダ内の libopencv_worldXXX.dll.a の名前を確認してください
+LIBS     := -lopencv_world460 -lfftw3-3
 
-OBJ = $(patsubst src/%.cpp,$(OBJ_DIR)/%.o,$(SRC))
-TARGET = my_nn
+TARGET   := neural_net.exe
 
-.PHONY: all clean
+SRCS     := src/main.cpp \
+            src/conv_layer.cpp \
+            src/dense_layer.cpp \
+            src/utils.cpp
+
+OBJS     := $(SRCS:.cpp=.o)
 
 all: $(TARGET)
-	@echo "--- Running main program ---"
-	./$(TARGET)
 
-$(TARGET): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(LIB_DIRS) $(OBJS) -o $(TARGET) $(LIBS)
 
-$(OBJ_DIR)/%.o: src/%.cpp | $(OBJ_DIR)
-	@echo "Compiling $<..."
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	rm -rf $(OBJ_DIR) $(TARGET)
+	del $(OBJS) $(TARGET)
