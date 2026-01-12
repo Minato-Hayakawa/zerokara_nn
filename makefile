@@ -1,24 +1,22 @@
 CXX      := g++
 CXXFLAGS := -std=c++14 -O3 -Wall
 
-EIGEN_PATH  := C:/igen-3.4.0/eigen-3.4.0
+EIGEN_PATH  := C:/eigen-3.4.0/eigen-3.4.0
 
-OPENCV_PATH := C:/opencv/opencv-4.12/build
+OPENCV_PATH := C:/opencv/opencv-4.12/build/include/opencv2
 
 FFTW_PATH   := C:/fftw/fftw-3.3.5-dll64
 
 INCLUDES := -I. \
-            -I$(SRC_DIR) \
+            -Iinclude \
             -I$(EIGEN_PATH) \
-            -I$(OPENCV_PATH)/include \
-            -I$(FFTW_PATH)/include
+            -I$(OPENCV_PATH)\
+            -I$(FFTW_PATH)
 
 LIB_DIRS := -L$(OPENCV_PATH)/x64/mingw/lib \
             -L$(FFTW_PATH)
 
-# 注意: OpenCVのバージョンによって数字(460など)を変えてください
-# フォルダ内の libopencv_worldXXX.dll.a の名前を確認してください
-LIBS     := -lopencv_world460 -lfftw3-3
+LIBS     := -lopencv_world412 -lfftw3-3
 
 TARGET   := neural_net.exe
 
@@ -38,4 +36,4 @@ $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	del $(OBJS) $(TARGET)
+	del /Q *.o $(TARGET)
