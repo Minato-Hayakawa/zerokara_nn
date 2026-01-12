@@ -6,3 +6,5 @@ fftw/
 
 # opencv library
 opencv/
+
+*.o

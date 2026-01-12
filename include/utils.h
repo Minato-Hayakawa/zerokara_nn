@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <Eigen/Dense>
 #include <unsupported/Eigen/CXX11/Tensor>
-#include "opencv.hpp"
+#include <opencv2/opencv.hpp>
 
 class Utils
     {
