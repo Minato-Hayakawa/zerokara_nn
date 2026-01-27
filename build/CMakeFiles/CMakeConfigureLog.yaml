@@ -1,0 +1,2019 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/cmake/share/cmake-4.2/Modules/"
+    found: "C:/cmake/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\gnuplot\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Graphviz\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\msys64\\usr\\local\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\msys64\\bin"
+        - "C:\\msys64\\opt\\bin"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\cmake\\bin"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\src\\flutter\\flutter_windows_3.29.2-stable\\flutter\\bin"
+        - "C:\\texlive\\2025\\bin\\windows"
+        - "C:\\Users\\hayak\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\GnuWin32\\bin"
+        - "C:\\kousen\\senmonkamoku\\3\\anaden1\\ngspice-44.2_64\\Spice64\\bin"
+        - "C:\\opencv\\opencv-4.12\\build\\bin"
+        - "C:\\mingw\\x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0\\mingw64\\bin"
+        - "C:\\cmake\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild のバージョン 17.13.19+0d9f5a35a (.NET Framework)
+      2026/01/27 20:33:28 にビルドを開始しました。
+      
+      ノード 1 上のプロジェクト "C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\4.2.2\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        構造化出力が有効になっています。コンパイラ診断の書式設定にはエラー階層が反映されます。詳細については、https://aka.ms/cpp/structured-output を参照してください。
+        ディレクトリ "Debug\\CompilerIdC.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を作成しています。
+        "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" のタッチ タスクを実行しています。
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\4.2.2\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\4.2.2\\CompilerIdC\\CompilerIdC.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:00.90
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/vscode/C++/zerokara_nn/build/CMakeFiles/4.2.2/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/"
+      - "C:/Program Files/PowerShell/7/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/gnuplot/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/gs/gs10.05.1/bin/"
+      - "C:/Program Files/Graphviz/bin/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/msys64/usr/local/bin/"
+      - "C:/msys64/usr/bin/"
+      - "C:/msys64/bin/"
+      - "C:/msys64/opt/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/cmake/bin/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/"
+      - "C:/texlive/2025/bin/windows/"
+      - "C:/Users/hayak/AppData/Roaming/npm/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/GnuWin32/bin/"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/"
+      - "C:/opencv/opencv-4.12/build/bin/"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\gnuplot\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Graphviz\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\msys64\\usr\\local\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\msys64\\bin"
+        - "C:\\msys64\\opt\\bin"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\cmake\\bin"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\src\\flutter\\flutter_windows_3.29.2-stable\\flutter\\bin"
+        - "C:\\texlive\\2025\\bin\\windows"
+        - "C:\\Users\\hayak\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\GnuWin32\\bin"
+        - "C:\\kousen\\senmonkamoku\\3\\anaden1\\ngspice-44.2_64\\Spice64\\bin"
+        - "C:\\opencv\\opencv-4.12\\build\\bin"
+        - "C:\\mingw\\x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0\\mingw64\\bin"
+        - "C:\\cmake\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/"
+      - "C:/Program Files/PowerShell/7/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/gnuplot/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/gs/gs10.05.1/bin/"
+      - "C:/Program Files/Graphviz/bin/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/msys64/usr/local/bin/"
+      - "C:/msys64/usr/bin/"
+      - "C:/msys64/bin/"
+      - "C:/msys64/opt/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/cmake/bin/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/"
+      - "C:/texlive/2025/bin/windows/"
+      - "C:/Users/hayak/AppData/Roaming/npm/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/GnuWin32/bin/"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/"
+      - "C:/opencv/opencv-4.12/build/bin/"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/lld-link"
+      - "C:/Program Files/PowerShell/7/lld-link.com"
+      - "C:/Program Files/PowerShell/7/lld-link.exe"
+      - "C:/Program Files/PowerShell/7/lld-link"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.com"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.exe"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/lld-link.com"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/lld-link.exe"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Program Files/gnuplot/bin/lld-link.com"
+      - "C:/Program Files/gnuplot/bin/lld-link.exe"
+      - "C:/Program Files/gnuplot/bin/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Program Files/gs/gs10.05.1/bin/lld-link.com"
+      - "C:/Program Files/gs/gs10.05.1/bin/lld-link.exe"
+      - "C:/Program Files/gs/gs10.05.1/bin/lld-link"
+      - "C:/Program Files/Graphviz/bin/lld-link.com"
+      - "C:/Program Files/Graphviz/bin/lld-link.exe"
+      - "C:/Program Files/Graphviz/bin/lld-link"
+      - "C:/msys64/mingw64/bin/lld-link.com"
+      - "C:/msys64/mingw64/bin/lld-link.exe"
+      - "C:/msys64/mingw64/bin/lld-link"
+      - "C:/msys64/usr/local/bin/lld-link.com"
+      - "C:/msys64/usr/local/bin/lld-link.exe"
+      - "C:/msys64/usr/local/bin/lld-link"
+      - "C:/msys64/usr/bin/lld-link.com"
+      - "C:/msys64/usr/bin/lld-link.exe"
+      - "C:/msys64/usr/bin/lld-link"
+      - "C:/msys64/bin/lld-link.com"
+      - "C:/msys64/bin/lld-link.exe"
+      - "C:/msys64/bin/lld-link"
+      - "C:/msys64/opt/bin/lld-link.com"
+      - "C:/msys64/opt/bin/lld-link.exe"
+      - "C:/msys64/opt/bin/lld-link"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link.com"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link.exe"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/cmake/bin/lld-link.com"
+      - "C:/cmake/bin/lld-link.exe"
+      - "C:/cmake/bin/lld-link"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/lld-link.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/lld-link.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/lld-link"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/lld-link.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/lld-link.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/lld-link"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/lld-link.com"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/lld-link.exe"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/lld-link"
+      - "C:/texlive/2025/bin/windows/lld-link.com"
+      - "C:/texlive/2025/bin/windows/lld-link.exe"
+      - "C:/texlive/2025/bin/windows/lld-link"
+      - "C:/Users/hayak/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/hayak/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/hayak/AppData/Roaming/npm/lld-link"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/lld-link.com"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/lld-link.exe"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/lld-link"
+      - "C:/GnuWin32/bin/lld-link.com"
+      - "C:/GnuWin32/bin/lld-link.exe"
+      - "C:/GnuWin32/bin/lld-link"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/lld-link.com"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/lld-link.exe"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/lld-link"
+      - "C:/opencv/opencv-4.12/build/bin/lld-link.com"
+      - "C:/opencv/opencv-4.12/build/bin/lld-link.exe"
+      - "C:/opencv/opencv-4.12/build/bin/lld-link"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/lld-link.com"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/lld-link.exe"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\gnuplot\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Graphviz\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\msys64\\usr\\local\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\msys64\\bin"
+        - "C:\\msys64\\opt\\bin"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\cmake\\bin"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\src\\flutter\\flutter_windows_3.29.2-stable\\flutter\\bin"
+        - "C:\\texlive\\2025\\bin\\windows"
+        - "C:\\Users\\hayak\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\GnuWin32\\bin"
+        - "C:\\kousen\\senmonkamoku\\3\\anaden1\\ngspice-44.2_64\\Spice64\\bin"
+        - "C:\\opencv\\opencv-4.12\\build\\bin"
+        - "C:\\mingw\\x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0\\mingw64\\bin"
+        - "C:\\cmake\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/"
+      - "C:/Program Files/PowerShell/7/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/gnuplot/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/gs/gs10.05.1/bin/"
+      - "C:/Program Files/Graphviz/bin/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/msys64/usr/local/bin/"
+      - "C:/msys64/usr/bin/"
+      - "C:/msys64/bin/"
+      - "C:/msys64/opt/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/cmake/bin/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/"
+      - "C:/texlive/2025/bin/windows/"
+      - "C:/Users/hayak/AppData/Roaming/npm/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/GnuWin32/bin/"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/"
+      - "C:/opencv/opencv-4.12/build/bin/"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\gnuplot\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Graphviz\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\msys64\\usr\\local\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\msys64\\bin"
+        - "C:\\msys64\\opt\\bin"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\cmake\\bin"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\src\\flutter\\flutter_windows_3.29.2-stable\\flutter\\bin"
+        - "C:\\texlive\\2025\\bin\\windows"
+        - "C:\\Users\\hayak\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\GnuWin32\\bin"
+        - "C:\\kousen\\senmonkamoku\\3\\anaden1\\ngspice-44.2_64\\Spice64\\bin"
+        - "C:\\opencv\\opencv-4.12\\build\\bin"
+        - "C:\\mingw\\x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0\\mingw64\\bin"
+        - "C:\\cmake\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/"
+      - "C:/Program Files/PowerShell/7/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/gnuplot/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/gs/gs10.05.1/bin/"
+      - "C:/Program Files/Graphviz/bin/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/msys64/usr/local/bin/"
+      - "C:/msys64/usr/bin/"
+      - "C:/msys64/bin/"
+      - "C:/msys64/opt/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/cmake/bin/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/"
+      - "C:/texlive/2025/bin/windows/"
+      - "C:/Users/hayak/AppData/Roaming/npm/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/GnuWin32/bin/"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/"
+      - "C:/opencv/opencv-4.12/build/bin/"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/mt"
+      - "C:/Program Files/PowerShell/7/mt.com"
+      - "C:/Program Files/PowerShell/7/mt.exe"
+      - "C:/Program Files/PowerShell/7/mt"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt.com"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt.exe"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mt"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.com"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt.exe"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mt"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/mt.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/mt.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/mt"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/mt.com"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/mt.exe"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt"
+      - "C:/Program Files/gnuplot/bin/mt.com"
+      - "C:/Program Files/gnuplot/bin/mt.exe"
+      - "C:/Program Files/gnuplot/bin/mt"
+      - "C:/Program Files/nodejs/mt.com"
+      - "C:/Program Files/nodejs/mt.exe"
+      - "C:/Program Files/nodejs/mt"
+      - "C:/Program Files/gs/gs10.05.1/bin/mt.com"
+      - "C:/Program Files/gs/gs10.05.1/bin/mt.exe"
+      - "C:/Program Files/gs/gs10.05.1/bin/mt"
+      - "C:/Program Files/Graphviz/bin/mt.com"
+      - "C:/Program Files/Graphviz/bin/mt.exe"
+      - "C:/Program Files/Graphviz/bin/mt"
+      - "C:/msys64/mingw64/bin/mt.com"
+      - "C:/msys64/mingw64/bin/mt.exe"
+      - "C:/msys64/mingw64/bin/mt"
+      - "C:/msys64/usr/local/bin/mt.com"
+      - "C:/msys64/usr/local/bin/mt.exe"
+      - "C:/msys64/usr/local/bin/mt"
+      - "C:/msys64/usr/bin/mt.com"
+      - "C:/msys64/usr/bin/mt.exe"
+      - "C:/msys64/usr/bin/mt"
+      - "C:/msys64/bin/mt.com"
+      - "C:/msys64/bin/mt.exe"
+      - "C:/msys64/bin/mt"
+      - "C:/msys64/opt/bin/mt.com"
+      - "C:/msys64/opt/bin/mt.exe"
+      - "C:/msys64/opt/bin/mt"
+      - "C:/Program Files/MATLAB/R2025b/bin/mt.com"
+      - "C:/Program Files/MATLAB/R2025b/bin/mt.exe"
+      - "C:/Program Files/MATLAB/R2025b/bin/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/cmake/bin/mt.com"
+      - "C:/cmake/bin/mt.exe"
+      - "C:/cmake/bin/mt"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/mt.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/mt.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/mt"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/mt.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/mt.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/mt"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/mt.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/mt.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/mt"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/mt.com"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/mt.exe"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/mt"
+      - "C:/texlive/2025/bin/windows/mt.com"
+      - "C:/texlive/2025/bin/windows/mt.exe"
+      - "C:/texlive/2025/bin/windows/mt"
+      - "C:/Users/hayak/AppData/Roaming/npm/mt.com"
+      - "C:/Users/hayak/AppData/Roaming/npm/mt.exe"
+      - "C:/Users/hayak/AppData/Roaming/npm/mt"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/mt.com"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/mt.exe"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/mt"
+      - "C:/GnuWin32/bin/mt.com"
+      - "C:/GnuWin32/bin/mt.exe"
+      - "C:/GnuWin32/bin/mt"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/mt.com"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/mt.exe"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/mt"
+      - "C:/opencv/opencv-4.12/build/bin/mt.com"
+      - "C:/opencv/opencv-4.12/build/bin/mt.exe"
+      - "C:/opencv/opencv-4.12/build/bin/mt"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/mt.com"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/mt.exe"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\gnuplot\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Graphviz\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\msys64\\usr\\local\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\msys64\\bin"
+        - "C:\\msys64\\opt\\bin"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\cmake\\bin"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\src\\flutter\\flutter_windows_3.29.2-stable\\flutter\\bin"
+        - "C:\\texlive\\2025\\bin\\windows"
+        - "C:\\Users\\hayak\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\GnuWin32\\bin"
+        - "C:\\kousen\\senmonkamoku\\3\\anaden1\\ngspice-44.2_64\\Spice64\\bin"
+        - "C:\\opencv\\opencv-4.12\\build\\bin"
+        - "C:\\mingw\\x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0\\mingw64\\bin"
+        - "C:\\cmake\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/"
+      - "C:/Program Files/PowerShell/7/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/gnuplot/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/gs/gs10.05.1/bin/"
+      - "C:/Program Files/Graphviz/bin/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/msys64/usr/local/bin/"
+      - "C:/msys64/usr/bin/"
+      - "C:/msys64/bin/"
+      - "C:/msys64/opt/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/cmake/bin/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/"
+      - "C:/texlive/2025/bin/windows/"
+      - "C:/Users/hayak/AppData/Roaming/npm/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/GnuWin32/bin/"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/"
+      - "C:/opencv/opencv-4.12/build/bin/"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\gnuplot\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Graphviz\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\msys64\\usr\\local\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\msys64\\bin"
+        - "C:\\msys64\\opt\\bin"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\cmake\\bin"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\src\\flutter\\flutter_windows_3.29.2-stable\\flutter\\bin"
+        - "C:\\texlive\\2025\\bin\\windows"
+        - "C:\\Users\\hayak\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\GnuWin32\\bin"
+        - "C:\\kousen\\senmonkamoku\\3\\anaden1\\ngspice-44.2_64\\Spice64\\bin"
+        - "C:\\opencv\\opencv-4.12\\build\\bin"
+        - "C:\\mingw\\x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0\\mingw64\\bin"
+        - "C:\\cmake\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/cmake/share/cmake-4.2/Modules/"
+    found: "C:/cmake/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\gnuplot\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Graphviz\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\msys64\\usr\\local\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\msys64\\bin"
+        - "C:\\msys64\\opt\\bin"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\cmake\\bin"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\src\\flutter\\flutter_windows_3.29.2-stable\\flutter\\bin"
+        - "C:\\texlive\\2025\\bin\\windows"
+        - "C:\\Users\\hayak\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\GnuWin32\\bin"
+        - "C:\\kousen\\senmonkamoku\\3\\anaden1\\ngspice-44.2_64\\Spice64\\bin"
+        - "C:\\opencv\\opencv-4.12\\build\\bin"
+        - "C:\\mingw\\x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0\\mingw64\\bin"
+        - "C:\\cmake\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild のバージョン 17.13.19+0d9f5a35a (.NET Framework)
+      2026/01/27 20:33:29 にビルドを開始しました。
+      
+      ノード 1 上のプロジェクト "C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\4.2.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット)。
+      PrepareForBuild:
+        ディレクトリ "Debug\\" を作成しています。
+        構造化出力が有効になっています。コンパイラ診断の書式設定にはエラー階層が反映されます。詳細については、https://aka.ms/cpp/structured-output を参照してください。
+        ディレクトリ "Debug\\CompilerIdCXX.tlog\\" を作成しています。
+      InitializeBuildStatus:
+        "AlwaysCreate" が指定されたため "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を作成しています。
+        "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" のタッチ タスクを実行しています。
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\4.2.2\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        ファイル "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" を削除しています。
+        "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate" のタッチ タスクを実行しています。
+      プロジェクト "C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\4.2.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (既定のターゲット) のビルドが完了しました。
+      
+      ビルドに成功しました。
+          0 個の警告
+          0 エラー
+      
+      経過時間 00:00:00.60
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/vscode/C++/zerokara_nn/build/CMakeFiles/4.2.2/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/"
+      - "C:/Program Files/PowerShell/7/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/gnuplot/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/gs/gs10.05.1/bin/"
+      - "C:/Program Files/Graphviz/bin/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/msys64/usr/local/bin/"
+      - "C:/msys64/usr/bin/"
+      - "C:/msys64/bin/"
+      - "C:/msys64/opt/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/cmake/bin/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/"
+      - "C:/texlive/2025/bin/windows/"
+      - "C:/Users/hayak/AppData/Roaming/npm/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/GnuWin32/bin/"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/"
+      - "C:/opencv/opencv-4.12/build/bin/"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/lld-link"
+      - "C:/Program Files/PowerShell/7/lld-link.com"
+      - "C:/Program Files/PowerShell/7/lld-link.exe"
+      - "C:/Program Files/PowerShell/7/lld-link"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.com"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.exe"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/lld-link.com"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/lld-link.exe"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Program Files/gnuplot/bin/lld-link.com"
+      - "C:/Program Files/gnuplot/bin/lld-link.exe"
+      - "C:/Program Files/gnuplot/bin/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Program Files/gs/gs10.05.1/bin/lld-link.com"
+      - "C:/Program Files/gs/gs10.05.1/bin/lld-link.exe"
+      - "C:/Program Files/gs/gs10.05.1/bin/lld-link"
+      - "C:/Program Files/Graphviz/bin/lld-link.com"
+      - "C:/Program Files/Graphviz/bin/lld-link.exe"
+      - "C:/Program Files/Graphviz/bin/lld-link"
+      - "C:/msys64/mingw64/bin/lld-link.com"
+      - "C:/msys64/mingw64/bin/lld-link.exe"
+      - "C:/msys64/mingw64/bin/lld-link"
+      - "C:/msys64/usr/local/bin/lld-link.com"
+      - "C:/msys64/usr/local/bin/lld-link.exe"
+      - "C:/msys64/usr/local/bin/lld-link"
+      - "C:/msys64/usr/bin/lld-link.com"
+      - "C:/msys64/usr/bin/lld-link.exe"
+      - "C:/msys64/usr/bin/lld-link"
+      - "C:/msys64/bin/lld-link.com"
+      - "C:/msys64/bin/lld-link.exe"
+      - "C:/msys64/bin/lld-link"
+      - "C:/msys64/opt/bin/lld-link.com"
+      - "C:/msys64/opt/bin/lld-link.exe"
+      - "C:/msys64/opt/bin/lld-link"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link.com"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link.exe"
+      - "C:/Program Files/MATLAB/R2025b/bin/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/cmake/bin/lld-link.com"
+      - "C:/cmake/bin/lld-link.exe"
+      - "C:/cmake/bin/lld-link"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/lld-link.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/lld-link.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/lld-link"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/lld-link.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/lld-link.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/lld-link"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/lld-link.com"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/lld-link.exe"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/lld-link"
+      - "C:/texlive/2025/bin/windows/lld-link.com"
+      - "C:/texlive/2025/bin/windows/lld-link.exe"
+      - "C:/texlive/2025/bin/windows/lld-link"
+      - "C:/Users/hayak/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/hayak/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/hayak/AppData/Roaming/npm/lld-link"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/lld-link.com"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/lld-link.exe"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/lld-link"
+      - "C:/GnuWin32/bin/lld-link.com"
+      - "C:/GnuWin32/bin/lld-link.exe"
+      - "C:/GnuWin32/bin/lld-link"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/lld-link.com"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/lld-link.exe"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/lld-link"
+      - "C:/opencv/opencv-4.12/build/bin/lld-link.com"
+      - "C:/opencv/opencv-4.12/build/bin/lld-link.exe"
+      - "C:/opencv/opencv-4.12/build/bin/lld-link"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/lld-link.com"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/lld-link.exe"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\gnuplot\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Graphviz\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\msys64\\usr\\local\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\msys64\\bin"
+        - "C:\\msys64\\opt\\bin"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\cmake\\bin"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\src\\flutter\\flutter_windows_3.29.2-stable\\flutter\\bin"
+        - "C:\\texlive\\2025\\bin\\windows"
+        - "C:\\Users\\hayak\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\GnuWin32\\bin"
+        - "C:\\kousen\\senmonkamoku\\3\\anaden1\\ngspice-44.2_64\\Spice64\\bin"
+        - "C:\\opencv\\opencv-4.12\\build\\bin"
+        - "C:\\mingw\\x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0\\mingw64\\bin"
+        - "C:\\cmake\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/cmake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:580 (enable_language)"
+      - "C:/cmake/share/cmake-4.2/Modules/Platform/Windows-MSVC.cmake:553 (__windows_compiler_msvc_enable_rc)"
+      - "C:/cmake/share/cmake-4.2/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Program Files/PowerShell/7/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/gnuplot/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/gs/gs10.05.1/bin/"
+      - "C:/Program Files/Graphviz/bin/"
+      - "C:/msys64/mingw64/bin/"
+      - "C:/msys64/usr/local/bin/"
+      - "C:/msys64/usr/bin/"
+      - "C:/msys64/bin/"
+      - "C:/msys64/opt/bin/"
+      - "C:/Program Files/MATLAB/R2025b/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/cmake/bin/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/"
+      - "C:/texlive/2025/bin/windows/"
+      - "C:/Users/hayak/AppData/Roaming/npm/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/GnuWin32/bin/"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/"
+      - "C:/opencv/opencv-4.12/build/bin/"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/cmake/bin/"
+      - "C:/cmake/sbin/"
+      - "C:/cmake/"
+      - "C:/Program Files (x86)/NeuralNetworkProject/bin/"
+      - "C:/Program Files (x86)/NeuralNetworkProject/sbin/"
+      - "C:/Program Files (x86)/NeuralNetworkProject/"
+    searched_directories:
+      - "C:/Program Files/PowerShell/7/rc.com"
+      - "C:/Program Files/PowerShell/7/rc.exe"
+      - "C:/Program Files/PowerShell/7/rc"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc.com"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc.exe"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/rc"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.com"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc.exe"
+      - "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/rc"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/rc.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/rc.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/rc"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/rc.com"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/rc.exe"
+      - "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/rc"
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc"
+      - "C:/Program Files/gnuplot/bin/rc.com"
+      - "C:/Program Files/gnuplot/bin/rc.exe"
+      - "C:/Program Files/gnuplot/bin/rc"
+      - "C:/Program Files/nodejs/rc.com"
+      - "C:/Program Files/nodejs/rc.exe"
+      - "C:/Program Files/nodejs/rc"
+      - "C:/Program Files/gs/gs10.05.1/bin/rc.com"
+      - "C:/Program Files/gs/gs10.05.1/bin/rc.exe"
+      - "C:/Program Files/gs/gs10.05.1/bin/rc"
+      - "C:/Program Files/Graphviz/bin/rc.com"
+      - "C:/Program Files/Graphviz/bin/rc.exe"
+      - "C:/Program Files/Graphviz/bin/rc"
+      - "C:/msys64/mingw64/bin/rc.com"
+      - "C:/msys64/mingw64/bin/rc.exe"
+      - "C:/msys64/mingw64/bin/rc"
+      - "C:/msys64/usr/local/bin/rc.com"
+      - "C:/msys64/usr/local/bin/rc.exe"
+      - "C:/msys64/usr/local/bin/rc"
+      - "C:/msys64/usr/bin/rc.com"
+      - "C:/msys64/usr/bin/rc.exe"
+      - "C:/msys64/usr/bin/rc"
+      - "C:/msys64/bin/rc.com"
+      - "C:/msys64/bin/rc.exe"
+      - "C:/msys64/bin/rc"
+      - "C:/msys64/opt/bin/rc.com"
+      - "C:/msys64/opt/bin/rc.exe"
+      - "C:/msys64/opt/bin/rc"
+      - "C:/Program Files/MATLAB/R2025b/bin/rc.com"
+      - "C:/Program Files/MATLAB/R2025b/bin/rc.exe"
+      - "C:/Program Files/MATLAB/R2025b/bin/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/cmake/bin/rc.com"
+      - "C:/cmake/bin/rc.exe"
+      - "C:/cmake/bin/rc"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/rc.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/rc.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/rc"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/rc.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/rc.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Python/Python312/rc"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/rc.com"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/rc.exe"
+      - "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/bin/rc"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/rc.com"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/rc.exe"
+      - "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/bin/rc"
+      - "C:/texlive/2025/bin/windows/rc.com"
+      - "C:/texlive/2025/bin/windows/rc.exe"
+      - "C:/texlive/2025/bin/windows/rc"
+      - "C:/Users/hayak/AppData/Roaming/npm/rc.com"
+      - "C:/Users/hayak/AppData/Roaming/npm/rc.exe"
+      - "C:/Users/hayak/AppData/Roaming/npm/rc"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/rc.com"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/rc.exe"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/rc"
+      - "C:/GnuWin32/bin/rc.com"
+      - "C:/GnuWin32/bin/rc.exe"
+      - "C:/GnuWin32/bin/rc"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/rc.com"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/rc.exe"
+      - "C:/kousen/senmonkamoku/3/anaden1/ngspice-44.2_64/Spice64/bin/rc"
+      - "C:/opencv/opencv-4.12/build/bin/rc.com"
+      - "C:/opencv/opencv-4.12/build/bin/rc.exe"
+      - "C:/opencv/opencv-4.12/build/bin/rc"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/rc.com"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/rc.exe"
+      - "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/bin/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/cmake/bin/rc.com"
+      - "C:/cmake/bin/rc.exe"
+      - "C:/cmake/bin/rc"
+      - "C:/cmake/sbin/rc.com"
+      - "C:/cmake/sbin/rc.exe"
+      - "C:/cmake/sbin/rc"
+      - "C:/cmake/rc.com"
+      - "C:/cmake/rc.exe"
+      - "C:/cmake/rc"
+      - "C:/Program Files (x86)/NeuralNetworkProject/bin/rc.com"
+      - "C:/Program Files (x86)/NeuralNetworkProject/bin/rc.exe"
+      - "C:/Program Files (x86)/NeuralNetworkProject/bin/rc"
+      - "C:/Program Files (x86)/NeuralNetworkProject/sbin/rc.com"
+      - "C:/Program Files (x86)/NeuralNetworkProject/sbin/rc.exe"
+      - "C:/Program Files (x86)/NeuralNetworkProject/sbin/rc"
+      - "C:/Program Files (x86)/NeuralNetworkProject/rc.com"
+      - "C:/Program Files (x86)/NeuralNetworkProject/rc.exe"
+      - "C:/Program Files (x86)/NeuralNetworkProject/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\gnuplot\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Graphviz\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\msys64\\usr\\local\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\msys64\\bin"
+        - "C:\\msys64\\opt\\bin"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\cmake\\bin"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\src\\flutter\\flutter_windows_3.29.2-stable\\flutter\\bin"
+        - "C:\\texlive\\2025\\bin\\windows"
+        - "C:\\Users\\hayak\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\GnuWin32\\bin"
+        - "C:\\kousen\\senmonkamoku\\3\\anaden1\\ngspice-44.2_64\\Spice64\\bin"
+        - "C:\\opencv\\opencv-4.12\\build\\bin"
+        - "C:\\mingw\\x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0\\mingw64\\bin"
+        - "C:\\cmake\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NeuralNetworkProject"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/cmake"
+        - "C:/Program Files (x86)/NeuralNetworkProject"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/vscode/C++/zerokara_nn/build/CMakeFiles/CMakeScratch/TryCompile-py7lpd"
+      binary: "C:/vscode/C++/zerokara_nn/build/CMakeFiles/CMakeScratch/TryCompile-py7lpd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/vscode/C++/zerokara_nn/build/CMakeFiles/CMakeScratch/TryCompile-py7lpd'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a9410.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild のバージョン 17.13.19+0d9f5a35a (.NET Framework)
+        2026/01/27 20:33:30 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\CMakeScratch\\TryCompile-py7lpd\\cmTC_a9410.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          構造化出力が有効になっています。コンパイラ診断の書式設定にはエラー階層が反映されます。詳細については、https://aka.ms/cpp/structured-output を参照してください。
+          ディレクトリ "C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\CMakeScratch\\TryCompile-py7lpd\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_a9410.dir\\Debug\\cmTC_a9410.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_a9410.dir\\Debug\\cmTC_a9410.tlog\\unsuccessfulbuild" を作成しています。
+          "cmTC_a9410.dir\\Debug\\cmTC_a9410.tlog\\unsuccessfulbuild" のタッチ タスクを実行しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_a9410.dir\\Debug\\\\" /Fd"cmTC_a9410.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\cmake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_a9410.dir\\Debug\\\\" /Fd"cmTC_a9410.dir\\Debug\\vc143.pdb" /external:W3 /TC /errorReport:queue "C:\\cmake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\CMakeScratch\\TryCompile-py7lpd\\Debug\\cmTC_a9410.exe" /INCREMENTAL /ILK:"cmTC_a9410.dir\\Debug\\cmTC_a9410.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/vscode/C++/zerokara_nn/build/CMakeFiles/CMakeScratch/TryCompile-py7lpd/Debug/cmTC_a9410.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/vscode/C++/zerokara_nn/build/CMakeFiles/CMakeScratch/TryCompile-py7lpd/Debug/cmTC_a9410.lib" /MACHINE:X64  /machine:x64 cmTC_a9410.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_a9410.vcxproj -> C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\CMakeScratch\\TryCompile-py7lpd\\Debug\\cmTC_a9410.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_a9410.dir\\Debug\\cmTC_a9410.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_a9410.dir\\Debug\\cmTC_a9410.tlog\\cmTC_a9410.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\CMakeScratch\\TryCompile-py7lpd\\cmTC_a9410.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.57
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.43.34810.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/vscode/C++/zerokara_nn/build/CMakeFiles/CMakeScratch/TryCompile-feaa1a"
+      binary: "C:/vscode/C++/zerokara_nn/build/CMakeFiles/CMakeScratch/TryCompile-feaa1a"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/vscode/C++/zerokara_nn/build/CMakeFiles/CMakeScratch/TryCompile-feaa1a'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f3c3e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild のバージョン 17.13.19+0d9f5a35a (.NET Framework)
+        2026/01/27 20:33:31 にビルドを開始しました。
+        
+        ノード 1 上のプロジェクト "C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\CMakeScratch\\TryCompile-feaa1a\\cmTC_f3c3e.vcxproj" (既定のターゲット)。
+        PrepareForBuild:
+          構造化出力が有効になっています。コンパイラ診断の書式設定にはエラー階層が反映されます。詳細については、https://aka.ms/cpp/structured-output を参照してください。
+          ディレクトリ "C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\CMakeScratch\\TryCompile-feaa1a\\Debug\\" を作成しています。
+          ディレクトリ "cmTC_f3c3e.dir\\Debug\\cmTC_f3c3e.tlog\\" を作成しています。
+        InitializeBuildStatus:
+          "AlwaysCreate" が指定されたため "cmTC_f3c3e.dir\\Debug\\cmTC_f3c3e.tlog\\unsuccessfulbuild" を作成しています。
+          "cmTC_f3c3e.dir\\Debug\\cmTC_f3c3e.tlog\\unsuccessfulbuild" のタッチ タスクを実行しています。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_f3c3e.dir\\Debug\\\\" /Fd"cmTC_f3c3e.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\cmake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft(R) C/C++ Optimizing Compiler Version 19.43.34810 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_f3c3e.dir\\Debug\\\\" /Fd"cmTC_f3c3e.dir\\Debug\\vc143.pdb" /external:W3 /TP /errorReport:queue "C:\\cmake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\CMakeScratch\\TryCompile-feaa1a\\Debug\\cmTC_f3c3e.exe" /INCREMENTAL /ILK:"cmTC_f3c3e.dir\\Debug\\cmTC_f3c3e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/vscode/C++/zerokara_nn/build/CMakeFiles/CMakeScratch/TryCompile-feaa1a/Debug/cmTC_f3c3e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/vscode/C++/zerokara_nn/build/CMakeFiles/CMakeScratch/TryCompile-feaa1a/Debug/cmTC_f3c3e.lib" /MACHINE:X64  /machine:x64 cmTC_f3c3e.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_f3c3e.vcxproj -> C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\CMakeScratch\\TryCompile-feaa1a\\Debug\\cmTC_f3c3e.exe
+        FinalizeBuildStatus:
+          ファイル "cmTC_f3c3e.dir\\Debug\\cmTC_f3c3e.tlog\\unsuccessfulbuild" を削除しています。
+          "cmTC_f3c3e.dir\\Debug\\cmTC_f3c3e.tlog\\cmTC_f3c3e.lastbuildstate" のタッチ タスクを実行しています。
+        プロジェクト "C:\\vscode\\C++\\zerokara_nn\\build\\CMakeFiles\\CMakeScratch\\TryCompile-feaa1a\\cmTC_f3c3e.vcxproj" (既定のターゲット) のビルドが完了しました。
+        
+        ビルドに成功しました。
+            0 個の警告
+            0 エラー
+        
+        経過時間 00:00:00.60
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/cmake/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/cmake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.43.34810.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:9 (find_package)"
+    name: "OpenCV"
+    configs:
+      -
+        filename: "OpenCVConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "opencv-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "OpenCV"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/vscode/C++/zerokara_nn/build/CMakeFiles/pkgRedirects/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/vscode/C++/zerokara_nn/build/CMakeFiles/pkgRedirects/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/ImageMagick-7.1.1-Q16-HDRI/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/gnuplot/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/gnuplot/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/gs/gs10.05.1/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/gs/gs10.05.1/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Graphviz/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Graphviz/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/MATLAB/R2025b/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/MATLAB/R2025b/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/cmake/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/cmake/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Local/Programs/Python/Python312/Scripts/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Local/Programs/Python/Python312/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Local/Programs/Python/Python312/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Local/Microsoft/WindowsApps/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Local/Programs/Microsoft VS Code/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/src/flutter/flutter_windows_3.29.2-stable/flutter/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/texlive/2025/bin/windows/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/texlive/2025/bin/windows/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Roaming/npm/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/hayak/AppData/Roaming/npm/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Java/jre1.8.0_451/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Java/jre1.8.0_451/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/GnuWin32/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/GnuWin32/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/mingw/x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0/mingw64/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\hayak\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\gnuplot\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Graphviz\\bin"
+        - "C:\\msys64\\mingw64\\bin"
+        - "C:\\msys64\\usr\\local\\bin"
+        - "C:\\msys64\\usr\\bin"
+        - "C:\\msys64\\bin"
+        - "C:\\msys64\\opt\\bin"
+        - "C:\\Program Files\\MATLAB\\R2025b\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\cmake\\bin"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:\\Users\\hayak\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\hayak\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\src\\flutter\\flutter_windows_3.29.2-stable\\flutter\\bin"
+        - "C:\\texlive\\2025\\bin\\windows"
+        - "C:\\Users\\hayak\\AppData\\Roaming\\npm"
+        - "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI"
+        - "C:\\Program Files\\gs\\gs10.05.1\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\GnuWin32\\bin"
+        - "C:\\kousen\\senmonkamoku\\3\\anaden1\\ngspice-44.2_64\\Spice64\\bin"
+        - "C:\\opencv\\opencv-4.12\\build\\bin"
+        - "C:\\mingw\\x86_64-15.2.0-release-win32-seh-ucrt-rt_v13-rev0\\mingw64\\bin"
+        - "C:\\cmake\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/NeuralNetworkProject"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/cmake"
+        - "C:/Program Files (x86)/NeuralNetworkProject"
+...

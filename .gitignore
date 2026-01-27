@@ -4,7 +4,9 @@
 # fftw library
 fftw/
 
-# opencv library
-opencv/
-
 *.o
+*.dll.a
+*.dll
+
+openc/
+fft/

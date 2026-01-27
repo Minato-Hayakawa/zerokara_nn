@@ -3,7 +3,7 @@
 #include "utils.h"
 
 int main(){
-
+    std::cout << "=== PROGRAM STARTED ===" << std::endl;
     const int epoch = 10;
     const int kernelsize = 3;
     const int classes_num = 2;

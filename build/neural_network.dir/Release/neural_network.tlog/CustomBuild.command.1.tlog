@@ -1,0 +1,10 @@
+^C:\VSCODE\C++\ZEROKARA_NN\CMAKELISTS.TXT
+setlocal
+C:\cmake\bin\cmake.exe -SC:/vscode/C++/zerokara_nn -BC:/vscode/C++/zerokara_nn/build --check-stamp-file C:/vscode/C++/zerokara_nn/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
