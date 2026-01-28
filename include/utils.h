@@ -4,10 +4,16 @@
 #include <Eigen/Dense>
 #include <unsupported/Eigen/CXX11/Tensor>
 #include <opencv2/opencv.hpp>
+#include <fstream>
+#include <vector>
+#include <Eigen/Core>
+#include <unsupported/Eigen/CXX11/Tensor>
 
 class Utils
     {
         public:
+            int reverseInt(int i);
+            Eigen::Tensor<double, 3> load_mnist_images(std::string path);
             void ReLU(
                 const Eigen::VectorXd &inVector,
                 Eigen::VectorXd &outVector);

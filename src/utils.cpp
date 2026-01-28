@@ -1,5 +1,42 @@
 #include "utils.h"
 
+
+int Utils::reverseInt(int i) {
+    unsigned char c1, c2, c3, c4;
+    c1 = i & 255; c2 = (i >> 8) & 255; c3 = (i >> 16) & 255; c4 = (i >> 24) & 255;
+    return ((int)c1 << 24) + ((int)c2 << 16) + ((int)c3 << 8) + c4;
+}
+
+Eigen::Tensor<double, 3> Utils :: load_mnist_images(std::string path) {
+    std::ifstream file(path, std::ios::binary);
+    if (!file.is_open()) throw std::runtime_error("ファイルが開けません");
+
+    int magic_number = 0, num_images = 0, rows = 0, cols = 0;
+    file.read((char*)&magic_number, 4);
+    file.read((char*)&num_images, 4);
+    file.read((char*)&rows, 4);
+    file.read((char*)&cols, 4);
+
+    num_images = reverseInt(num_images);
+    rows = reverseInt(rows);
+    cols = reverseInt(cols);
+
+    int limit = 100; 
+    Eigen::Tensor<double, 3> tensor(limit, rows, cols);
+
+    for (int i = 0; i < limit; i++) {
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                unsigned char pixel = 0;
+                file.read((char*)&pixel, 1);
+                // 0.0 ~ 1.0 に正規化
+                tensor(i, r, c) = (double)pixel / 255.0;
+            }
+        }
+    }
+    return tensor;
+}
+
 void Utils::ReLU(const Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
     outVector=inVector.array().cwiseMax(0.0);
 }
