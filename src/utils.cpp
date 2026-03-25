@@ -1,40 +1,67 @@
 #include "utils.h"
 
 
-int Utils::reverseInt(int i) {
+int Utils :: reverseInt(int i) {
     unsigned char c1, c2, c3, c4;
-    c1 = i & 255; c2 = (i >> 8) & 255; c3 = (i >> 16) & 255; c4 = (i >> 24) & 255;
+    c1 = i & 255;
+    c2 = (i >> 8) & 255;
+    c3 = (i >> 16) & 255;
+    c4 = (i >> 24) & 255;
     return ((int)c1 << 24) + ((int)c2 << 16) + ((int)c3 << 8) + c4;
+}
+
+int Utils :: readInt(std::ifstream& file) {
+    int val = 0;
+    file.read((char*)&val, 4);
+    return reverseInt(val);
 }
 
 Eigen::Tensor<double, 3> Utils :: load_mnist_images(std::string path) {
     std::ifstream file(path, std::ios::binary);
     if (!file.is_open()) throw std::runtime_error("ファイルが開けません");
 
-    int magic_number = 0, num_images = 0, rows = 0, cols = 0;
-    file.read((char*)&magic_number, 4);
-    file.read((char*)&num_images, 4);
-    file.read((char*)&rows, 4);
-    file.read((char*)&cols, 4);
+    int magic_number = readInt(file);
+    int num_images = readInt(file);
+    int rows = readInt(file);
+    int cols = readInt(file);
 
-    num_images = reverseInt(num_images);
-    rows = reverseInt(rows);
-    cols = reverseInt(cols);
+    std::cout << "Debug - Images: " << num_images << " Rows: " << rows << " Cols: " << cols << std::endl;
 
-    int limit = 100; 
+    int limit = 60000; 
+
     Eigen::Tensor<double, 3> tensor(limit, rows, cols);
+    std::vector<unsigned char> buffer(rows * cols);
 
     for (int i = 0; i < limit; i++) {
+        file.read((char*)buffer.data(), rows * cols); // まとめて読み込み
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
-                unsigned char pixel = 0;
-                file.read((char*)&pixel, 1);
-                // 0.0 ~ 1.0 に正規化
-                tensor(i, r, c) = (double)pixel / 255.0;
+                tensor(i, r, c) = (double)buffer[r * cols + c] / 255.0;
             }
         }
     }
+    
     return tensor;
+}
+
+Eigen::VectorXd Utils::load_mnist_labels(std::string path) {
+    std::ifstream file(path, std::ios::binary);
+    if (!file.is_open()) throw std::runtime_error("ラベルファイルが開けません: " + path);
+
+    int magic_number = readInt(file);
+    int num_items = readInt(file);
+
+    std::cout << "Debug Labels - Items: " << num_items << std::endl;
+
+    Eigen::VectorXd labels(num_items);
+
+    for (int i = 0; i < num_items; i++) {
+        unsigned char temp = 0;
+        file.read((char*)&temp, 1);
+        labels(i) = (int)temp; 
+    }
+
+    return labels;
 }
 
 void Utils::ReLU(const Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
@@ -46,6 +73,12 @@ void Utils::Sigmoid(const Eigen::VectorXd &inVector, Eigen::VectorXd &outVector)
     });
 }
 
+void Utils::Softmax(const Eigen::VectorXd &inVector, Eigen::VectorXd &outVector){
+    double max_val = inVector.maxCoeff();
+    Eigen::ArrayXd exp_values = (inVector.array() - max_val).exp();
+    double sum = exp_values.sum();
+    outVector = (exp_values / sum).matrix();
+}
 double Utils::CrossEntropy(
     const Eigen::VectorXd &TargetVector,
     const Eigen::VectorXd &outVector){
@@ -55,12 +88,21 @@ double Utils::CrossEntropy(
 }
 
 Eigen::VectorXd Utils::output_delta(
-    const Eigen::VectorXd &y,
-    const Eigen::VectorXd &t
+    const Eigen::VectorXd &output,
+    const Eigen::VectorXd &ground_truth
 ){
-    return y-t;
+    Eigen::VectorXd error = output - ground_truth;
+    Eigen::ArrayXd sigmoid_grad = output.array() * (1.0 - output.array());
+    return (error.array() * sigmoid_grad).matrix();
 }
 
+Eigen::VectorXd Utils :: output_delta_ReLU(
+    const Eigen::VectorXd &output,
+    const Eigen::VectorXd &ground_truth
+){
+    Eigen::VectorXd error = output - ground_truth;
+    return error.cwiseProduct((output.array() > 0.0).cast<double>().matrix());
+}
 void Utils::addition(
     const Eigen::VectorXd &inVector1,
     const Eigen::VectorXd &inVector2,

@@ -1,3 +1,7 @@
 C:/vscode/C++/zerokara_nn/build/CMakeFiles/neural_network.dir
+C:/vscode/C++/zerokara_nn/build/CMakeFiles/benchmark_sigmoid.dir
+C:/vscode/C++/zerokara_nn/build/CMakeFiles/benchmark_softmax.dir
+C:/vscode/C++/zerokara_nn/build/CMakeFiles/benchmark_CNN_sigmoid.dir
+C:/vscode/C++/zerokara_nn/build/CMakeFiles/benchmark_CNN_softmax.dir
 C:/vscode/C++/zerokara_nn/build/CMakeFiles/ALL_BUILD.dir
 C:/vscode/C++/zerokara_nn/build/CMakeFiles/ZERO_CHECK.dir

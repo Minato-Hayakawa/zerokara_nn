@@ -13,11 +13,16 @@ class Utils
     {
         public:
             int reverseInt(int i);
+            int readInt(std::ifstream& file);
             Eigen::Tensor<double, 3> load_mnist_images(std::string path);
+            Eigen::VectorXd load_mnist_labels(std::string path);
             void ReLU(
                 const Eigen::VectorXd &inVector,
                 Eigen::VectorXd &outVector);
             void Sigmoid(
+                const Eigen::VectorXd &inVector,
+                Eigen::VectorXd &outVector);
+            void Softmax(
                 const Eigen::VectorXd &inVector,
                 Eigen::VectorXd &outVector);
             double CrossEntropy(
@@ -26,6 +31,9 @@ class Utils
             Eigen::VectorXd output_delta(
                 const Eigen::VectorXd &y,
                 const Eigen::VectorXd &t);
+            Eigen::VectorXd output_delta_ReLU(
+                const Eigen::VectorXd &output,
+                const Eigen::VectorXd &ground_truth);
             void addition(
                 const Eigen::VectorXd &inVector1,
                 const Eigen::VectorXd &inVector2,
