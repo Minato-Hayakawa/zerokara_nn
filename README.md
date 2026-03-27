@@ -70,13 +70,7 @@ Where:
 ### Build & Execution
 ```bash
 # Clone the repository
-git clone [https://github.com/your-username/neural-fft.git](https://github.com/your-username/neural-fft.git)
-cd neural-fft
-
-# Build the project
-mkdir build && cd build
-cmake ..
-make
+git clone [https://github.com/Minato-Hayakawa/zerokara_nn.git](https://github.com/Minato-Hayakawa/zerokara_nn.git)
 
 # Run the training
-./NeuralFFT
+./neural_net.exe
