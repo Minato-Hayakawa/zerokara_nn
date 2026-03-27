@@ -1,4 +1,4 @@
-# Neural-FFT: C++ CNN Implementation from Scratch
+# zerokara_nn: C++ CNN Implementation from Scratch
 
 A high-performance, from-scratch implementation of a Convolutional Neural Network (CNN) in C++. This project demonstrates the internal mechanics of deep learning by bypassing high-level frameworks and utilizing **Eigen** for linear algebra and **FFTW3** to optimize convolutions via the Fourier Transform.
 
